@@ -1,0 +1,12 @@
+name: frontend-design
+type: skill
+description: >-
+  Create distinctive, production-grade frontend interfaces with high design
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/frontend-design"
+version: "20260123.1"
+quality: 100
+tags: [ui, frontend, design, css, components]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

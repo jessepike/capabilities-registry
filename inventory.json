@@ -1,0 +1,404 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-01-29T13:43:40.521218",
+  "summary": {
+    "total": 21,
+    "by_type": {
+      "plugin": 1,
+      "skill": 16,
+      "tool": 4
+    },
+    "by_source": {
+      "internal": 1,
+      "anthropic": 16,
+      "modelcontextprotocol": 4
+    }
+  },
+  "capabilities": [
+    {
+      "name": "acm-env",
+      "type": "plugin",
+      "description": "Agentic Development Environment Manager \u2014 manages Claude Code environment across user and project layers",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "environment",
+        "maintenance",
+        "validation",
+        "acm"
+      ],
+      "upstream": "",
+      "path": "capabilities/plugins/acm-env",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "algorithmic-art",
+      "type": "skill",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260122.1",
+      "quality": 100,
+      "tags": [
+        "art",
+        "generative",
+        "p5js",
+        "creative"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art",
+      "path": "capabilities/skills/algorithmic-art",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "brand-guidelines",
+      "type": "skill",
+      "description": "Applies Anthropic's official brand colors and typography to any sort",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260122.1",
+      "quality": 100,
+      "tags": [
+        "design",
+        "branding",
+        "guidelines"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
+      "path": "capabilities/skills/brand-guidelines",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "canvas-design",
+      "type": "skill",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "ui",
+        "design",
+        "canvas",
+        "graphics"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
+      "path": "capabilities/skills/canvas-design",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "doc-coauthoring",
+      "type": "skill",
+      "description": "Guide users through a structured workflow for co-authoring documentation.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "documents",
+        "writing",
+        "collaboration"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring",
+      "path": "capabilities/skills/doc-coauthoring",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "docx",
+      "type": "skill",
+      "description": "'Comprehensive document creation, editing, and analysis with support",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "documents",
+        "docx",
+        "word"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/docx",
+      "path": "capabilities/skills/docx",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "frontend-design",
+      "type": "skill",
+      "description": "Create distinctive, production-grade frontend interfaces with high design",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "ui",
+        "frontend",
+        "design",
+        "css",
+        "components"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+      "path": "capabilities/skills/frontend-design",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "internal-comms",
+      "type": "skill",
+      "description": "A set of resources to help me write all kinds of internal communications,",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "writing",
+        "communications",
+        "business"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/internal-comms",
+      "path": "capabilities/skills/internal-comms",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "mcp-builder",
+      "type": "skill",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "mcp",
+        "development",
+        "tools"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+      "path": "capabilities/skills/mcp-builder",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "pdf",
+      "type": "skill",
+      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables,",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "documents",
+        "pdf"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+      "path": "capabilities/skills/pdf",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "pptx",
+      "type": "skill",
+      "description": "'Presentation creation, editing, and analysis. When Claude needs to work",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "documents",
+        "pptx",
+        "presentations"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+      "path": "capabilities/skills/pptx",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "skill-creator",
+      "type": "skill",
+      "description": "Guide for creating effective skills. This skill should be used when users",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "development",
+        "skills",
+        "meta"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+      "path": "capabilities/skills/skill-creator",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "slack-gif-creator",
+      "type": "skill",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260122.1",
+      "quality": 100,
+      "tags": [
+        "slack",
+        "gif",
+        "animation",
+        "creative"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator",
+      "path": "capabilities/skills/slack-gif-creator",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "theme-factory",
+      "type": "skill",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides,",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "ui",
+        "design",
+        "themes",
+        "css"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/theme-factory",
+      "path": "capabilities/skills/theme-factory",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "type": "skill",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "web",
+        "artifacts",
+        "html",
+        "javascript"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder",
+      "path": "capabilities/skills/web-artifacts-builder",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "webapp-testing",
+      "type": "skill",
+      "description": "Toolkit for interacting with and testing local web applications using",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "testing",
+        "web",
+        "qa"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+      "path": "capabilities/skills/webapp-testing",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "xlsx",
+      "type": "skill",
+      "description": "'Comprehensive spreadsheet creation, editing, and analysis with support",
+      "source": "anthropic",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 100,
+      "tags": [
+        "documents",
+        "xlsx",
+        "spreadsheets"
+      ],
+      "upstream": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+      "path": "capabilities/skills/xlsx",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "everything-mcp",
+      "type": "tool",
+      "description": "MCP server that exercises all the features of the MCP protocol",
+      "source": "modelcontextprotocol",
+      "status": "active",
+      "version": "20260122.1",
+      "quality": 90,
+      "tags": [
+        "mcp",
+        "testing",
+        "reference"
+      ],
+      "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+      "path": "capabilities/tools/everything-mcp",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "filesystem-mcp",
+      "type": "tool",
+      "description": "MCP server for filesystem access",
+      "source": "modelcontextprotocol",
+      "status": "active",
+      "version": "20260122.1",
+      "quality": 75,
+      "tags": [
+        "mcp",
+        "filesystem",
+        "io"
+      ],
+      "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "path": "capabilities/tools/filesystem-mcp",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "memory-mcp",
+      "type": "tool",
+      "description": "MCP server for enabling memory for Claude through a knowledge graph",
+      "source": "modelcontextprotocol",
+      "status": "active",
+      "version": "20260122.1",
+      "quality": 90,
+      "tags": [
+        "mcp",
+        "memory",
+        "knowledge-graph"
+      ],
+      "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "path": "capabilities/tools/memory-mcp",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    },
+    {
+      "name": "sequentialthinking-mcp",
+      "type": "tool",
+      "description": "MCP server for sequential thinking and problem solving",
+      "source": "modelcontextprotocol",
+      "status": "active",
+      "version": "20260123.1",
+      "quality": 90,
+      "tags": [
+        "mcp",
+        "reasoning",
+        "thinking"
+      ],
+      "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "path": "capabilities/tools/sequentialthinking-mcp",
+      "added": "2026-01-29",
+      "updated": "2026-01-29"
+    }
+  ]
+}

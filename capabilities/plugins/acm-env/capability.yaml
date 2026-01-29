@@ -1,0 +1,12 @@
+name: acm-env
+type: plugin
+description: >-
+  Agentic Development Environment Manager — manages Claude Code environment across user and project layers
+source: internal
+upstream: ""
+version: "1.0.0"
+quality: 100
+tags: [environment, maintenance, validation, acm]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

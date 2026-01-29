@@ -1,0 +1,12 @@
+name: docx
+type: skill
+description: >-
+  'Comprehensive document creation, editing, and analysis with support
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/docx"
+version: "20260123.1"
+quality: 100
+tags: [documents, docx, word]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

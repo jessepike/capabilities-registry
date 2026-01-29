@@ -1,0 +1,12 @@
+name: brand-guidelines
+type: skill
+description: >-
+  Applies Anthropic's official brand colors and typography to any sort
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines"
+version: "20260122.1"
+quality: 100
+tags: [design, branding, guidelines]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

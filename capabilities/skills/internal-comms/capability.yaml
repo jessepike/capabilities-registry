@@ -1,0 +1,12 @@
+name: internal-comms
+type: skill
+description: >-
+  A set of resources to help me write all kinds of internal communications,
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/internal-comms"
+version: "20260123.1"
+quality: 100
+tags: [writing, communications, business]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

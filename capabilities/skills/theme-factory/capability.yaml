@@ -1,0 +1,12 @@
+name: theme-factory
+type: skill
+description: >-
+  Toolkit for styling artifacts with a theme. These artifacts can be slides,
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/theme-factory"
+version: "20260123.1"
+quality: 100
+tags: [ui, design, themes, css]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

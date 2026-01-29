@@ -1,0 +1,12 @@
+name: pdf
+type: skill
+description: >-
+  Comprehensive PDF manipulation toolkit for extracting text and tables,
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/pdf"
+version: "20260123.1"
+quality: 100
+tags: [documents, pdf]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

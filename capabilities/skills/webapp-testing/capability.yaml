@@ -1,0 +1,12 @@
+name: webapp-testing
+type: skill
+description: >-
+  Toolkit for interacting with and testing local web applications using
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/webapp-testing"
+version: "20260123.1"
+quality: 100
+tags: [testing, web, qa]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

@@ -1,0 +1,12 @@
+name: web-artifacts-builder
+type: skill
+description: >-
+  Suite of tools for creating elaborate, multi-component claude.ai HTML
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder"
+version: "20260123.1"
+quality: 100
+tags: [web, artifacts, html, javascript]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

@@ -1,0 +1,12 @@
+name: filesystem-mcp
+type: tool
+description: >-
+  MCP server for filesystem access
+source: modelcontextprotocol
+upstream: "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
+version: "20260122.1"
+quality: 75
+tags: [mcp, filesystem, io]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

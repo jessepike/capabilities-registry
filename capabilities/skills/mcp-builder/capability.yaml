@@ -1,0 +1,12 @@
+name: mcp-builder
+type: skill
+description: >-
+  Guide for creating high-quality MCP (Model Context Protocol) servers
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/mcp-builder"
+version: "20260123.1"
+quality: 100
+tags: [mcp, development, tools]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

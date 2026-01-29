@@ -1,0 +1,12 @@
+name: canvas-design
+type: skill
+description: >-
+  Create beautiful visual art in .png and .pdf documents using design philosophy.
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/canvas-design"
+version: "20260123.1"
+quality: 100
+tags: [ui, design, canvas, graphics]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

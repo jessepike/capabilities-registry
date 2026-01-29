@@ -1,0 +1,12 @@
+name: slack-gif-creator
+type: skill
+description: >-
+  Knowledge and utilities for creating animated GIFs optimized for Slack.
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator"
+version: "20260122.1"
+quality: 100
+tags: [slack, gif, animation, creative]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

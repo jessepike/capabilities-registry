@@ -1,0 +1,12 @@
+name: algorithmic-art
+type: skill
+description: >-
+  Creating algorithmic art using p5.js with seeded randomness and interactive
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art"
+version: "20260122.1"
+quality: 100
+tags: [art, generative, p5js, creative]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"

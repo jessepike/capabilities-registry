@@ -1,0 +1,12 @@
+name: pptx
+type: skill
+description: >-
+  'Presentation creation, editing, and analysis. When Claude needs to work
+source: anthropic
+upstream: "https://github.com/anthropics/skills/tree/main/skills/pptx"
+version: "20260123.1"
+quality: 100
+tags: [documents, pptx, presentations]
+status: active
+added: "2026-01-29"
+updated: "2026-01-29"
