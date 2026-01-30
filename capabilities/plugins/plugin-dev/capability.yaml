@@ -1,0 +1,13 @@
+name: plugin-dev
+type: plugin
+description: >-
+  End-to-end plugin development — create plugins, skills, agents, hooks, commands, and MCP integrations
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+status: active
+tags: [development, plugins, skills, meta, authoring]
+install_id: "plugin-dev@claude-plugins-official"
+install_level: user
+quality: 90
+added: "2026-01-30"
+updated: "2026-01-30"

@@ -1,0 +1,13 @@
+name: commit-commands
+type: plugin
+description: >-
+  Git workflow automation — commit, push, open PRs, and clean up gone branches
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+status: active
+tags: [git, workflow, automation, ci-cd]
+install_id: "commit-commands@claude-plugins-official"
+install_level: user
+quality: 90
+added: "2026-01-30"
+updated: "2026-01-30"

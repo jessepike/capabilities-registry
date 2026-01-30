@@ -1,0 +1,13 @@
+name: security-guidance
+type: plugin
+description: >-
+  PreToolUse security hook — detects command injection, XSS, eval, pickle deserialization, and other dangerous patterns
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance"
+status: active
+tags: [security, hooks, validation, safety]
+install_id: "security-guidance@claude-plugins-official"
+install_level: user
+quality: 90
+added: "2026-01-30"
+updated: "2026-01-30"

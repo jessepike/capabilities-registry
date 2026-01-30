@@ -1,8 +1,8 @@
 ---
 type: "specification"
 description: "Defines the capability registry — structure, types, lifecycle, and data flow"
-version: "1.0.0"
-updated: "2026-01-29"
+version: "1.1.0"
+updated: "2026-01-30"
 lifecycle: "reference"
 ---
 
@@ -32,7 +32,7 @@ The registry is standalone. It is consumed by ACM stages but not coupled to ACM.
 ## Directory Structure
 
 ```
-capability-registry/
+capabilities-registry/
 ├── capabilities/
 │   ├── skills/
 │   │   └── <name>/
@@ -58,6 +58,7 @@ capability-registry/
 │   ├── check-freshness.sh
 │   ├── sync.sh
 │   └── promote.sh
+├── declined.yaml                  # Evaluated and rejected capabilities
 ├── inventory.json                 # Derived index
 ├── INVENTORY.md                   # Derived human-readable
 └── REGISTRY-SPEC.md              # This file
@@ -89,6 +90,8 @@ upstream: "https://github.com/..."   # Upstream source URL
 version: "20260123.1"                # Version identifier
 quality: 100                         # 0-100 quality score
 content_fingerprint: "sha256:..."    # Content hash for change detection
+install_id: "name@registry"          # Plugin/MCP install identifier (e.g., "commit-commands@claude-plugins-official")
+install_level: project               # Recommended install level: user | project
 ```
 
 ---
@@ -174,7 +177,7 @@ Currently: Anthropic official only. Community sources are future backlog.
 
 | Source | URL | Types |
 |--------|-----|-------|
-| anthropic | `https://github.com/anthropics/skills` | Skills |
+| anthropic | `https://github.com/anthropics/skills` | Skills, Plugins |
 | modelcontextprotocol | `https://github.com/modelcontextprotocol/servers` | Tools |
 
 ---
@@ -199,7 +202,16 @@ Capabilities are organized by **name**, not by vendor.
 
 ---
 
+## Declined Capabilities
+
+`declined.yaml` tracks upstream capabilities that have been evaluated and rejected.
+
+- Sync skips declined capabilities (won't re-stage them)
+- Remove an entry to re-evaluate on next refresh
+- Each entry records: name, source, reason for declining
+
+---
+
 ## References
 
 - ACM-ENVIRONMENT-SPEC.md (Capabilities primitive)
-- capability-registry-brief.md (extraction brief)

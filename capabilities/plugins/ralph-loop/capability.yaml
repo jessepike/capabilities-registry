@@ -1,0 +1,13 @@
+name: ralph-loop
+type: plugin
+description: >-
+  Iterative development loop — structured review cycles for refining code and artifacts
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop"
+status: active
+tags: [review, iteration, development, quality]
+install_id: "ralph-loop@claude-plugins-official"
+install_level: user
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

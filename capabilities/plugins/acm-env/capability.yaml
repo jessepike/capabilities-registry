@@ -8,5 +8,7 @@ version: "1.0.0"
 quality: 100
 tags: [environment, maintenance, validation, acm]
 status: active
+install_id: "acm-env@acm-plugins"
+install_level: user
 added: "2026-01-29"
-updated: "2026-01-29"
+updated: "2026-01-30"

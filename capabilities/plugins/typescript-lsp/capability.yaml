@@ -1,0 +1,13 @@
+name: typescript-lsp
+type: plugin
+description: >-
+  TypeScript Language Server Protocol — auto-diagnostics after edits, go-to-definition, find references, type info
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp"
+status: active
+tags: [lsp, typescript, diagnostics, code-navigation]
+install_id: "typescript-lsp@claude-plugins-official"
+install_level: project
+quality: 75
+added: "2026-01-30"
+updated: "2026-01-30"

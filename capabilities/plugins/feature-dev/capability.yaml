@@ -1,0 +1,13 @@
+name: feature-dev
+type: plugin
+description: >-
+  Guided feature development workflow — clarifying questions, codebase analysis, architecture review before implementation
+source: anthropic
+upstream: "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev"
+status: active
+tags: [development, workflow, architecture, planning]
+install_id: "feature-dev@claude-plugins-official"
+install_level: user
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

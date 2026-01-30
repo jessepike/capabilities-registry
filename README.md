@@ -29,6 +29,7 @@ capabilities/
 ├── tools/       # MCP servers, deterministic scripts
 ├── agents/      # Sub-agent definitions
 └── plugins/     # Composite packages (skills + hooks + commands)
+declined.yaml    # Evaluated and rejected capabilities
 ```
 
 Each capability has a `capability.yaml` manifest (source of truth).
@@ -49,7 +50,7 @@ Never hand-edit `inventory.json` or `INVENTORY.md` — they are derived.
 
 | Source | Types |
 |--------|-------|
-| Anthropic | Skills |
+| Anthropic | Skills, Plugins |
 | Model Context Protocol | Tools |
 | Internal | Plugins, Agents |
 

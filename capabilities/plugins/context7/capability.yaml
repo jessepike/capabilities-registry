@@ -1,0 +1,13 @@
+name: context7
+type: plugin
+description: >-
+  Retrieve up-to-date documentation and code examples for any programming library via Context7
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+status: active
+tags: [documentation, libraries, reference, context]
+install_id: "context7@claude-plugins-official"
+install_level: project
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

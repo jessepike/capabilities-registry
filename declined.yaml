@@ -1,0 +1,58 @@
+# Capabilities evaluated and declined
+# These are known upstream capabilities we've reviewed and chosen not to register.
+# Sync will skip these. Refresh will report them as "declined" not "new".
+# Remove an entry from this list to re-evaluate it on next refresh.
+
+updated: "2026-01-30"
+
+declined:
+  # MCP tools — redundant with Claude Code built-ins
+  - name: fetch-mcp
+    source: modelcontextprotocol
+    reason: "Redundant — Claude Code has WebFetch built-in"
+  - name: git-mcp
+    source: modelcontextprotocol
+    reason: "Redundant — Claude Code has full git via Bash"
+  - name: time-mcp
+    source: modelcontextprotocol
+    reason: "Niche — no current timezone-heavy projects"
+
+  # Plugins — not needed currently
+  - name: serena
+    source: anthropic
+    reason: "No use case identified"
+  - name: example-skills
+    source: anthropic
+    reason: "Reference only — plugin-dev covers skill authoring"
+  - name: superpowers
+    source: superpowers-dev
+    reason: "Third-party, unvetted"
+
+  # LSP plugins — languages not in use
+  - name: clangd-lsp
+    source: anthropic
+    reason: "No C/C++ projects"
+  - name: csharp-lsp
+    source: anthropic
+    reason: "No C# projects"
+  - name: gopls-lsp
+    source: anthropic
+    reason: "No Go projects"
+  - name: jdtls-lsp
+    source: anthropic
+    reason: "No Java projects"
+  - name: kotlin-lsp
+    source: anthropic
+    reason: "No Kotlin projects"
+  - name: lua-lsp
+    source: anthropic
+    reason: "No Lua projects"
+  - name: php-lsp
+    source: anthropic
+    reason: "No PHP projects"
+  - name: rust-analyzer-lsp
+    source: anthropic
+    reason: "No Rust projects"
+  - name: swift-lsp
+    source: anthropic
+    reason: "No Swift projects"

@@ -15,13 +15,21 @@ list_staging() {
   echo "=== Staging Capabilities ==="
   echo ""
   local count=0
-  for cap_yaml in $(find "$STAGING_DIR" -name "capability.yaml" -type f 2>/dev/null | sort); do
+  local cap_files
+  cap_files=$(find "$STAGING_DIR" -name "capability.yaml" -type f 2>/dev/null | sort) || true
+  if [ -z "$cap_files" ]; then
+    echo "  (none)"
+    echo ""
+    echo "0 capabilities in staging"
+    return 0
+  fi
+  while IFS= read -r cap_yaml; do
     local name type
-    name=$(python3 -c "import yaml; print(yaml.safe_load(open('$cap_yaml')).get('name',''))" 2>/dev/null)
-    type=$(python3 -c "import yaml; print(yaml.safe_load(open('$cap_yaml')).get('type',''))" 2>/dev/null)
+    name=$(python3 -c "import yaml; print(yaml.safe_load(open('$cap_yaml')).get('name',''))" 2>/dev/null || echo "unknown")
+    type=$(python3 -c "import yaml; print(yaml.safe_load(open('$cap_yaml')).get('type',''))" 2>/dev/null || echo "unknown")
     echo "  $type/$name"
     count=$((count + 1))
-  done
+  done <<< "$cap_files"
   echo ""
   echo "$count capabilities in staging"
 }
@@ -84,6 +92,7 @@ with open(path, 'w') as f:
 case "${1:-}" in
   --list)
     list_staging
+    exit 0
     ;;
   --all)
     echo "=== Promoting All Staging Capabilities ==="

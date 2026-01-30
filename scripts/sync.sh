@@ -6,11 +6,30 @@ set -euo pipefail
 
 REGISTRY_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 STAGING_DIR="$REGISTRY_ROOT/staging"
+CAPS_DIR="$REGISTRY_ROOT/capabilities"
 CACHE_DIR="$REGISTRY_ROOT/.cache"
 SOURCE="${1:---source}"
 SOURCE_FILTER="${2:-all}"
 
+DECLINED_FILE="$REGISTRY_ROOT/declined.yaml"
+
 mkdir -p "$CACHE_DIR" "$STAGING_DIR"
+
+# Load declined names into a lookup list
+DECLINED_NAMES=""
+if [ -f "$DECLINED_FILE" ]; then
+  DECLINED_NAMES=$(python3 -c "
+import yaml
+with open('$DECLINED_FILE') as f:
+    data = yaml.safe_load(f)
+for item in data.get('declined', []):
+    print(item.get('name', ''))
+" 2>/dev/null)
+fi
+
+is_declined() {
+  echo "$DECLINED_NAMES" | grep -qx "$1"
+}
 
 echo "=== Capability Sync ==="
 echo ""
@@ -33,12 +52,27 @@ fetch_anthropic() {
     }
   fi
 
-  # Copy skills to staging
+  # Copy skills to staging (skip already-active and declined)
   local count=0
+  local skipped=0
+  local declined=0
   for skill_dir in "$ANTHROPIC_CACHE"/skills/*/; do
     [ ! -d "$skill_dir" ] && continue
     local name
     name=$(basename "$skill_dir")
+
+    # Skip if already active in registry
+    if [ -d "$CAPS_DIR/skills/$name" ]; then
+      skipped=$((skipped + 1))
+      continue
+    fi
+
+    # Skip if declined
+    if is_declined "$name"; then
+      declined=$((declined + 1))
+      continue
+    fi
+
     local dest="$STAGING_DIR/skills/$name"
 
     mkdir -p "$dest"
@@ -67,7 +101,7 @@ EOF
 
     count=$((count + 1))
   done
-  echo "  Staged $count Anthropic skills"
+  echo "  Staged $count new, skipped $skipped active, $declined declined"
 }
 
 fetch_mcp() {
@@ -81,8 +115,10 @@ fetch_mcp() {
     }
   fi
 
-  # Copy MCP servers to staging
+  # Copy MCP servers to staging (skip already-active and declined)
   local count=0
+  local skipped=0
+  local declined=0
   for server_dir in "$MCP_CACHE"/src/*/; do
     [ ! -d "$server_dir" ] && continue
     local name
@@ -90,6 +126,19 @@ fetch_mcp() {
     # Add -mcp suffix if not present
     local reg_name="$name"
     echo "$name" | grep -q "mcp" || reg_name="${name}-mcp"
+
+    # Skip if already active in registry
+    if [ -d "$CAPS_DIR/tools/$reg_name" ]; then
+      skipped=$((skipped + 1))
+      continue
+    fi
+
+    # Skip if declined
+    if is_declined "$reg_name"; then
+      declined=$((declined + 1))
+      continue
+    fi
+
     local dest="$STAGING_DIR/tools/$reg_name"
 
     mkdir -p "$dest"
@@ -119,7 +168,7 @@ EOF
 
     count=$((count + 1))
   done
-  echo "  Staged $count MCP tools"
+  echo "  Staged $count new, skipped $skipped active, $declined declined"
 }
 
 case "$SOURCE_FILTER" in

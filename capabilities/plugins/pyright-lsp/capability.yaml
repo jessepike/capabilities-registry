@@ -1,0 +1,13 @@
+name: pyright-lsp
+type: plugin
+description: >-
+  Python Language Server Protocol via Pyright — auto-diagnostics, type checking, go-to-definition, find references
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pyright-lsp"
+status: active
+tags: [lsp, python, diagnostics, code-navigation, type-checking]
+install_id: "pyright-lsp@claude-plugins-official"
+install_level: project
+quality: 80
+added: "2026-01-30"
+updated: "2026-01-30"

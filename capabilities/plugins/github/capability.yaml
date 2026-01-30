@@ -1,0 +1,13 @@
+name: github
+type: plugin
+description: >-
+  GitHub MCP server integration — issues, PRs, repos, code search via GitHub API
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github"
+status: active
+tags: [github, git, mcp, source-control, issues, pull-requests]
+install_id: "github@claude-plugins-official"
+install_level: user
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

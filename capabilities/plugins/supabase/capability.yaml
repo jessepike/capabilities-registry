@@ -1,0 +1,13 @@
+name: supabase
+type: plugin
+description: >-
+  Supabase integration via bundled MCP server — database queries, auth, storage, edge functions
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/supabase"
+status: active
+tags: [database, backend, supabase, mcp, auth, storage]
+install_id: "supabase@claude-plugins-official"
+install_level: project
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

@@ -1,0 +1,13 @@
+name: hookify
+type: plugin
+description: >-
+  Custom hook creation helper — scaffolds PreToolUse, PostToolUse, and other event-driven hooks
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify"
+status: active
+tags: [hooks, automation, development, scaffolding]
+install_id: "hookify@claude-plugins-official"
+install_level: user
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

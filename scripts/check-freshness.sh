@@ -29,22 +29,46 @@ check_upstream() {
 
   # For GitHub URLs, check the API for last commit date
   if echo "$upstream" | grep -q "github.com"; then
-    # Extract repo owner/name from URL
+    # Extract repo owner/name from URL — handles both:
+    #   https://github.com/org/repo
+    #   https://github.com/org/repo/tree/main/some/path
     local repo_path
-    repo_path=$(echo "$upstream" | sed -E 's|https://github.com/([^/]+/[^/]+).*|\1|')
+    repo_path=$(echo "$upstream" | sed -E 's|https://github.com/([^/]+/[^/]+)(/.*)?|\1|')
 
-    # Try to get latest commit date via git ls-remote (lightweight, no clone)
-    local remote_date
-    remote_date=$(timeout 5 git ls-remote --sort=-committerdate "https://github.com/$repo_path.git" HEAD 2>/dev/null | head -1 | awk '{print $1}' || echo "")
+    # Extract subpath within repo (for commit checking)
+    local sub_path
+    sub_path=$(echo "$upstream" | sed -E 's|https://github.com/[^/]+/[^/]+(/tree/[^/]+)?(/.*)?|\2|' | sed 's|^/||')
 
-    if [ -z "$remote_date" ]; then
-      echo "  WARN: $name — could not reach upstream ($upstream)"
+    # Try to get latest commit hash via git ls-remote (lightweight, no clone)
+    local remote_hash
+    # Use perl alarm for timeout on macOS (no coreutils timeout)
+    remote_hash=$(perl -e 'alarm 10; exec @ARGV' git ls-remote "https://github.com/$repo_path.git" HEAD 2>/dev/null | head -1 | awk '{print $1}' || echo "")
+
+    if [ -z "$remote_hash" ]; then
+      echo "  WARN: $name — could not reach upstream (repo: $repo_path)"
       ERRORS=$((ERRORS + 1))
       return
     fi
 
-    # We can't easily compare dates from ls-remote, so just report
-    echo "  OK: $name — upstream reachable (last updated locally: $updated)"
+    # Compare local updated date against a staleness threshold (30 days)
+    if [ -n "$updated" ]; then
+      local days_old
+      days_old=$(python3 -c "
+from datetime import datetime, date
+try:
+    d = datetime.strptime('$updated', '%Y-%m-%d').date()
+    print((date.today() - d).days)
+except:
+    print(-1)
+" 2>/dev/null)
+      if [ "$days_old" -gt 30 ]; then
+        echo "  STALE: $name — last updated $updated ($days_old days ago), upstream reachable"
+        STALE=$((STALE + 1))
+        return
+      fi
+    fi
+
+    echo "  OK: $name — upstream reachable, updated $updated"
   else
     echo "  SKIP: $name — non-GitHub upstream, manual check needed"
   fi

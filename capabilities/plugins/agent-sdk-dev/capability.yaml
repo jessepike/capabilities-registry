@@ -1,0 +1,13 @@
+name: agent-sdk-dev
+type: plugin
+description: >-
+  Claude Agent SDK development kit — scaffolding, verifier agents for Python and TypeScript SDK projects
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/agent-sdk-dev"
+status: active
+tags: [agent-sdk, development, scaffolding, python, typescript]
+install_id: "agent-sdk-dev@claude-plugins-official"
+install_level: project
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

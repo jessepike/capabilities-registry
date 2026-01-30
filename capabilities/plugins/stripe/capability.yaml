@@ -1,0 +1,13 @@
+name: stripe
+type: plugin
+description: >-
+  Stripe payments integration via bundled MCP server — payment processing, subscriptions, billing
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/stripe"
+status: active
+tags: [payments, stripe, mcp, backend, billing]
+install_id: "stripe@claude-plugins-official"
+install_level: project
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

@@ -1,0 +1,13 @@
+name: claude-md-management
+type: plugin
+description: >-
+  Audit, improve, and maintain CLAUDE.md files across repositories
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+status: active
+tags: [context, documentation, maintenance, claude-md]
+install_id: "claude-md-management@claude-plugins-official"
+install_level: user
+quality: 90
+added: "2026-01-30"
+updated: "2026-01-30"

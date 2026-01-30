@@ -1,0 +1,13 @@
+name: vercel
+type: plugin
+description: >-
+  Vercel deployment integration via MCP server — deployments, projects, environment variables, logs
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/vercel"
+status: active
+tags: [deployment, vercel, mcp, infrastructure, hosting]
+install_id: "vercel@claude-plugins-official"
+install_level: project
+quality: 85
+added: "2026-01-30"
+updated: "2026-01-30"

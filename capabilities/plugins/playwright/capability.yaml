@@ -1,0 +1,13 @@
+name: playwright
+type: plugin
+description: >-
+  Browser automation via Playwright — navigate, click, fill forms, take screenshots, run code snippets
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+status: active
+tags: [browser, automation, testing, web]
+install_id: "playwright@claude-plugins-official"
+install_level: project
+quality: 90
+added: "2026-01-30"
+updated: "2026-01-30"

@@ -1,16 +1,16 @@
 {
   "version": "1.0",
-  "generated_at": "2026-01-29T13:43:40.521218",
+  "generated_at": "2026-01-30T09:43:30.295934",
   "summary": {
-    "total": 21,
+    "total": 39,
     "by_type": {
-      "plugin": 1,
+      "plugin": 19,
       "skill": 16,
       "tool": 4
     },
     "by_source": {
       "internal": 1,
-      "anthropic": 16,
+      "anthropic": 34,
       "modelcontextprotocol": 4
     }
   },
@@ -32,7 +32,358 @@
       "upstream": "",
       "path": "capabilities/plugins/acm-env",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "agent-sdk-dev",
+      "type": "plugin",
+      "description": "Claude Agent SDK development kit \u2014 scaffolding, verifier agents for Python and TypeScript SDK projects",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "agent-sdk",
+        "development",
+        "scaffolding",
+        "python",
+        "typescript"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/agent-sdk-dev",
+      "path": "capabilities/plugins/agent-sdk-dev",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "claude-code-setup",
+      "type": "plugin",
+      "description": "Analyze codebases and recommend Claude Code automations \u2014 hooks, skills, MCP servers, plugins",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 90,
+      "tags": [
+        "setup",
+        "automation",
+        "recommendations",
+        "onboarding"
+      ],
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/plugins/claude-code-setup",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "claude-md-management",
+      "type": "plugin",
+      "description": "Audit, improve, and maintain CLAUDE.md files across repositories",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 90,
+      "tags": [
+        "context",
+        "documentation",
+        "maintenance",
+        "claude-md"
+      ],
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/plugins/claude-md-management",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "code-review",
+      "type": "plugin",
+      "description": "Automated code review \u2014 analyzes code for quality, patterns, and issues with specialized review agents",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 90,
+      "tags": [
+        "code-review",
+        "quality",
+        "development",
+        "automation"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
+      "path": "capabilities/plugins/code-review",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "commit-commands",
+      "type": "plugin",
+      "description": "Git workflow automation \u2014 commit, push, open PRs, and clean up gone branches",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 90,
+      "tags": [
+        "git",
+        "workflow",
+        "automation",
+        "ci-cd"
+      ],
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/plugins/commit-commands",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "context7",
+      "type": "plugin",
+      "description": "Retrieve up-to-date documentation and code examples for any programming library via Context7",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "documentation",
+        "libraries",
+        "reference",
+        "context"
+      ],
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/plugins/context7",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "feature-dev",
+      "type": "plugin",
+      "description": "Guided feature development workflow \u2014 clarifying questions, codebase analysis, architecture review before implementation",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "development",
+        "workflow",
+        "architecture",
+        "planning"
+      ],
+      "upstream": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev",
+      "path": "capabilities/plugins/feature-dev",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "github",
+      "type": "plugin",
+      "description": "GitHub MCP server integration \u2014 issues, PRs, repos, code search via GitHub API",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "github",
+        "git",
+        "mcp",
+        "source-control",
+        "issues",
+        "pull-requests"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github",
+      "path": "capabilities/plugins/github",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "hookify",
+      "type": "plugin",
+      "description": "Custom hook creation helper \u2014 scaffolds PreToolUse, PostToolUse, and other event-driven hooks",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "hooks",
+        "automation",
+        "development",
+        "scaffolding"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify",
+      "path": "capabilities/plugins/hookify",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "playwright",
+      "type": "plugin",
+      "description": "Browser automation via Playwright \u2014 navigate, click, fill forms, take screenshots, run code snippets",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 90,
+      "tags": [
+        "browser",
+        "automation",
+        "testing",
+        "web"
+      ],
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/plugins/playwright",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "plugin-dev",
+      "type": "plugin",
+      "description": "End-to-end plugin development \u2014 create plugins, skills, agents, hooks, commands, and MCP integrations",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 90,
+      "tags": [
+        "development",
+        "plugins",
+        "skills",
+        "meta",
+        "authoring"
+      ],
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/plugins/plugin-dev",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "pyright-lsp",
+      "type": "plugin",
+      "description": "Python Language Server Protocol via Pyright \u2014 auto-diagnostics, type checking, go-to-definition, find references",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 80,
+      "tags": [
+        "lsp",
+        "python",
+        "diagnostics",
+        "code-navigation",
+        "type-checking"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pyright-lsp",
+      "path": "capabilities/plugins/pyright-lsp",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "ralph-loop",
+      "type": "plugin",
+      "description": "Iterative development loop \u2014 structured review cycles for refining code and artifacts",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "review",
+        "iteration",
+        "development",
+        "quality"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop",
+      "path": "capabilities/plugins/ralph-loop",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "security-guidance",
+      "type": "plugin",
+      "description": "PreToolUse security hook \u2014 detects command injection, XSS, eval, pickle deserialization, and other dangerous patterns",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 90,
+      "tags": [
+        "security",
+        "hooks",
+        "validation",
+        "safety"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+      "path": "capabilities/plugins/security-guidance",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "stripe",
+      "type": "plugin",
+      "description": "Stripe payments integration via bundled MCP server \u2014 payment processing, subscriptions, billing",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "payments",
+        "stripe",
+        "mcp",
+        "backend",
+        "billing"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/stripe",
+      "path": "capabilities/plugins/stripe",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "supabase",
+      "type": "plugin",
+      "description": "Supabase integration via bundled MCP server \u2014 database queries, auth, storage, edge functions",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "database",
+        "backend",
+        "supabase",
+        "mcp",
+        "auth",
+        "storage"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/supabase",
+      "path": "capabilities/plugins/supabase",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "typescript-lsp",
+      "type": "plugin",
+      "description": "TypeScript Language Server Protocol \u2014 auto-diagnostics after edits, go-to-definition, find references, type info",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 75,
+      "tags": [
+        "lsp",
+        "typescript",
+        "diagnostics",
+        "code-navigation"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp",
+      "path": "capabilities/plugins/typescript-lsp",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
+    },
+    {
+      "name": "vercel",
+      "type": "plugin",
+      "description": "Vercel deployment integration via MCP server \u2014 deployments, projects, environment variables, logs",
+      "source": "anthropic",
+      "status": "active",
+      "version": "",
+      "quality": 85,
+      "tags": [
+        "deployment",
+        "vercel",
+        "mcp",
+        "infrastructure",
+        "hosting"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/vercel",
+      "path": "capabilities/plugins/vercel",
+      "added": "2026-01-30",
+      "updated": "2026-01-30"
     },
     {
       "name": "algorithmic-art",

@@ -1,0 +1,13 @@
+name: claude-code-setup
+type: plugin
+description: >-
+  Analyze codebases and recommend Claude Code automations — hooks, skills, MCP servers, plugins
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+status: active
+tags: [setup, automation, recommendations, onboarding]
+install_id: "claude-code-setup@claude-plugins-official"
+install_level: user
+quality: 90
+added: "2026-01-30"
+updated: "2026-01-30"

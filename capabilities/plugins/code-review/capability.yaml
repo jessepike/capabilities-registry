@@ -1,0 +1,13 @@
+name: code-review
+type: plugin
+description: >-
+  Automated code review — analyzes code for quality, patterns, and issues with specialized review agents
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review"
+status: active
+tags: [code-review, quality, development, automation]
+install_id: "code-review@claude-plugins-official"
+install_level: project
+quality: 90
+added: "2026-01-30"
+updated: "2026-01-30"
