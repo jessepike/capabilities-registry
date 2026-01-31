@@ -1,0 +1,12 @@
+name: github-mcp
+type: tool
+description: "GitHub MCP server — repo management, issues, PRs, code search"
+source: anthropic
+status: active
+tags: [mcp, github, vcs, code]
+install_vector: plugin
+parent_plugin: github
+transport: http
+upstream: "https://github.com/anthropics/claude-code-plugins"
+added: "2026-01-31"
+updated: "2026-01-31"

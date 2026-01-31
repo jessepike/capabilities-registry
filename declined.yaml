@@ -3,7 +3,7 @@
 # Sync will skip these. Refresh will report them as "declined" not "new".
 # Remove an entry from this list to re-evaluate it on next refresh.
 
-updated: "2026-01-30"
+updated: "2026-01-31"
 
 declined:
   # MCP tools — redundant with Claude Code built-ins
@@ -27,6 +27,20 @@ declined:
   - name: superpowers
     source: superpowers-dev
     reason: "Third-party, unvetted"
+
+  # MCP tools — deferred or redundant with built-ins
+  - name: memory-mcp
+    source: modelcontextprotocol
+    reason: "Deferred to B18 (memory layer). Not needed for current workflows."
+  - name: filesystem-mcp
+    source: modelcontextprotocol
+    reason: "Redundant — Claude Code has built-in file tools (Read, Write, Edit, Glob, Grep)"
+  - name: everything-mcp
+    source: modelcontextprotocol
+    reason: "Test/reference implementation only. No production use case."
+  - name: sequentialthinking-mcp
+    source: modelcontextprotocol
+    reason: "Redundant — Claude has built-in extended thinking"
 
   # LSP plugins — languages not in use
   - name: clangd-lsp

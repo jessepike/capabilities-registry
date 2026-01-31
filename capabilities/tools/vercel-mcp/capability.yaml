@@ -1,0 +1,12 @@
+name: vercel-mcp
+type: tool
+description: "Vercel MCP server — deployment management, project configuration, domains"
+source: anthropic
+status: active
+tags: [mcp, vercel, deployment, infrastructure]
+install_vector: plugin
+parent_plugin: vercel
+transport: stdio
+upstream: "https://github.com/anthropics/claude-code-plugins"
+added: "2026-01-31"
+updated: "2026-01-31"
