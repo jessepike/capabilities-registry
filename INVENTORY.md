@@ -1,6 +1,6 @@
 # Capability Registry Inventory
 
-*Generated: 2026-01-30 09:43*
+*Generated: 2026-01-31 09:28*
 
 ## Summary
 
@@ -14,9 +14,8 @@
 
 | Source | Count |
 |--------|-------|
-| anthropic | 34 |
+| anthropic | 38 |
 | internal | 1 |
-| modelcontextprotocol | 4 |
 
 ## Plugins
 
@@ -67,10 +66,10 @@
 
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
-| everything-mcp | modelcontextprotocol | 90 | mcp, testing, reference | MCP server that exercises all the features of the MCP protocol |
-| filesystem-mcp | modelcontextprotocol | 75 | mcp, filesystem, io | MCP server for filesystem access |
-| memory-mcp | modelcontextprotocol | 90 | mcp, memory, knowledge-graph | MCP server for enabling memory for Claude through a knowledge graph |
-| sequentialthinking-mcp | modelcontextprotocol | 90 | mcp, reasoning, thinking | MCP server for sequential thinking and problem solving |
+| github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
+| stripe-mcp | anthropic | 0 | mcp, stripe, payments, billing | Stripe MCP server — payments, subscriptions, billing management |
+| supabase-mcp | anthropic | 0 | mcp, supabase, database, backend | Supabase MCP server — database management, auth, storage, edge functions |
+| vercel-mcp | anthropic | 0 | mcp, vercel, deployment, infrastructure | Vercel MCP server — deployment management, project configuration, domains |
 
 ## Tags Index
 
@@ -83,14 +82,15 @@
 - **auth**: supabase
 - **authoring**: plugin-dev
 - **automation**: claude-code-setup, code-review, commit-commands, hookify, playwright
-- **backend**: stripe, supabase
-- **billing**: stripe
+- **backend**: stripe, supabase, supabase-mcp
+- **billing**: stripe, stripe-mcp
 - **branding**: brand-guidelines
 - **browser**: playwright
 - **business**: internal-comms
 - **canvas**: canvas-design
 - **ci-cd**: commit-commands
 - **claude-md**: claude-md-management
+- **code**: github-mcp
 - **code-navigation**: pyright-lsp, typescript-lsp
 - **code-review**: code-review
 - **collaboration**: doc-coauthoring
@@ -99,8 +99,8 @@
 - **context**: claude-md-management, context7
 - **creative**: algorithmic-art, slack-gif-creator
 - **css**: frontend-design, theme-factory
-- **database**: supabase
-- **deployment**: vercel
+- **database**: supabase, supabase-mcp
+- **deployment**: vercel, vercel-mcp
 - **design**: brand-guidelines, canvas-design, frontend-design, theme-factory
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
@@ -108,32 +108,28 @@
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
 - **docx**: docx
 - **environment**: acm-env
-- **filesystem**: filesystem-mcp
 - **frontend**: frontend-design
 - **generative**: algorithmic-art
 - **gif**: slack-gif-creator
 - **git**: commit-commands, github
-- **github**: github
+- **github**: github, github-mcp
 - **graphics**: canvas-design
 - **guidelines**: brand-guidelines
 - **hooks**: hookify, security-guidance
 - **hosting**: vercel
 - **html**: web-artifacts-builder
-- **infrastructure**: vercel
-- **io**: filesystem-mcp
+- **infrastructure**: vercel, vercel-mcp
 - **issues**: github
 - **iteration**: ralph-loop
 - **javascript**: web-artifacts-builder
-- **knowledge-graph**: memory-mcp
 - **libraries**: context7
 - **lsp**: pyright-lsp, typescript-lsp
 - **maintenance**: acm-env, claude-md-management
-- **mcp**: everything-mcp, filesystem-mcp, github, mcp-builder, memory-mcp, sequentialthinking-mcp, stripe, supabase, vercel
-- **memory**: memory-mcp
+- **mcp**: github, github-mcp, mcp-builder, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp
 - **meta**: plugin-dev, skill-creator
 - **onboarding**: claude-code-setup
 - **p5js**: algorithmic-art
-- **payments**: stripe
+- **payments**: stripe, stripe-mcp
 - **pdf**: pdf
 - **planning**: feature-dev
 - **plugins**: plugin-dev
@@ -143,9 +139,8 @@
 - **python**: agent-sdk-dev, pyright-lsp
 - **qa**: webapp-testing
 - **quality**: code-review, ralph-loop
-- **reasoning**: sequentialthinking-mcp
 - **recommendations**: claude-code-setup
-- **reference**: context7, everything-mcp
+- **reference**: context7
 - **review**: ralph-loop
 - **safety**: security-guidance
 - **scaffolding**: agent-sdk-dev, hookify
@@ -156,17 +151,17 @@
 - **source-control**: github
 - **spreadsheets**: xlsx
 - **storage**: supabase
-- **stripe**: stripe
-- **supabase**: supabase
-- **testing**: everything-mcp, playwright, webapp-testing
+- **stripe**: stripe, stripe-mcp
+- **supabase**: supabase, supabase-mcp
+- **testing**: playwright, webapp-testing
 - **themes**: theme-factory
-- **thinking**: sequentialthinking-mcp
 - **tools**: mcp-builder
 - **type-checking**: pyright-lsp
 - **typescript**: agent-sdk-dev, typescript-lsp
 - **ui**: canvas-design, frontend-design, theme-factory
 - **validation**: acm-env, security-guidance
-- **vercel**: vercel
+- **vcs**: github-mcp
+- **vercel**: vercel, vercel-mcp
 - **web**: playwright, web-artifacts-builder, webapp-testing
 - **word**: docx
 - **workflow**: commit-commands, feature-dev

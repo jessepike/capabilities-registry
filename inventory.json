@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-01-30T09:43:30.295934",
+  "generated_at": "2026-01-31T09:28:42.203408",
   "summary": {
     "total": 39,
     "by_type": {
@@ -10,8 +10,7 @@
     },
     "by_source": {
       "internal": 1,
-      "anthropic": 34,
-      "modelcontextprotocol": 4
+      "anthropic": 38
     }
   },
   "capabilities": [
@@ -68,7 +67,7 @@
         "recommendations",
         "onboarding"
       ],
-      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/claude-code-setup",
       "added": "2026-01-30",
       "updated": "2026-01-30"
@@ -87,7 +86,7 @@
         "maintenance",
         "claude-md"
       ],
-      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/claude-md-management",
       "added": "2026-01-30",
       "updated": "2026-01-30"
@@ -125,7 +124,7 @@
         "automation",
         "ci-cd"
       ],
-      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/commit-commands",
       "added": "2026-01-30",
       "updated": "2026-01-30"
@@ -144,7 +143,7 @@
         "reference",
         "context"
       ],
-      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/context7",
       "added": "2026-01-30",
       "updated": "2026-01-30"
@@ -222,7 +221,7 @@
         "testing",
         "web"
       ],
-      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/playwright",
       "added": "2026-01-30",
       "updated": "2026-01-30"
@@ -242,7 +241,7 @@
         "meta",
         "authoring"
       ],
-      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/plugin-dev",
       "added": "2026-01-30",
       "updated": "2026-01-30"
@@ -680,76 +679,80 @@
       "updated": "2026-01-29"
     },
     {
-      "name": "everything-mcp",
+      "name": "github-mcp",
       "type": "tool",
-      "description": "MCP server that exercises all the features of the MCP protocol",
-      "source": "modelcontextprotocol",
+      "description": "GitHub MCP server \u2014 repo management, issues, PRs, code search",
+      "source": "anthropic",
       "status": "active",
-      "version": "20260122.1",
-      "quality": 90,
+      "version": "",
+      "quality": 0,
       "tags": [
         "mcp",
-        "testing",
-        "reference"
+        "github",
+        "vcs",
+        "code"
       ],
-      "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
-      "path": "capabilities/tools/everything-mcp",
-      "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/tools/github-mcp",
+      "added": "2026-01-31",
+      "updated": "2026-01-31"
     },
     {
-      "name": "filesystem-mcp",
+      "name": "stripe-mcp",
       "type": "tool",
-      "description": "MCP server for filesystem access",
-      "source": "modelcontextprotocol",
+      "description": "Stripe MCP server \u2014 payments, subscriptions, billing management",
+      "source": "anthropic",
       "status": "active",
-      "version": "20260122.1",
-      "quality": 75,
+      "version": "",
+      "quality": 0,
       "tags": [
         "mcp",
-        "filesystem",
-        "io"
+        "stripe",
+        "payments",
+        "billing"
       ],
-      "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
-      "path": "capabilities/tools/filesystem-mcp",
-      "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/tools/stripe-mcp",
+      "added": "2026-01-31",
+      "updated": "2026-01-31"
     },
     {
-      "name": "memory-mcp",
+      "name": "supabase-mcp",
       "type": "tool",
-      "description": "MCP server for enabling memory for Claude through a knowledge graph",
-      "source": "modelcontextprotocol",
+      "description": "Supabase MCP server \u2014 database management, auth, storage, edge functions",
+      "source": "anthropic",
       "status": "active",
-      "version": "20260122.1",
-      "quality": 90,
+      "version": "",
+      "quality": 0,
       "tags": [
         "mcp",
-        "memory",
-        "knowledge-graph"
+        "supabase",
+        "database",
+        "backend"
       ],
-      "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
-      "path": "capabilities/tools/memory-mcp",
-      "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/tools/supabase-mcp",
+      "added": "2026-01-31",
+      "updated": "2026-01-31"
     },
     {
-      "name": "sequentialthinking-mcp",
+      "name": "vercel-mcp",
       "type": "tool",
-      "description": "MCP server for sequential thinking and problem solving",
-      "source": "modelcontextprotocol",
+      "description": "Vercel MCP server \u2014 deployment management, project configuration, domains",
+      "source": "anthropic",
       "status": "active",
-      "version": "20260123.1",
-      "quality": 90,
+      "version": "",
+      "quality": 0,
       "tags": [
         "mcp",
-        "reasoning",
-        "thinking"
+        "vercel",
+        "deployment",
+        "infrastructure"
       ],
-      "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
-      "path": "capabilities/tools/sequentialthinking-mcp",
-      "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "upstream": "https://github.com/anthropics/claude-code-plugins",
+      "path": "capabilities/tools/vercel-mcp",
+      "added": "2026-01-31",
+      "updated": "2026-01-31"
     }
   ]
 }
