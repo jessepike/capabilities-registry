@@ -1,7 +1,7 @@
 ---
 type: "specification"
 description: "Defines the capability registry — structure, types, lifecycle, and data flow"
-version: "1.1.0"
+version: "1.2.0"
 updated: "2026-01-30"
 lifecycle: "reference"
 ---
@@ -88,10 +88,15 @@ updated: "2026-01-29"
 ```yaml
 upstream: "https://github.com/..."   # Upstream source URL
 version: "20260123.1"                # Version identifier
-quality: 100                         # 0-100 quality score
+quality: 100                         # 0-100 quality score (subjective; see quality note below)
 content_fingerprint: "sha256:..."    # Content hash for change detection
 install_id: "name@registry"          # Plugin/MCP install identifier (e.g., "commit-commands@claude-plugins-official")
 install_level: project               # Recommended install level: user | project
+
+# MCP-specific fields (type: tool only)
+install_vector: standalone           # standalone | plugin — how the MCP server is installed
+parent_plugin: null                  # Plugin name when install_vector: plugin
+transport: stdio                     # stdio | http | sse — MCP transport protocol
 ```
 
 ---
@@ -173,12 +178,15 @@ Promotion from staging to active is a separate manual step via `promote.sh`.
 
 ### Sources
 
-Currently: Anthropic official only. Community sources are future backlog.
+Community sources are scanned weekly via `/acm-env:refresh`. New discoveries land in `inbox/mcp-triage.md` for human review.
 
 | Source | URL | Types |
 |--------|-----|-------|
 | anthropic | `https://github.com/anthropics/skills` | Skills, Plugins |
 | modelcontextprotocol | `https://github.com/modelcontextprotocol/servers` | Tools |
+| mcp-registry | `registry.modelcontextprotocol.io` | Tools |
+| awesome-mcp | `github.com/wong2/awesome-mcp-servers` | Tools |
+| mcp-market | `mcpmarket.com` | Tools |
 
 ---
 
