@@ -42,6 +42,26 @@ declined:
     source: modelcontextprotocol
     reason: "Redundant — Claude has built-in extended thinking"
 
+  # Plugins — no use case, unwanted MCP servers
+  - name: asana
+    source: anthropic
+    reason: "No Asana usage"
+  - name: firebase
+    source: anthropic
+    reason: "No Firebase projects"
+  - name: gitlab
+    source: anthropic
+    reason: "GitHub only — no GitLab usage"
+  - name: laravel-boost
+    source: anthropic
+    reason: "No Laravel/PHP projects"
+  - name: linear
+    source: anthropic
+    reason: "No Linear usage"
+  - name: slack
+    source: anthropic
+    reason: "No Slack integration needed"
+
   # LSP plugins — languages not in use
   - name: clangd-lsp
     source: anthropic
