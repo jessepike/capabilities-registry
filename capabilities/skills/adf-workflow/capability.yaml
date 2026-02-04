@@ -1,0 +1,14 @@
+name: adf-workflow
+type: skill
+description: >-
+  ADF Workflow Skill — companion skill that teaches agents when and how to use ADF MCP server tools. Provides narrative workflow instructions for stage transitions, reviews, and artifact management.
+source: internal
+upstream: "https://github.com/jessepike/adf"
+version: "1.0.0"
+quality: 100
+tags: [workflow, adf, orchestration, stages, guidance]
+status: active
+install_id: null
+install_level: null
+added: "2026-02-04"
+updated: "2026-02-04"

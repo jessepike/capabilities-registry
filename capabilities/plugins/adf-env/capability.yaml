@@ -1,0 +1,14 @@
+name: adf-env
+type: plugin
+description: >-
+  ADF Environment Manager — manages Claude Code environment across user and project layers, validates session discipline, runs health checks
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "2.1.0"
+quality: 100
+tags: [environment, maintenance, validation, adf, session-discipline]
+status: active
+install_id: "adf-env@adf-plugins"
+install_level: user
+added: "2026-01-29"
+updated: "2026-02-04"

@@ -1,0 +1,16 @@
+name: external-review
+type: skill
+description: >-
+  External Review MCP Server — sends artifacts to external LLM models (GPT, Gemini, Kimi) for independent review. Provides list_models and review tools with parallel execution and cost tracking.
+source: internal
+upstream: "https://github.com/jessepike/adf"
+version: "1.0.0"
+quality: 100
+tags: [review, mcp, external, multi-model, validation]
+status: active
+install_vector: mcp
+transport: stdio
+install_id: "external-review"
+install_level: project
+added: "2026-02-04"
+updated: "2026-02-04"

@@ -1,0 +1,17 @@
+name: adf-server
+type: tool
+description: >-
+  ADF MCP Server — read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation.
+source: internal
+upstream: "https://github.com/jessepike/adf"
+version: "1.0.0"
+quality: 100
+tags: [mcp, adf, orchestration, specs, review, validation]
+status: active
+install_vector: mcp
+transport: stdio
+parent_plugin: null
+install_id: "adf-server"
+install_level: project
+added: "2026-02-04"
+updated: "2026-02-04"

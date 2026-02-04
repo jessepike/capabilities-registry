@@ -1,37 +1,58 @@
 {
   "version": "1.0",
-  "generated_at": "2026-01-31T09:28:42.203408",
+  "generated_at": "2026-02-04T12:06:25.547806",
   "summary": {
-    "total": 39,
+    "total": 44,
     "by_type": {
-      "plugin": 19,
-      "skill": 16,
-      "tool": 4
+      "plugin": 20,
+      "skill": 19,
+      "tool": 5
     },
     "by_source": {
-      "internal": 1,
+      "internal": 6,
       "anthropic": 38
     }
   },
   "capabilities": [
     {
-      "name": "acm-env",
+      "name": "adf-env",
       "type": "plugin",
-      "description": "Agentic Development Environment Manager \u2014 manages Claude Code environment across user and project layers",
+      "description": "ADF Environment Manager \u2014 manages Claude Code environment across user and project layers, validates session discipline, runs health checks",
       "source": "internal",
       "status": "active",
-      "version": "1.0.0",
+      "version": "2.1.0",
       "quality": 100,
       "tags": [
         "environment",
         "maintenance",
         "validation",
-        "acm"
+        "adf",
+        "session-discipline"
       ],
-      "upstream": "",
-      "path": "capabilities/plugins/acm-env",
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/plugins/adf-env",
       "added": "2026-01-29",
-      "updated": "2026-01-30"
+      "updated": "2026-02-04"
+    },
+    {
+      "name": "adf-review",
+      "type": "plugin",
+      "description": "ADF Review Plugin \u2014 provides slash commands for artifact reviews (/adf-review:artifact, /adf-review:artifact-internal, /adf-review:artifact-external). Wraps the adf-review skill with convenient command interface.",
+      "source": "internal",
+      "status": "active",
+      "version": "2.0.1",
+      "quality": 100,
+      "tags": [
+        "review",
+        "adf",
+        "validation",
+        "commands",
+        "ralph-loop"
+      ],
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/plugins/adf-review",
+      "added": "2026-02-04",
+      "updated": "2026-02-04"
     },
     {
       "name": "agent-sdk-dev",
@@ -385,6 +406,46 @@
       "updated": "2026-01-30"
     },
     {
+      "name": "adf-review",
+      "type": "skill",
+      "description": "ADF Review Skill \u2014 orchestrates two-phase artifact reviews (internal Ralph Loop + external multi-model). Unified entry point for all ADF review processes.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "review",
+        "adf",
+        "validation",
+        "quality",
+        "ralph-loop"
+      ],
+      "upstream": "https://github.com/jessepike/adf",
+      "path": "capabilities/skills/adf-review",
+      "added": "2026-02-04",
+      "updated": "2026-02-04"
+    },
+    {
+      "name": "adf-workflow",
+      "type": "skill",
+      "description": "ADF Workflow Skill \u2014 companion skill that teaches agents when and how to use ADF MCP server tools. Provides narrative workflow instructions for stage transitions, reviews, and artifact management.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "workflow",
+        "adf",
+        "orchestration",
+        "stages",
+        "guidance"
+      ],
+      "upstream": "https://github.com/jessepike/adf",
+      "path": "capabilities/skills/adf-workflow",
+      "added": "2026-02-04",
+      "updated": "2026-02-04"
+    },
+    {
       "name": "algorithmic-art",
       "type": "skill",
       "description": "Creating algorithmic art using p5.js with seeded randomness and interactive",
@@ -475,6 +536,26 @@
       "path": "capabilities/skills/docx",
       "added": "2026-01-29",
       "updated": "2026-01-29"
+    },
+    {
+      "name": "external-review",
+      "type": "skill",
+      "description": "External Review MCP Server \u2014 sends artifacts to external LLM models (GPT, Gemini, Kimi) for independent review. Provides list_models and review tools with parallel execution and cost tracking.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "review",
+        "mcp",
+        "external",
+        "multi-model",
+        "validation"
+      ],
+      "upstream": "https://github.com/jessepike/adf",
+      "path": "capabilities/skills/external-review",
+      "added": "2026-02-04",
+      "updated": "2026-02-04"
     },
     {
       "name": "frontend-design",
@@ -677,6 +758,27 @@
       "path": "capabilities/skills/xlsx",
       "added": "2026-01-29",
       "updated": "2026-01-29"
+    },
+    {
+      "name": "adf-server",
+      "type": "tool",
+      "description": "ADF MCP Server \u2014 read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "mcp",
+        "adf",
+        "orchestration",
+        "specs",
+        "review",
+        "validation"
+      ],
+      "upstream": "https://github.com/jessepike/adf",
+      "path": "capabilities/tools/adf-server",
+      "added": "2026-02-04",
+      "updated": "2026-02-04"
     },
     {
       "name": "github-mcp",

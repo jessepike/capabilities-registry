@@ -1,0 +1,14 @@
+name: adf-review
+type: plugin
+description: >-
+  ADF Review Plugin — provides slash commands for artifact reviews (/adf-review:artifact, /adf-review:artifact-internal, /adf-review:artifact-external). Wraps the adf-review skill with convenient command interface.
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "2.0.1"
+quality: 100
+tags: [review, adf, validation, commands, ralph-loop]
+status: active
+install_id: "adf-review@adf-plugins"
+install_level: user
+added: "2026-02-04"
+updated: "2026-02-04"

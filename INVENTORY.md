@@ -1,27 +1,28 @@
 # Capability Registry Inventory
 
-*Generated: 2026-01-31 09:28*
+*Generated: 2026-02-04 12:06*
 
 ## Summary
 
-**Total capabilities:** 39
+**Total capabilities:** 44
 
 | Type | Count |
 |------|-------|
-| plugin | 19 |
-| skill | 16 |
-| tool | 4 |
+| plugin | 20 |
+| skill | 19 |
+| tool | 5 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 38 |
-| internal | 1 |
+| internal | 6 |
 
 ## Plugins
 
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
-| acm-env | internal | 100 | environment, maintenance, validation, acm | Agentic Development Environment Manager — manages Claude Code environment across user and project layers |
+| adf-env | internal | 100 | environment, maintenance, validation, adf, session-discipline | ADF Environment Manager — manages Claude Code environment across user and project layers, validates session discipline, runs health checks |
+| adf-review | internal | 100 | review, adf, validation, commands, ralph-loop | ADF Review Plugin — provides slash commands for artifact reviews (/adf-review:artifact, /adf-review:artifact-internal, /adf-review:artifact-external). Wraps the adf-review skill with convenient command interface. |
 | agent-sdk-dev | anthropic | 85 | agent-sdk, development, scaffolding, python, typescript | Claude Agent SDK development kit — scaffolding, verifier agents for Python and TypeScript SDK projects |
 | claude-code-setup | anthropic | 90 | setup, automation, recommendations, onboarding | Analyze codebases and recommend Claude Code automations — hooks, skills, MCP servers, plugins |
 | claude-md-management | anthropic | 90 | context, documentation, maintenance, claude-md | Audit, improve, and maintain CLAUDE.md files across repositories |
@@ -45,11 +46,14 @@
 
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
+| adf-review | internal | 100 | review, adf, validation, quality, ralph-loop | ADF Review Skill — orchestrates two-phase artifact reviews (internal Ralph Loop + external multi-model). Unified entry point for all ADF review processes. |
+| adf-workflow | internal | 100 | workflow, adf, orchestration, stages, guidance | ADF Workflow Skill — companion skill that teaches agents when and how to use ADF MCP server tools. Provides narrative workflow instructions for stage transitions, reviews, and artifact management. |
 | algorithmic-art | anthropic | 100 | art, generative, p5js, creative | Creating algorithmic art using p5.js with seeded randomness and interactive |
 | brand-guidelines | anthropic | 100 | design, branding, guidelines | Applies Anthropic's official brand colors and typography to any sort |
 | canvas-design | anthropic | 100 | ui, design, canvas, graphics | Create beautiful visual art in .png and .pdf documents using design philosophy. |
 | doc-coauthoring | anthropic | 100 | documents, writing, collaboration | Guide users through a structured workflow for co-authoring documentation. |
 | docx | anthropic | 100 | documents, docx, word | 'Comprehensive document creation, editing, and analysis with support |
+| external-review | internal | 100 | review, mcp, external, multi-model, validation | External Review MCP Server — sends artifacts to external LLM models (GPT, Gemini, Kimi) for independent review. Provides list_models and review tools with parallel execution and cost tracking. |
 | frontend-design | anthropic | 100 | ui, frontend, design, css, components | Create distinctive, production-grade frontend interfaces with high design |
 | internal-comms | anthropic | 100 | writing, communications, business | A set of resources to help me write all kinds of internal communications, |
 | mcp-builder | anthropic | 100 | mcp, development, tools | Guide for creating high-quality MCP (Model Context Protocol) servers |
@@ -66,6 +70,7 @@
 
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
+| adf-server | internal | 100 | mcp, adf, orchestration, specs, review, validation | ADF MCP Server — read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation. |
 | github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
 | stripe-mcp | anthropic | 0 | mcp, stripe, payments, billing | Stripe MCP server — payments, subscriptions, billing management |
 | supabase-mcp | anthropic | 0 | mcp, supabase, database, backend | Supabase MCP server — database management, auth, storage, edge functions |
@@ -73,7 +78,7 @@
 
 ## Tags Index
 
-- **acm**: acm-env
+- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow
 - **agent-sdk**: agent-sdk-dev
 - **animation**: slack-gif-creator
 - **architecture**: feature-dev
@@ -94,6 +99,7 @@
 - **code-navigation**: pyright-lsp, typescript-lsp
 - **code-review**: code-review
 - **collaboration**: doc-coauthoring
+- **commands**: adf-review
 - **communications**: internal-comms
 - **components**: frontend-design
 - **context**: claude-md-management, context7
@@ -107,13 +113,15 @@
 - **documentation**: claude-md-management, context7
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
 - **docx**: docx
-- **environment**: acm-env
+- **environment**: adf-env
+- **external**: external-review
 - **frontend**: frontend-design
 - **generative**: algorithmic-art
 - **gif**: slack-gif-creator
 - **git**: commit-commands, github
 - **github**: github, github-mcp
 - **graphics**: canvas-design
+- **guidance**: adf-workflow
 - **guidelines**: brand-guidelines
 - **hooks**: hookify, security-guidance
 - **hosting**: vercel
@@ -124,10 +132,12 @@
 - **javascript**: web-artifacts-builder
 - **libraries**: context7
 - **lsp**: pyright-lsp, typescript-lsp
-- **maintenance**: acm-env, claude-md-management
-- **mcp**: github, github-mcp, mcp-builder, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp
+- **maintenance**: adf-env, claude-md-management
+- **mcp**: adf-server, external-review, github, github-mcp, mcp-builder, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp
 - **meta**: plugin-dev, skill-creator
+- **multi-model**: external-review
 - **onboarding**: claude-code-setup
+- **orchestration**: adf-server, adf-workflow
 - **p5js**: algorithmic-art
 - **payments**: stripe, stripe-mcp
 - **pdf**: pdf
@@ -138,18 +148,22 @@
 - **pull-requests**: github
 - **python**: agent-sdk-dev, pyright-lsp
 - **qa**: webapp-testing
-- **quality**: code-review, ralph-loop
+- **quality**: adf-review, code-review, ralph-loop
+- **ralph-loop**: adf-review, adf-review
 - **recommendations**: claude-code-setup
 - **reference**: context7
-- **review**: ralph-loop
+- **review**: adf-review, adf-review, adf-server, external-review, ralph-loop
 - **safety**: security-guidance
 - **scaffolding**: agent-sdk-dev, hookify
 - **security**: security-guidance
+- **session-discipline**: adf-env
 - **setup**: claude-code-setup
 - **skills**: plugin-dev, skill-creator
 - **slack**: slack-gif-creator
 - **source-control**: github
+- **specs**: adf-server
 - **spreadsheets**: xlsx
+- **stages**: adf-workflow
 - **storage**: supabase
 - **stripe**: stripe, stripe-mcp
 - **supabase**: supabase, supabase-mcp
@@ -159,11 +173,11 @@
 - **type-checking**: pyright-lsp
 - **typescript**: agent-sdk-dev, typescript-lsp
 - **ui**: canvas-design, frontend-design, theme-factory
-- **validation**: acm-env, security-guidance
+- **validation**: adf-env, adf-review, adf-review, adf-server, external-review, security-guidance
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp
 - **web**: playwright, web-artifacts-builder, webapp-testing
 - **word**: docx
-- **workflow**: commit-commands, feature-dev
+- **workflow**: adf-workflow, commit-commands, feature-dev
 - **writing**: doc-coauthoring, internal-comms
 - **xlsx**: xlsx

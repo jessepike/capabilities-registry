@@ -1,0 +1,14 @@
+name: adf-review
+type: skill
+description: >-
+  ADF Review Skill — orchestrates two-phase artifact reviews (internal Ralph Loop + external multi-model). Unified entry point for all ADF review processes.
+source: internal
+upstream: "https://github.com/jessepike/adf"
+version: "1.0.0"
+quality: 100
+tags: [review, adf, validation, quality, ralph-loop]
+status: active
+install_id: null
+install_level: null
+added: "2026-02-04"
+updated: "2026-02-04"
