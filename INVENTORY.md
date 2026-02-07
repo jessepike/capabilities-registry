@@ -1,21 +1,28 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-04 12:06*
+*Generated: 2026-02-07 08:52*
 
 ## Summary
 
-**Total capabilities:** 44
+**Total capabilities:** 48
 
 | Type | Count |
 |------|-------|
-| plugin | 20 |
+| agent | 1 |
+| plugin | 22 |
 | skill | 19 |
-| tool | 5 |
+| tool | 6 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 38 |
-| internal | 6 |
+| internal | 10 |
+
+## Agents
+
+| Name | Source | Quality | Tags | Description |
+|------|--------|---------|------|-------------|
+| doc-mgr | internal | 90 | documentation, maintenance, validation, lifecycle, planning | Documentation Specialist Agent — plans, creates, validates, and maintains project documentation throughout the development lifecycle. Handles documentation audits, post-implementation docs, and knowledge alignment. |
 
 ## Plugins
 
@@ -32,6 +39,8 @@
 | feature-dev | anthropic | 85 | development, workflow, architecture, planning | Guided feature development workflow — clarifying questions, codebase analysis, architecture review before implementation |
 | github | anthropic | 85 | github, git, mcp, source-control, issues, pull-requests | GitHub MCP server integration — issues, PRs, repos, code search via GitHub API |
 | hookify | anthropic | 85 | hooks, automation, development, scaffolding | Custom hook creation helper — scaffolds PreToolUse, PostToolUse, and other event-driven hooks |
+| kb-manager | internal | 95 | knowledge-base, intelligence, curation, synthesis, content-pipeline, adf | Knowledge Base Intelligence Layer — digest, curate, synthesize, recommend, and manage content pipeline from KB data. Provides slash commands (/kb:digest, /kb:curate, /kb:recommend, /kb:capture) and a kb-manager agent. |
+| link-triage | internal | 90 | pipeline, triage, links, content, automation | Link Triage Pipeline — operate the link triage pipeline with run, backfill, status check, and collection listing. Project-scoped plugin for the link-triage-pipeline repo. |
 | playwright | anthropic | 90 | browser, automation, testing, web | Browser automation via Playwright — navigate, click, fill forms, take screenshots, run code snippets |
 | plugin-dev | anthropic | 90 | development, plugins, skills, meta, authoring | End-to-end plugin development — create plugins, skills, agents, hooks, commands, and MCP integrations |
 | pyright-lsp | anthropic | 80 | lsp, python, diagnostics, code-navigation, type-checking | Python Language Server Protocol via Pyright — auto-diagnostics, type checking, go-to-definition, find references |
@@ -72,13 +81,14 @@
 |------|--------|---------|------|-------------|
 | adf-server | internal | 100 | mcp, adf, orchestration, specs, review, validation | ADF MCP Server — read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation. |
 | github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
+| knowledge-base | internal | 95 | mcp, knowledge-base, semantic-search, content, intelligence | Knowledge Base MCP Server — semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle. |
 | stripe-mcp | anthropic | 0 | mcp, stripe, payments, billing | Stripe MCP server — payments, subscriptions, billing management |
 | supabase-mcp | anthropic | 0 | mcp, supabase, database, backend | Supabase MCP server — database management, auth, storage, edge functions |
 | vercel-mcp | anthropic | 0 | mcp, vercel, deployment, infrastructure | Vercel MCP server — deployment management, project configuration, domains |
 
 ## Tags Index
 
-- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow
+- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, kb-manager
 - **agent-sdk**: agent-sdk-dev
 - **animation**: slack-gif-creator
 - **architecture**: feature-dev
@@ -86,7 +96,7 @@
 - **artifacts**: web-artifacts-builder
 - **auth**: supabase
 - **authoring**: plugin-dev
-- **automation**: claude-code-setup, code-review, commit-commands, hookify, playwright
+- **automation**: claude-code-setup, code-review, commit-commands, hookify, link-triage, playwright
 - **backend**: stripe, supabase, supabase-mcp
 - **billing**: stripe, stripe-mcp
 - **branding**: brand-guidelines
@@ -102,15 +112,18 @@
 - **commands**: adf-review
 - **communications**: internal-comms
 - **components**: frontend-design
+- **content**: knowledge-base, link-triage
+- **content-pipeline**: kb-manager
 - **context**: claude-md-management, context7
 - **creative**: algorithmic-art, slack-gif-creator
 - **css**: frontend-design, theme-factory
+- **curation**: kb-manager
 - **database**: supabase, supabase-mcp
 - **deployment**: vercel, vercel-mcp
 - **design**: brand-guidelines, canvas-design, frontend-design, theme-factory
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
-- **documentation**: claude-md-management, context7
+- **documentation**: claude-md-management, context7, doc-mgr
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
 - **docx**: docx
 - **environment**: adf-env
@@ -127,13 +140,17 @@
 - **hosting**: vercel
 - **html**: web-artifacts-builder
 - **infrastructure**: vercel, vercel-mcp
+- **intelligence**: kb-manager, knowledge-base
 - **issues**: github
 - **iteration**: ralph-loop
 - **javascript**: web-artifacts-builder
+- **knowledge-base**: kb-manager, knowledge-base
 - **libraries**: context7
+- **lifecycle**: doc-mgr
+- **links**: link-triage
 - **lsp**: pyright-lsp, typescript-lsp
-- **maintenance**: adf-env, claude-md-management
-- **mcp**: adf-server, external-review, github, github-mcp, mcp-builder, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp
+- **maintenance**: adf-env, claude-md-management, doc-mgr
+- **mcp**: adf-server, external-review, github, github-mcp, knowledge-base, mcp-builder, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp
 - **meta**: plugin-dev, skill-creator
 - **multi-model**: external-review
 - **onboarding**: claude-code-setup
@@ -141,7 +158,8 @@
 - **p5js**: algorithmic-art
 - **payments**: stripe, stripe-mcp
 - **pdf**: pdf
-- **planning**: feature-dev
+- **pipeline**: link-triage
+- **planning**: doc-mgr, feature-dev
 - **plugins**: plugin-dev
 - **pptx**: pptx
 - **presentations**: pptx
@@ -156,6 +174,7 @@
 - **safety**: security-guidance
 - **scaffolding**: agent-sdk-dev, hookify
 - **security**: security-guidance
+- **semantic-search**: knowledge-base
 - **session-discipline**: adf-env
 - **setup**: claude-code-setup
 - **skills**: plugin-dev, skill-creator
@@ -167,13 +186,15 @@
 - **storage**: supabase
 - **stripe**: stripe, stripe-mcp
 - **supabase**: supabase, supabase-mcp
+- **synthesis**: kb-manager
 - **testing**: playwright, webapp-testing
 - **themes**: theme-factory
 - **tools**: mcp-builder
+- **triage**: link-triage
 - **type-checking**: pyright-lsp
 - **typescript**: agent-sdk-dev, typescript-lsp
 - **ui**: canvas-design, frontend-design, theme-factory
-- **validation**: adf-env, adf-review, adf-review, adf-server, external-review, security-guidance
+- **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, external-review, security-guidance
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp
 - **web**: playwright, web-artifacts-builder, webapp-testing

@@ -1,19 +1,40 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-04T12:06:25.547806",
+  "generated_at": "2026-02-07T08:52:03.089753",
   "summary": {
-    "total": 44,
+    "total": 48,
     "by_type": {
-      "plugin": 20,
+      "agent": 1,
+      "plugin": 22,
       "skill": 19,
-      "tool": 5
+      "tool": 6
     },
     "by_source": {
-      "internal": 6,
+      "internal": 10,
       "anthropic": 38
     }
   },
   "capabilities": [
+    {
+      "name": "doc-mgr",
+      "type": "agent",
+      "description": "Documentation Specialist Agent \u2014 plans, creates, validates, and maintains project documentation throughout the development lifecycle. Handles documentation audits, post-implementation docs, and knowledge alignment.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "documentation",
+        "maintenance",
+        "validation",
+        "lifecycle",
+        "planning"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/doc-mgr",
+      "added": "2026-02-07",
+      "updated": "2026-02-07"
+    },
     {
       "name": "adf-env",
       "type": "plugin",
@@ -227,6 +248,47 @@
       "path": "capabilities/plugins/hookify",
       "added": "2026-01-30",
       "updated": "2026-01-30"
+    },
+    {
+      "name": "kb-manager",
+      "type": "plugin",
+      "description": "Knowledge Base Intelligence Layer \u2014 digest, curate, synthesize, recommend, and manage content pipeline from KB data. Provides slash commands (/kb:digest, /kb:curate, /kb:recommend, /kb:capture) and a kb-manager agent.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "knowledge-base",
+        "intelligence",
+        "curation",
+        "synthesis",
+        "content-pipeline",
+        "adf"
+      ],
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/plugins/kb-manager",
+      "added": "2026-02-07",
+      "updated": "2026-02-07"
+    },
+    {
+      "name": "link-triage",
+      "type": "plugin",
+      "description": "Link Triage Pipeline \u2014 operate the link triage pipeline with run, backfill, status check, and collection listing. Project-scoped plugin for the link-triage-pipeline repo.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "pipeline",
+        "triage",
+        "links",
+        "content",
+        "automation"
+      ],
+      "upstream": "https://github.com/jessepike/link-triage-pipeline",
+      "path": "capabilities/plugins/link-triage",
+      "added": "2026-02-07",
+      "updated": "2026-02-07"
     },
     {
       "name": "playwright",
@@ -798,6 +860,26 @@
       "path": "capabilities/tools/github-mcp",
       "added": "2026-01-31",
       "updated": "2026-01-31"
+    },
+    {
+      "name": "knowledge-base",
+      "type": "tool",
+      "description": "Knowledge Base MCP Server \u2014 semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "mcp",
+        "knowledge-base",
+        "semantic-search",
+        "content",
+        "intelligence"
+      ],
+      "upstream": "https://github.com/jessepike/knowledge-base",
+      "path": "capabilities/tools/knowledge-base",
+      "added": "2026-02-07",
+      "updated": "2026-02-07"
     },
     {
       "name": "stripe-mcp",

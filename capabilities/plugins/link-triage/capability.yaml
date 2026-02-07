@@ -1,0 +1,14 @@
+name: link-triage
+type: plugin
+description: >-
+  Link Triage Pipeline — operate the link triage pipeline with run, backfill, status check, and collection listing. Project-scoped plugin for the link-triage-pipeline repo.
+source: internal
+upstream: "https://github.com/jessepike/link-triage-pipeline"
+version: "1.0.0"
+quality: 90
+tags: [pipeline, triage, links, content, automation]
+status: active
+install_id: "link-triage@link-triage-pipeline"
+install_level: project
+added: "2026-02-07"
+updated: "2026-02-07"

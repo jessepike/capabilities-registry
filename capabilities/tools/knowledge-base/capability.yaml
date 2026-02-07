@@ -1,0 +1,17 @@
+name: knowledge-base
+type: tool
+description: >-
+  Knowledge Base MCP Server — semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle.
+source: internal
+upstream: "https://github.com/jessepike/knowledge-base"
+version: "1.0.0"
+quality: 95
+tags: [mcp, knowledge-base, semantic-search, content, intelligence]
+status: active
+install_vector: standalone
+transport: stdio
+parent_plugin: null
+install_id: "knowledge-base"
+install_level: user
+added: "2026-02-07"
+updated: "2026-02-07"

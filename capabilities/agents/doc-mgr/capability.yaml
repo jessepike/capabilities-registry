@@ -1,0 +1,13 @@
+name: doc-mgr
+type: agent
+description: >-
+  Documentation Specialist Agent — plans, creates, validates, and maintains project documentation throughout the development lifecycle. Handles documentation audits, post-implementation docs, and knowledge alignment.
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 90
+tags: [documentation, maintenance, validation, lifecycle, planning]
+status: active
+install_level: user
+added: "2026-02-07"
+updated: "2026-02-07"

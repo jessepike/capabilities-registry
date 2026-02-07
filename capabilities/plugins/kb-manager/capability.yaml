@@ -1,0 +1,14 @@
+name: kb-manager
+type: plugin
+description: >-
+  Knowledge Base Intelligence Layer — digest, curate, synthesize, recommend, and manage content pipeline from KB data. Provides slash commands (/kb:digest, /kb:curate, /kb:recommend, /kb:capture) and a kb-manager agent.
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "1.0.0"
+quality: 95
+tags: [knowledge-base, intelligence, curation, synthesis, content-pipeline, adf]
+status: active
+install_id: "kb-manager@adf-plugins"
+install_level: user
+added: "2026-02-07"
+updated: "2026-02-07"
