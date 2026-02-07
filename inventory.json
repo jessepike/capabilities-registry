@@ -1,16 +1,16 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-07T08:52:03.089753",
+  "generated_at": "2026-02-07T10:26:05.277963",
   "summary": {
-    "total": 48,
+    "total": 50,
     "by_type": {
-      "agent": 1,
-      "plugin": 22,
+      "agent": 2,
+      "plugin": 23,
       "skill": 19,
       "tool": 6
     },
     "by_source": {
-      "internal": 10,
+      "internal": 12,
       "anthropic": 38
     }
   },
@@ -32,6 +32,28 @@
       ],
       "upstream": null,
       "path": "capabilities/agents/doc-mgr",
+      "added": "2026-02-07",
+      "updated": "2026-02-07"
+    },
+    {
+      "name": "ecosystem-steward",
+      "type": "agent",
+      "description": "Ecosystem Steward Agent \u2014 responsible for cross-project alignment across the ADF ecosystem. Runs 6 alignment checks (governing docs, interface contracts, dependency chain, terminology, intent, decisions), produces structured reports with severity-rated findings, and proposes backlog items routed to the correct project. Supports full audit, targeted check, drift scan, and follow-up modes.",
+      "source": "internal",
+      "status": "active",
+      "version": "0.1.0",
+      "quality": 90,
+      "tags": [
+        "ecosystem",
+        "alignment",
+        "validation",
+        "cross-project",
+        "drift-detection",
+        "stewardship",
+        "adf"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/ecosystem-steward",
       "added": "2026-02-07",
       "updated": "2026-02-07"
     },
@@ -189,6 +211,28 @@
       "path": "capabilities/plugins/context7",
       "added": "2026-01-30",
       "updated": "2026-01-30"
+    },
+    {
+      "name": "ecosystem-alignment",
+      "type": "plugin",
+      "description": "Ecosystem Steward \u2014 monitors cross-project alignment across the ADF ecosystem, detects drift between interrelated systems (ADF, Work OS, Krypton, KB, Memory Layer), and recommends corrective actions. Provides /ecosystem:audit command and ecosystem-steward agent for full audits, targeted checks, drift scans, and follow-up tracking.",
+      "source": "internal",
+      "status": "active",
+      "version": "0.1.0",
+      "quality": 90,
+      "tags": [
+        "ecosystem",
+        "alignment",
+        "validation",
+        "cross-project",
+        "drift-detection",
+        "adf",
+        "integration"
+      ],
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/plugins/ecosystem-alignment",
+      "added": "2026-02-07",
+      "updated": "2026-02-07"
     },
     {
       "name": "feature-dev",

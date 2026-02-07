@@ -1,0 +1,17 @@
+name: ecosystem-alignment
+type: plugin
+description: >-
+  Ecosystem Steward — monitors cross-project alignment across the ADF ecosystem, detects drift between
+  interrelated systems (ADF, Work OS, Krypton, KB, Memory Layer), and recommends corrective actions.
+  Provides /ecosystem:audit command and ecosystem-steward agent for full audits, targeted checks,
+  drift scans, and follow-up tracking.
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "0.1.0"
+quality: 90
+tags: [ecosystem, alignment, validation, cross-project, drift-detection, adf, integration]
+status: active
+install_id: "ecosystem-alignment@adf-plugins"
+install_level: user
+added: "2026-02-07"
+updated: "2026-02-07"

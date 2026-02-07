@@ -1,0 +1,16 @@
+name: ecosystem-steward
+type: agent
+description: >-
+  Ecosystem Steward Agent — responsible for cross-project alignment across the ADF ecosystem. Runs 6
+  alignment checks (governing docs, interface contracts, dependency chain, terminology, intent, decisions),
+  produces structured reports with severity-rated findings, and proposes backlog items routed to the
+  correct project. Supports full audit, targeted check, drift scan, and follow-up modes.
+source: internal
+upstream: null
+version: "0.1.0"
+quality: 90
+tags: [ecosystem, alignment, validation, cross-project, drift-detection, stewardship, adf]
+status: active
+install_level: user
+added: "2026-02-07"
+updated: "2026-02-07"

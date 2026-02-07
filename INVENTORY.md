@@ -1,28 +1,29 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-07 08:52*
+*Generated: 2026-02-07 10:26*
 
 ## Summary
 
-**Total capabilities:** 48
+**Total capabilities:** 50
 
 | Type | Count |
 |------|-------|
-| agent | 1 |
-| plugin | 22 |
+| agent | 2 |
+| plugin | 23 |
 | skill | 19 |
 | tool | 6 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 38 |
-| internal | 10 |
+| internal | 12 |
 
 ## Agents
 
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
 | doc-mgr | internal | 90 | documentation, maintenance, validation, lifecycle, planning | Documentation Specialist Agent — plans, creates, validates, and maintains project documentation throughout the development lifecycle. Handles documentation audits, post-implementation docs, and knowledge alignment. |
+| ecosystem-steward | internal | 90 | ecosystem, alignment, validation, cross-project, drift-detection, stewardship, adf | Ecosystem Steward Agent — responsible for cross-project alignment across the ADF ecosystem. Runs 6 alignment checks (governing docs, interface contracts, dependency chain, terminology, intent, decisions), produces structured reports with severity-rated findings, and proposes backlog items routed to the correct project. Supports full audit, targeted check, drift scan, and follow-up modes. |
 
 ## Plugins
 
@@ -36,6 +37,7 @@
 | code-review | anthropic | 90 | code-review, quality, development, automation | Automated code review — analyzes code for quality, patterns, and issues with specialized review agents |
 | commit-commands | anthropic | 90 | git, workflow, automation, ci-cd | Git workflow automation — commit, push, open PRs, and clean up gone branches |
 | context7 | anthropic | 85 | documentation, libraries, reference, context | Retrieve up-to-date documentation and code examples for any programming library via Context7 |
+| ecosystem-alignment | internal | 90 | ecosystem, alignment, validation, cross-project, drift-detection, adf, integration | Ecosystem Steward — monitors cross-project alignment across the ADF ecosystem, detects drift between interrelated systems (ADF, Work OS, Krypton, KB, Memory Layer), and recommends corrective actions. Provides /ecosystem:audit command and ecosystem-steward agent for full audits, targeted checks, drift scans, and follow-up tracking. |
 | feature-dev | anthropic | 85 | development, workflow, architecture, planning | Guided feature development workflow — clarifying questions, codebase analysis, architecture review before implementation |
 | github | anthropic | 85 | github, git, mcp, source-control, issues, pull-requests | GitHub MCP server integration — issues, PRs, repos, code search via GitHub API |
 | hookify | anthropic | 85 | hooks, automation, development, scaffolding | Custom hook creation helper — scaffolds PreToolUse, PostToolUse, and other event-driven hooks |
@@ -88,8 +90,9 @@
 
 ## Tags Index
 
-- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, kb-manager
+- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, ecosystem-alignment, ecosystem-steward, kb-manager
 - **agent-sdk**: agent-sdk-dev
+- **alignment**: ecosystem-alignment, ecosystem-steward
 - **animation**: slack-gif-creator
 - **architecture**: feature-dev
 - **art**: algorithmic-art
@@ -116,6 +119,7 @@
 - **content-pipeline**: kb-manager
 - **context**: claude-md-management, context7
 - **creative**: algorithmic-art, slack-gif-creator
+- **cross-project**: ecosystem-alignment, ecosystem-steward
 - **css**: frontend-design, theme-factory
 - **curation**: kb-manager
 - **database**: supabase, supabase-mcp
@@ -126,6 +130,8 @@
 - **documentation**: claude-md-management, context7, doc-mgr
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
 - **docx**: docx
+- **drift-detection**: ecosystem-alignment, ecosystem-steward
+- **ecosystem**: ecosystem-alignment, ecosystem-steward
 - **environment**: adf-env
 - **external**: external-review
 - **frontend**: frontend-design
@@ -140,6 +146,7 @@
 - **hosting**: vercel
 - **html**: web-artifacts-builder
 - **infrastructure**: vercel, vercel-mcp
+- **integration**: ecosystem-alignment
 - **intelligence**: kb-manager, knowledge-base
 - **issues**: github
 - **iteration**: ralph-loop
@@ -183,6 +190,7 @@
 - **specs**: adf-server
 - **spreadsheets**: xlsx
 - **stages**: adf-workflow
+- **stewardship**: ecosystem-steward
 - **storage**: supabase
 - **stripe**: stripe, stripe-mcp
 - **supabase**: supabase, supabase-mcp
@@ -194,7 +202,7 @@
 - **type-checking**: pyright-lsp
 - **typescript**: agent-sdk-dev, typescript-lsp
 - **ui**: canvas-design, frontend-design, theme-factory
-- **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, external-review, security-guidance
+- **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, security-guidance
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp
 - **web**: playwright, web-artifacts-builder, webapp-testing
