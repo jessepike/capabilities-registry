@@ -1,17 +1,18 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-09T18:40:51.719151",
+  "generated_at": "2026-02-10T10:22:22.599369",
   "summary": {
-    "total": 56,
+    "total": 58,
     "by_type": {
       "agent": 6,
       "plugin": 23,
-      "skill": 21,
-      "tool": 6
+      "skill": 22,
+      "tool": 7
     },
     "by_source": {
-      "internal": 18,
-      "anthropic": 38
+      "internal": 19,
+      "anthropic": 38,
+      "community": 1
     }
   },
   "capabilities": [
@@ -885,6 +886,31 @@
       "updated": "2026-02-09"
     },
     {
+      "name": "security-review",
+      "type": "skill",
+      "description": "Security Review \u2014 code-level and design-level security analysis with 22 checks across 5 categories (injection & input validation, cryptography, unsafe operations, supply chain, design security posture). Complements project-health (secrets, CVEs) and security-guidance (runtime prevention). Supports Python, TypeScript, Go, Rust with auto-detection, stage-aware check selection, and OWASP pattern matching.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "security",
+        "owasp",
+        "injection",
+        "xss",
+        "ssrf",
+        "cryptography",
+        "supply-chain",
+        "threat-model",
+        "audit",
+        "adf"
+      ],
+      "upstream": "https://github.com/jessepike/adf",
+      "path": "capabilities/skills/security-review",
+      "added": "2026-02-09",
+      "updated": "2026-02-09"
+    },
+    {
       "name": "skill-creator",
       "type": "skill",
       "description": "Guide for creating effective skills. This skill should be used when users",
@@ -1054,6 +1080,27 @@
       "path": "capabilities/tools/knowledge-base",
       "added": "2026-02-07",
       "updated": "2026-02-07"
+    },
+    {
+      "name": "stitch-mcp",
+      "type": "tool",
+      "description": "Google Stitch MCP Server \u2014 AI-powered UI design generation from text prompts. Provides tools to create and manage design projects, retrieve screen code (HTML) and images, and build sites from screen-to-route mappings. Connects agents to Google Stitch for design asset access.",
+      "source": "community",
+      "status": "active",
+      "version": "0.3.2",
+      "quality": 75,
+      "tags": [
+        "mcp",
+        "ui",
+        "design",
+        "frontend",
+        "google",
+        "code-generation"
+      ],
+      "upstream": "https://github.com/davideast/stitch-mcp",
+      "path": "capabilities/tools/stitch-mcp",
+      "added": "2026-02-10",
+      "updated": "2026-02-10"
     },
     {
       "name": "stripe-mcp",

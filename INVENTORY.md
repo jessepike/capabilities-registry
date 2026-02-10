@@ -1,21 +1,22 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-09*
+*Generated: 2026-02-10 10:22*
 
 ## Summary
 
-**Total capabilities:** 57
+**Total capabilities:** 58
 
 | Type | Count |
 |------|-------|
 | agent | 6 |
 | plugin | 23 |
 | skill | 22 |
-| tool | 6 |
+| tool | 7 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 38 |
+| community | 1 |
 | internal | 19 |
 
 ## Agents
@@ -91,6 +92,7 @@
 | adf-server | internal | 100 | mcp, adf, orchestration, specs, review, validation | ADF MCP Server — read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation. |
 | github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
 | knowledge-base | internal | 95 | mcp, knowledge-base, semantic-search, content, intelligence | Knowledge Base MCP Server — semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle. |
+| stitch-mcp | community | 75 | mcp, ui, design, frontend, google, code-generation | Google Stitch MCP Server — AI-powered UI design generation from text prompts. Provides tools to create and manage design projects, retrieve screen code (HTML) and images, and build sites from screen-to-route mappings. Connects agents to Google Stitch for design asset access. |
 | stripe-mcp | anthropic | 0 | mcp, stripe, payments, billing | Stripe MCP server — payments, subscriptions, billing management |
 | supabase-mcp | anthropic | 0 | mcp, supabase, database, backend | Supabase MCP server — database management, auth, storage, edge functions |
 | vercel-mcp | anthropic | 0 | mcp, vercel, deployment, infrastructure | Vercel MCP server — deployment management, project configuration, domains |
@@ -119,6 +121,7 @@
 - **ci-cd**: commit-commands
 - **claude-md**: claude-md-management
 - **code**: github-mcp
+- **code-generation**: stitch-mcp
 - **code-hygiene**: project-health
 - **code-navigation**: pyright-lsp, typescript-lsp
 - **code-review**: code-review
@@ -134,6 +137,7 @@
 - **criteria-checking**: validator
 - **cross-cutting**: improver, planner, reviewer, validator
 - **cross-project**: ecosystem-alignment, ecosystem-steward
+- **cryptography**: security-review
 - **css**: frontend-design, theme-factory
 - **curation**: kb-manager
 - **database**: supabase, supabase-mcp
@@ -141,7 +145,7 @@
 - **decomposition**: planner
 - **dependencies**: project-health
 - **deployment**: vercel, vercel-mcp
-- **design**: brand-guidelines, canvas-design, frontend-design, theme-factory
+- **design**: brand-guidelines, canvas-design, frontend-design, stitch-mcp, theme-factory
 - **design-drift**: project-health
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
@@ -153,12 +157,13 @@
 - **environment**: adf-env
 - **external**: external-review
 - **feedback**: reviewer
-- **frontend**: frontend-design
+- **frontend**: frontend-design, stitch-mcp
 - **gap-analysis**: reviewer
 - **generative**: algorithmic-art
 - **gif**: slack-gif-creator
 - **git**: commit-commands, github
 - **github**: github, github-mcp
+- **google**: stitch-mcp
 - **governance**: adr
 - **graphics**: canvas-design
 - **guidance**: adf-workflow
@@ -169,6 +174,7 @@
 - **html**: web-artifacts-builder
 - **improvement**: improver
 - **infrastructure**: vercel, vercel-mcp
+- **injection**: security-review
 - **integration**: ecosystem-alignment
 - **intelligence**: kb-manager, knowledge-base
 - **issues**: github
@@ -181,12 +187,13 @@
 - **links**: link-triage
 - **lsp**: pyright-lsp, typescript-lsp
 - **maintenance**: adf-env, claude-md-management, doc-mgr
-- **mcp**: adf-server, external-review, github, github-mcp, knowledge-base, mcp-builder, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp
+- **mcp**: adf-server, external-review, github, github-mcp, knowledge-base, mcp-builder, stitch-mcp, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp
 - **meta**: plugin-dev, skill-creator
 - **multi-model**: external-review
 - **onboarding**: claude-code-setup
 - **optimization**: improver
 - **orchestration**: adf-server, adf-workflow
+- **owasp**: security-review
 - **p5js**: algorithmic-art
 - **parallelization**: planner
 - **patterns**: improver
@@ -208,12 +215,7 @@
 - **safety**: security-guidance
 - **scaffolding**: agent-sdk-dev, hookify
 - **secrets**: project-health
-- **cryptography**: security-review
-- **injection**: security-review
-- **owasp**: security-review
 - **security**: project-health, security-guidance, security-review
-- **ssrf**: security-review
-- **supply-chain**: security-review
 - **semantic-search**: knowledge-base
 - **session-discipline**: adf-env
 - **setup**: claude-code-setup
@@ -222,11 +224,13 @@
 - **source-control**: github
 - **specs**: adf-server
 - **spreadsheets**: xlsx
+- **ssrf**: security-review
 - **stages**: adf-workflow
 - **stewardship**: ecosystem-steward
 - **storage**: supabase
 - **stripe**: stripe, stripe-mcp
 - **supabase**: supabase, supabase-mcp
+- **supply-chain**: security-review
 - **synthesis**: kb-manager
 - **testing**: playwright, project-health, webapp-testing
 - **themes**: theme-factory
@@ -235,7 +239,7 @@
 - **triage**: link-triage
 - **type-checking**: pyright-lsp
 - **typescript**: agent-sdk-dev, typescript-lsp
-- **ui**: canvas-design, frontend-design, theme-factory
+- **ui**: canvas-design, frontend-design, stitch-mcp, theme-factory
 - **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, security-guidance, validator
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp

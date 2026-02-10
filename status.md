@@ -2,6 +2,7 @@
 project: "Capabilities Registry"
 stage: "Develop"
 updated: "2026-02-10"
+last_session: "2026-02-10"
 ---
 
 # Status
@@ -42,3 +43,4 @@ updated: "2026-02-10"
 | 2026-01-31 | Environment cleanup — 6 unwanted plugins declined (27 total). |
 | 2026-01-31 | Project bootstrapping — created own BACKLOG.md, status.md, .claude/CLAUDE.md. Migrated CR-1/2/3 from ACM backlog. Archived processed B34 inbox docs. |
 | 2026-02-10 | Updated adf-env project-init agent: auto-detect brief files by name, move (not copy) brief to docs/inbox/, create initial intent.md from brief content, add BACKLOG.md creation, fix README template. |
+| 2026-02-10 | Registered stitch-mcp tool (Google Stitch MCP Server for AI UI design generation). 57→58 capabilities. |

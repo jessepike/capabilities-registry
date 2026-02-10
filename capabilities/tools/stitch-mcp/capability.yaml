@@ -1,0 +1,20 @@
+name: stitch-mcp
+type: tool
+description: >-
+  Google Stitch MCP Server — AI-powered UI design generation from text prompts.
+  Provides tools to create and manage design projects, retrieve screen code (HTML)
+  and images, and build sites from screen-to-route mappings. Connects agents to
+  Google Stitch for design asset access.
+source: community
+upstream: "https://github.com/davideast/stitch-mcp"
+version: "0.3.2"
+quality: 75
+tags: [mcp, ui, design, frontend, google, code-generation]
+status: active
+install_vector: standalone
+transport: stdio
+parent_plugin: null
+install_id: "@_davideast/stitch-mcp"
+install_level: project
+added: "2026-02-10"
+updated: "2026-02-10"
