@@ -1,16 +1,16 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-09T17:37:33.069269",
+  "generated_at": "2026-02-09T18:40:51.719151",
   "summary": {
-    "total": 55,
+    "total": 56,
     "by_type": {
       "agent": 6,
       "plugin": 23,
-      "skill": 20,
+      "skill": 21,
       "tool": 6
     },
     "by_source": {
-      "internal": 17,
+      "internal": 18,
       "anthropic": 38
     }
   },
@@ -858,6 +858,31 @@
       "path": "capabilities/skills/pptx",
       "added": "2026-01-29",
       "updated": "2026-01-29"
+    },
+    {
+      "name": "project-health",
+      "type": "skill",
+      "description": "Project Health Auditor \u2014 code-level health auditing with 19 checks across 6 categories (test health, dependency health, code hygiene, secrets & config, build-to-design drift, documentation sync). Complements adf-env (governance layer) and adf-review (artifact quality). Supports Python, TypeScript, Go, Rust with auto-detection and stage-aware check selection.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "health",
+        "audit",
+        "testing",
+        "dependencies",
+        "security",
+        "code-hygiene",
+        "adf",
+        "secrets",
+        "design-drift",
+        "documentation"
+      ],
+      "upstream": "https://github.com/jessepike/adf",
+      "path": "capabilities/skills/project-health",
+      "added": "2026-02-09",
+      "updated": "2026-02-09"
     },
     {
       "name": "skill-creator",

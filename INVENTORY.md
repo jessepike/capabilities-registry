@@ -1,22 +1,22 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-09 17:37*
+*Generated: 2026-02-09 18:40*
 
 ## Summary
 
-**Total capabilities:** 55
+**Total capabilities:** 56
 
 | Type | Count |
 |------|-------|
 | agent | 6 |
 | plugin | 23 |
-| skill | 20 |
+| skill | 21 |
 | tool | 6 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 38 |
-| internal | 17 |
+| internal | 18 |
 
 ## Agents
 
@@ -75,6 +75,7 @@
 | mcp-builder | anthropic | 100 | mcp, development, tools | Guide for creating high-quality MCP (Model Context Protocol) servers |
 | pdf | anthropic | 100 | documents, pdf | Comprehensive PDF manipulation toolkit for extracting text and tables, |
 | pptx | anthropic | 100 | documents, pptx, presentations | 'Presentation creation, editing, and analysis. When Claude needs to work |
+| project-health | internal | 100 | health, audit, testing, dependencies, security, code-hygiene, adf, secrets, design-drift, documentation | Project Health Auditor — code-level health auditing with 19 checks across 6 categories (test health, dependency health, code hygiene, secrets & config, build-to-design drift, documentation sync). Complements adf-env (governance layer) and adf-review (artifact quality). Supports Python, TypeScript, Go, Rust with auto-detection and stage-aware check selection. |
 | skill-creator | anthropic | 100 | development, skills, meta | Guide for creating effective skills. This skill should be used when users |
 | slack-gif-creator | anthropic | 100 | slack, gif, animation, creative | Knowledge and utilities for creating animated GIFs optimized for Slack. |
 | theme-factory | anthropic | 100 | ui, design, themes, css | Toolkit for styling artifacts with a theme. These artifacts can be slides, |
@@ -95,7 +96,7 @@
 
 ## Tags Index
 
-- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager
+- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager, project-health
 - **adr**: adr
 - **agent-sdk**: agent-sdk-dev
 - **alignment**: ecosystem-alignment, ecosystem-steward
@@ -103,6 +104,7 @@
 - **architecture**: adr, feature-dev, improver, planner, reviewer, validator
 - **art**: algorithmic-art
 - **artifacts**: web-artifacts-builder
+- **audit**: project-health
 - **auth**: supabase
 - **authoring**: plugin-dev
 - **automation**: claude-code-setup, code-review, commit-commands, hookify, link-triage, playwright
@@ -116,6 +118,7 @@
 - **ci-cd**: commit-commands
 - **claude-md**: claude-md-management
 - **code**: github-mcp
+- **code-hygiene**: project-health
 - **code-navigation**: pyright-lsp, typescript-lsp
 - **code-review**: code-review
 - **collaboration**: doc-coauthoring
@@ -135,11 +138,13 @@
 - **database**: supabase, supabase-mcp
 - **decisions**: adr
 - **decomposition**: planner
+- **dependencies**: project-health
 - **deployment**: vercel, vercel-mcp
 - **design**: brand-guidelines, canvas-design, frontend-design, theme-factory
+- **design-drift**: project-health
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
-- **documentation**: adr, claude-md-management, context7, doc-mgr
+- **documentation**: adr, claude-md-management, context7, doc-mgr, project-health
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
 - **docx**: docx
 - **drift-detection**: ecosystem-alignment, ecosystem-steward, validator
@@ -157,6 +162,7 @@
 - **graphics**: canvas-design
 - **guidance**: adf-workflow
 - **guidelines**: brand-guidelines
+- **health**: project-health
 - **hooks**: hookify, security-guidance
 - **hosting**: vercel
 - **html**: web-artifacts-builder
@@ -200,7 +206,8 @@
 - **review**: adf-review, adf-review, adf-server, external-review, ralph-loop, reviewer
 - **safety**: security-guidance
 - **scaffolding**: agent-sdk-dev, hookify
-- **security**: security-guidance
+- **secrets**: project-health
+- **security**: project-health, security-guidance
 - **semantic-search**: knowledge-base
 - **session-discipline**: adf-env
 - **setup**: claude-code-setup
@@ -215,7 +222,7 @@
 - **stripe**: stripe, stripe-mcp
 - **supabase**: supabase, supabase-mcp
 - **synthesis**: kb-manager
-- **testing**: playwright, webapp-testing
+- **testing**: playwright, project-health, webapp-testing
 - **themes**: theme-factory
 - **tools**: mcp-builder
 - **triage**: link-triage
