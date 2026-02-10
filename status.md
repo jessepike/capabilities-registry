@@ -45,3 +45,4 @@ last_session: "2026-02-10"
 | 2026-02-10 | Updated adf-env project-init agent: auto-detect brief files by name, move (not copy) brief to docs/inbox/, create initial intent.md from brief content, add BACKLOG.md creation, fix README template. |
 | 2026-02-10 | Registered stitch-mcp tool (Google Stitch MCP Server for AI UI design generation). 57→58 capabilities. |
 | 2026-02-10 | stitch-mcp registration needs correction: used community npm wrapper (@_davideast/stitch-mcp, stdio) instead of official Google remote MCP server (HTTP transport, API key auth). KB has official setup info but URL truncated. Awaiting full server URL to fix capability.yaml. |
+| 2026-02-10 | Blocked on stitch-mcp fix — official Google docs (stitch.withgoogle.com) are JS-rendered SPAs, can't fetch. User to paste content from setup/guide/reference pages. Will then fix capability.yaml and update KB with complete info. |
