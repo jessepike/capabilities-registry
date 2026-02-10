@@ -1,16 +1,16 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-07T10:26:05.277963",
+  "generated_at": "2026-02-09T17:37:33.069269",
   "summary": {
-    "total": 50,
+    "total": 55,
     "by_type": {
-      "agent": 2,
+      "agent": 6,
       "plugin": 23,
-      "skill": 19,
+      "skill": 20,
       "tool": 6
     },
     "by_source": {
-      "internal": 12,
+      "internal": 17,
       "anthropic": 38
     }
   },
@@ -56,6 +56,90 @@
       "path": "capabilities/agents/ecosystem-steward",
       "added": "2026-02-07",
       "updated": "2026-02-07"
+    },
+    {
+      "name": "improver",
+      "type": "agent",
+      "description": "Cross-cutting Improvement Team agent \u2014 identifies improvement opportunities from patterns across completed work, KB, memory, and operational data. Produces improvement proposals as backlog items. Part of the Improvement Team defined in the Agentic Work System Architecture. Does NOT execute improvements \u2014 it proposes them. Does NOT assess current quality (that's the reviewer) or verify completion (that's the validator). Focuses on \"how do we get better?\"",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "improvement",
+        "learning",
+        "cross-cutting",
+        "patterns",
+        "optimization",
+        "architecture"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/improver",
+      "added": "2026-02-09",
+      "updated": "2026-02-09"
+    },
+    {
+      "name": "planner",
+      "type": "agent",
+      "description": "Planning Agent \u2014 implements the ADF-PLANNING-SPEC methodology. Decomposes intent into executable work organized for parallel execution by agents with verified capabilities. Runs the seven-step planning process: understand intent, decompose into work units, organize phases, parallelization strategy, capability assessment (hard gate), testing strategy, risk/contingency. Produces plan.md and tasks.md drafts. Subordinate to Work Manager in the Work Management hierarchy.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "planning",
+        "decomposition",
+        "parallelization",
+        "capability-assessment",
+        "cross-cutting",
+        "architecture"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/planner",
+      "added": "2026-02-09",
+      "updated": "2026-02-09"
+    },
+    {
+      "name": "reviewer",
+      "type": "agent",
+      "description": "Cross-cutting Review Team agent \u2014 quality assessment for any artifact across any project or domain. Evaluates plans, designs, code, briefs, and other artifacts against quality standards. Provides structured feedback with severity-rated findings (Critical/High/Low). Part of the Review Team defined in the Agentic Work System Architecture. Dispatched by orchestrators, Work Manager, or humans with artifact + review criteria as input. Does NOT verify completion (that's the validator). Focuses on \"is this good?\" not \"is this done?\"",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "review",
+        "quality",
+        "cross-cutting",
+        "gap-analysis",
+        "feedback",
+        "architecture"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/reviewer",
+      "added": "2026-02-09",
+      "updated": "2026-02-09"
+    },
+    {
+      "name": "validator",
+      "type": "agent",
+      "description": "Cross-cutting Validation Team agent \u2014 completion verification and drift detection for any work across any project or domain. Checks current state against target state (acceptance criteria, checklists, exit criteria). Produces structured pass/fail reports. Part of the Validation Team defined in the Agentic Work System Architecture. Does NOT assess quality (that's the reviewer). Focuses on \"is this done?\" not \"is this good?\"",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "validation",
+        "completion",
+        "drift-detection",
+        "cross-cutting",
+        "criteria-checking",
+        "architecture"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/validator",
+      "added": "2026-02-09",
+      "updated": "2026-02-09"
     },
     {
       "name": "adf-env",
@@ -550,6 +634,27 @@
       "path": "capabilities/skills/adf-workflow",
       "added": "2026-02-04",
       "updated": "2026-02-04"
+    },
+    {
+      "name": "adr",
+      "type": "skill",
+      "description": "ADR Skill \u2014 manages Architecture Decision Records as ADF decision-type artifacts. Supports create (auto-numbering, template), list (status table), update-status (with archive moves), and link (connect to design.md Decision Log) workflows.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "adr",
+        "adf",
+        "decisions",
+        "architecture",
+        "governance",
+        "documentation"
+      ],
+      "upstream": "https://github.com/jessepike/adf",
+      "path": "capabilities/skills/adr",
+      "added": "2026-02-09",
+      "updated": "2026-02-09"
     },
     {
       "name": "algorithmic-art",

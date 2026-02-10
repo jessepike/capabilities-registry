@@ -1,22 +1,22 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-07 10:26*
+*Generated: 2026-02-09 17:37*
 
 ## Summary
 
-**Total capabilities:** 50
+**Total capabilities:** 55
 
 | Type | Count |
 |------|-------|
-| agent | 2 |
+| agent | 6 |
 | plugin | 23 |
-| skill | 19 |
+| skill | 20 |
 | tool | 6 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 38 |
-| internal | 12 |
+| internal | 17 |
 
 ## Agents
 
@@ -24,6 +24,10 @@
 |------|--------|---------|------|-------------|
 | doc-mgr | internal | 90 | documentation, maintenance, validation, lifecycle, planning | Documentation Specialist Agent — plans, creates, validates, and maintains project documentation throughout the development lifecycle. Handles documentation audits, post-implementation docs, and knowledge alignment. |
 | ecosystem-steward | internal | 90 | ecosystem, alignment, validation, cross-project, drift-detection, stewardship, adf | Ecosystem Steward Agent — responsible for cross-project alignment across the ADF ecosystem. Runs 6 alignment checks (governing docs, interface contracts, dependency chain, terminology, intent, decisions), produces structured reports with severity-rated findings, and proposes backlog items routed to the correct project. Supports full audit, targeted check, drift scan, and follow-up modes. |
+| improver | internal | 90 | improvement, learning, cross-cutting, patterns, optimization, architecture | Cross-cutting Improvement Team agent — identifies improvement opportunities from patterns across completed work, KB, memory, and operational data. Produces improvement proposals as backlog items. Part of the Improvement Team defined in the Agentic Work System Architecture. Does NOT execute improvements — it proposes them. Does NOT assess current quality (that's the reviewer) or verify completion (that's the validator). Focuses on "how do we get better?" |
+| planner | internal | 90 | planning, decomposition, parallelization, capability-assessment, cross-cutting, architecture | Planning Agent — implements the ADF-PLANNING-SPEC methodology. Decomposes intent into executable work organized for parallel execution by agents with verified capabilities. Runs the seven-step planning process: understand intent, decompose into work units, organize phases, parallelization strategy, capability assessment (hard gate), testing strategy, risk/contingency. Produces plan.md and tasks.md drafts. Subordinate to Work Manager in the Work Management hierarchy. |
+| reviewer | internal | 90 | review, quality, cross-cutting, gap-analysis, feedback, architecture | Cross-cutting Review Team agent — quality assessment for any artifact across any project or domain. Evaluates plans, designs, code, briefs, and other artifacts against quality standards. Provides structured feedback with severity-rated findings (Critical/High/Low). Part of the Review Team defined in the Agentic Work System Architecture. Dispatched by orchestrators, Work Manager, or humans with artifact + review criteria as input. Does NOT verify completion (that's the validator). Focuses on "is this good?" not "is this done?" |
+| validator | internal | 90 | validation, completion, drift-detection, cross-cutting, criteria-checking, architecture | Cross-cutting Validation Team agent — completion verification and drift detection for any work across any project or domain. Checks current state against target state (acceptance criteria, checklists, exit criteria). Produces structured pass/fail reports. Part of the Validation Team defined in the Agentic Work System Architecture. Does NOT assess quality (that's the reviewer). Focuses on "is this done?" not "is this good?" |
 
 ## Plugins
 
@@ -59,6 +63,7 @@
 |------|--------|---------|------|-------------|
 | adf-review | internal | 100 | review, adf, validation, quality, ralph-loop | ADF Review Skill — orchestrates two-phase artifact reviews (internal Ralph Loop + external multi-model). Unified entry point for all ADF review processes. |
 | adf-workflow | internal | 100 | workflow, adf, orchestration, stages, guidance | ADF Workflow Skill — companion skill that teaches agents when and how to use ADF MCP server tools. Provides narrative workflow instructions for stage transitions, reviews, and artifact management. |
+| adr | internal | 100 | adr, adf, decisions, architecture, governance, documentation | ADR Skill — manages Architecture Decision Records as ADF decision-type artifacts. Supports create (auto-numbering, template), list (status table), update-status (with archive moves), and link (connect to design.md Decision Log) workflows. |
 | algorithmic-art | anthropic | 100 | art, generative, p5js, creative | Creating algorithmic art using p5.js with seeded randomness and interactive |
 | brand-guidelines | anthropic | 100 | design, branding, guidelines | Applies Anthropic's official brand colors and typography to any sort |
 | canvas-design | anthropic | 100 | ui, design, canvas, graphics | Create beautiful visual art in .png and .pdf documents using design philosophy. |
@@ -90,11 +95,12 @@
 
 ## Tags Index
 
-- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, ecosystem-alignment, ecosystem-steward, kb-manager
+- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager
+- **adr**: adr
 - **agent-sdk**: agent-sdk-dev
 - **alignment**: ecosystem-alignment, ecosystem-steward
 - **animation**: slack-gif-creator
-- **architecture**: feature-dev
+- **architecture**: adr, feature-dev, improver, planner, reviewer, validator
 - **art**: algorithmic-art
 - **artifacts**: web-artifacts-builder
 - **auth**: supabase
@@ -106,6 +112,7 @@
 - **browser**: playwright
 - **business**: internal-comms
 - **canvas**: canvas-design
+- **capability-assessment**: planner
 - **ci-cd**: commit-commands
 - **claude-md**: claude-md-management
 - **code**: github-mcp
@@ -114,37 +121,46 @@
 - **collaboration**: doc-coauthoring
 - **commands**: adf-review
 - **communications**: internal-comms
+- **completion**: validator
 - **components**: frontend-design
 - **content**: knowledge-base, link-triage
 - **content-pipeline**: kb-manager
 - **context**: claude-md-management, context7
 - **creative**: algorithmic-art, slack-gif-creator
+- **criteria-checking**: validator
+- **cross-cutting**: improver, planner, reviewer, validator
 - **cross-project**: ecosystem-alignment, ecosystem-steward
 - **css**: frontend-design, theme-factory
 - **curation**: kb-manager
 - **database**: supabase, supabase-mcp
+- **decisions**: adr
+- **decomposition**: planner
 - **deployment**: vercel, vercel-mcp
 - **design**: brand-guidelines, canvas-design, frontend-design, theme-factory
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
-- **documentation**: claude-md-management, context7, doc-mgr
+- **documentation**: adr, claude-md-management, context7, doc-mgr
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
 - **docx**: docx
-- **drift-detection**: ecosystem-alignment, ecosystem-steward
+- **drift-detection**: ecosystem-alignment, ecosystem-steward, validator
 - **ecosystem**: ecosystem-alignment, ecosystem-steward
 - **environment**: adf-env
 - **external**: external-review
+- **feedback**: reviewer
 - **frontend**: frontend-design
+- **gap-analysis**: reviewer
 - **generative**: algorithmic-art
 - **gif**: slack-gif-creator
 - **git**: commit-commands, github
 - **github**: github, github-mcp
+- **governance**: adr
 - **graphics**: canvas-design
 - **guidance**: adf-workflow
 - **guidelines**: brand-guidelines
 - **hooks**: hookify, security-guidance
 - **hosting**: vercel
 - **html**: web-artifacts-builder
+- **improvement**: improver
 - **infrastructure**: vercel, vercel-mcp
 - **integration**: ecosystem-alignment
 - **intelligence**: kb-manager, knowledge-base
@@ -152,6 +168,7 @@
 - **iteration**: ralph-loop
 - **javascript**: web-artifacts-builder
 - **knowledge-base**: kb-manager, knowledge-base
+- **learning**: improver
 - **libraries**: context7
 - **lifecycle**: doc-mgr
 - **links**: link-triage
@@ -161,23 +178,26 @@
 - **meta**: plugin-dev, skill-creator
 - **multi-model**: external-review
 - **onboarding**: claude-code-setup
+- **optimization**: improver
 - **orchestration**: adf-server, adf-workflow
 - **p5js**: algorithmic-art
+- **parallelization**: planner
+- **patterns**: improver
 - **payments**: stripe, stripe-mcp
 - **pdf**: pdf
 - **pipeline**: link-triage
-- **planning**: doc-mgr, feature-dev
+- **planning**: doc-mgr, feature-dev, planner
 - **plugins**: plugin-dev
 - **pptx**: pptx
 - **presentations**: pptx
 - **pull-requests**: github
 - **python**: agent-sdk-dev, pyright-lsp
 - **qa**: webapp-testing
-- **quality**: adf-review, code-review, ralph-loop
+- **quality**: adf-review, code-review, ralph-loop, reviewer
 - **ralph-loop**: adf-review, adf-review
 - **recommendations**: claude-code-setup
 - **reference**: context7
-- **review**: adf-review, adf-review, adf-server, external-review, ralph-loop
+- **review**: adf-review, adf-review, adf-server, external-review, ralph-loop, reviewer
 - **safety**: security-guidance
 - **scaffolding**: agent-sdk-dev, hookify
 - **security**: security-guidance
@@ -202,7 +222,7 @@
 - **type-checking**: pyright-lsp
 - **typescript**: agent-sdk-dev, typescript-lsp
 - **ui**: canvas-design, frontend-design, theme-factory
-- **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, security-guidance
+- **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, security-guidance, validator
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp
 - **web**: playwright, web-artifacts-builder, webapp-testing

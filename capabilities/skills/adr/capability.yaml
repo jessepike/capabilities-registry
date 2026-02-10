@@ -1,0 +1,14 @@
+name: adr
+type: skill
+description: >-
+  ADR Skill — manages Architecture Decision Records as ADF decision-type artifacts. Supports create (auto-numbering, template), list (status table), update-status (with archive moves), and link (connect to design.md Decision Log) workflows.
+source: internal
+upstream: "https://github.com/jessepike/adf"
+version: "1.0.0"
+quality: 100
+tags: [adr, adf, decisions, architecture, governance, documentation]
+status: active
+install_id: null
+install_level: null
+added: "2026-02-09"
+updated: "2026-02-09"
