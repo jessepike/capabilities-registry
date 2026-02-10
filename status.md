@@ -44,3 +44,4 @@ last_session: "2026-02-10"
 | 2026-01-31 | Project bootstrapping — created own BACKLOG.md, status.md, .claude/CLAUDE.md. Migrated CR-1/2/3 from ACM backlog. Archived processed B34 inbox docs. |
 | 2026-02-10 | Updated adf-env project-init agent: auto-detect brief files by name, move (not copy) brief to docs/inbox/, create initial intent.md from brief content, add BACKLOG.md creation, fix README template. |
 | 2026-02-10 | Registered stitch-mcp tool (Google Stitch MCP Server for AI UI design generation). 57→58 capabilities. |
+| 2026-02-10 | stitch-mcp registration needs correction: used community npm wrapper (@_davideast/stitch-mcp, stdio) instead of official Google remote MCP server (HTTP transport, API key auth). KB has official setup info but URL truncated. Awaiting full server URL to fix capability.yaml. |
