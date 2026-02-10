@@ -1,0 +1,14 @@
+name: security-review
+type: skill
+description: >-
+  Security Review — code-level and design-level security analysis with 22 checks across 5 categories (injection & input validation, cryptography, unsafe operations, supply chain, design security posture). Complements project-health (secrets, CVEs) and security-guidance (runtime prevention). Supports Python, TypeScript, Go, Rust with auto-detection, stage-aware check selection, and OWASP pattern matching.
+source: internal
+upstream: "https://github.com/jessepike/adf"
+version: "1.0.0"
+quality: 100
+tags: [security, owasp, injection, xss, ssrf, cryptography, supply-chain, threat-model, audit, adf]
+status: active
+install_id: null
+install_level: null
+added: "2026-02-09"
+updated: "2026-02-09"
