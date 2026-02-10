@@ -1,0 +1,19 @@
+name: reviewer
+type: agent
+description: >-
+  Cross-cutting Review Team agent — quality assessment for any artifact across any project or domain.
+  Evaluates plans, designs, code, briefs, and other artifacts against quality standards. Provides
+  structured feedback with severity-rated findings (Critical/High/Low). Part of the Review Team
+  defined in the Agentic Work System Architecture. Dispatched by orchestrators, Work Manager,
+  or humans with artifact + review criteria as input. Does NOT verify completion (that's the
+  validator). Focuses on "is this good?" not "is this done?"
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 90
+tags: [review, quality, cross-cutting, gap-analysis, feedback, architecture]
+status: active
+install_level: user
+added: "2026-02-09"
+updated: "2026-02-09"
+agent_definition: "agent.md"

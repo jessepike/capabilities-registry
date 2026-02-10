@@ -1,0 +1,18 @@
+name: validator
+type: agent
+description: >-
+  Cross-cutting Validation Team agent — completion verification and drift detection for any work
+  across any project or domain. Checks current state against target state (acceptance criteria,
+  checklists, exit criteria). Produces structured pass/fail reports. Part of the Validation Team
+  defined in the Agentic Work System Architecture. Does NOT assess quality (that's the reviewer).
+  Focuses on "is this done?" not "is this good?"
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 90
+tags: [validation, completion, drift-detection, cross-cutting, criteria-checking, architecture]
+status: active
+install_level: user
+added: "2026-02-09"
+updated: "2026-02-09"
+agent_definition: "agent.md"

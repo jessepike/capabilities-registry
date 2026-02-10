@@ -1,0 +1,18 @@
+name: planner
+type: agent
+description: >-
+  Planning Agent — implements the ADF-PLANNING-SPEC methodology. Decomposes intent into executable
+  work organized for parallel execution by agents with verified capabilities. Runs the seven-step
+  planning process: understand intent, decompose into work units, organize phases, parallelization
+  strategy, capability assessment (hard gate), testing strategy, risk/contingency. Produces plan.md
+  and tasks.md drafts. Subordinate to Work Manager in the Work Management hierarchy.
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 90
+tags: [planning, decomposition, parallelization, capability-assessment, cross-cutting, architecture]
+status: active
+install_level: user
+added: "2026-02-09"
+updated: "2026-02-09"
+agent_definition: "agent.md"
