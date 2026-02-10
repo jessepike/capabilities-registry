@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-10T10:22:22.599369",
+  "generated_at": "2026-02-10T10:48:58.611163",
   "summary": {
     "total": 58,
     "by_type": {
@@ -1084,20 +1084,21 @@
     {
       "name": "stitch-mcp",
       "type": "tool",
-      "description": "Google Stitch MCP Server \u2014 AI-powered UI design generation from text prompts. Provides tools to create and manage design projects, retrieve screen code (HTML) and images, and build sites from screen-to-route mappings. Connects agents to Google Stitch for design asset access.",
+      "description": "Google Stitch MCP Server \u2014 official remote MCP server for AI-powered UI/UX design generation. Provides 5 tools: generate screens from text prompts, list/get projects and screens with full design details. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key authentication via stitch.withgoogle.com/settings.",
       "source": "community",
       "status": "active",
-      "version": "0.3.2",
-      "quality": 75,
+      "version": "",
+      "quality": 80,
       "tags": [
         "mcp",
         "ui",
         "design",
         "frontend",
         "google",
-        "code-generation"
+        "code-generation",
+        "stitch"
       ],
-      "upstream": "https://github.com/davideast/stitch-mcp",
+      "upstream": "https://stitch.withgoogle.com/docs/mcp/setup",
       "path": "capabilities/tools/stitch-mcp",
       "added": "2026-02-10",
       "updated": "2026-02-10"

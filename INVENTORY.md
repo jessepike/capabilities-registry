@@ -1,6 +1,6 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-10 10:22*
+*Generated: 2026-02-10 10:48*
 
 ## Summary
 
@@ -92,7 +92,7 @@
 | adf-server | internal | 100 | mcp, adf, orchestration, specs, review, validation | ADF MCP Server — read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation. |
 | github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
 | knowledge-base | internal | 95 | mcp, knowledge-base, semantic-search, content, intelligence | Knowledge Base MCP Server — semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle. |
-| stitch-mcp | community | 75 | mcp, ui, design, frontend, google, code-generation | Google Stitch MCP Server — AI-powered UI design generation from text prompts. Provides tools to create and manage design projects, retrieve screen code (HTML) and images, and build sites from screen-to-route mappings. Connects agents to Google Stitch for design asset access. |
+| stitch-mcp | community | 80 | mcp, ui, design, frontend, google, code-generation, stitch | Google Stitch MCP Server — official remote MCP server for AI-powered UI/UX design generation. Provides 5 tools: generate screens from text prompts, list/get projects and screens with full design details. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key authentication via stitch.withgoogle.com/settings. |
 | stripe-mcp | anthropic | 0 | mcp, stripe, payments, billing | Stripe MCP server — payments, subscriptions, billing management |
 | supabase-mcp | anthropic | 0 | mcp, supabase, database, backend | Supabase MCP server — database management, auth, storage, edge functions |
 | vercel-mcp | anthropic | 0 | mcp, vercel, deployment, infrastructure | Vercel MCP server — deployment management, project configuration, domains |
@@ -227,6 +227,7 @@
 - **ssrf**: security-review
 - **stages**: adf-workflow
 - **stewardship**: ecosystem-steward
+- **stitch**: stitch-mcp
 - **storage**: supabase
 - **stripe**: stripe, stripe-mcp
 - **supabase**: supabase, supabase-mcp
