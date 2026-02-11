@@ -1,7 +1,7 @@
 ---
 type: "plan"
 project: "Capabilities Registry Cross-Agent Alignment"
-version: "0.1"
+version: "0.2"
 status: "draft-for-review"
 created: "2026-02-11"
 updated: "2026-02-11"
@@ -34,11 +34,36 @@ By end state, the registry will provide:
 ## Current State (as of 2026-02-11)
 
 1. Cross-client MCP installers exist for Claude Code, Codex, Gemini.
-2. Standalone MCP install metadata is incomplete for some tools (notably `stitch-mcp`).
+2. `stitch-mcp` now fully registered with server URL, launcher metadata, and multi-client install commands.
 3. Registry scripts (`sync`, `generate-inventory`, `check-freshness`) have environment fragility due to YAML parser dependency assumptions.
 4. Agents are modeled in manifests but do not yet have definition artifacts wired.
 5. Plugin metadata is primarily Claude-oriented, creating portability ambiguity.
 6. Skill corpus includes client-specific wording in multiple SKILL files.
+
+## Client Transport Compatibility (Research Finding, 2026-02-11)
+
+| Client | stdio | HTTP/Streamable | SSE | Config Location |
+|--------|-------|-----------------|-----|-----------------|
+| Claude Code | Yes (spawns on demand) | Yes | Yes | `~/.claude.json` or `.mcp.json` |
+| Codex CLI | **Yes (only)** | No | No | `~/.codex/config.toml` or `.codex/config.toml` |
+| Gemini CLI | Yes | Yes | Yes | `settings.json`, `gemini mcp add` |
+
+**Critical constraint:** Codex CLI only supports stdio transport. It spawns local subprocesses — no remote/HTTP server support. This means:
+
+1. All local MCP servers can be shared across clients via stdio (all three clients support it).
+2. Remote HTTP servers (e.g., `stitch-mcp`) are not accessible from Codex without a local proxy.
+3. "Always-on" for Codex means the server process is spawned fresh each session, not a persistent daemon.
+4. The registry's `launcher` block (command, args, env) is the universal source of truth — each client configures the same stdio command in its native format.
+
+### Runtime Management Strategy
+
+**Phase 1 approach (recommended):** Each client spawns its own stdio process. No shared daemon needed. Installer scripts generate client-specific configs from registry launcher metadata.
+
+**Future options (defer until concurrent access needed):**
+- [Supergateway](https://github.com/supercorp-ai/supergateway) — wraps stdio as SSE/HTTP (works for Gemini, not Codex)
+- [mcporter](https://github.com/steipete/mcporter) — per-login daemon with keep-alive for stateful servers
+- [mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) — bidirectional stdio↔HTTP transport bridge
+- launchd/pm2 — system-level process supervision
 
 ## Design Principles
 
@@ -86,6 +111,7 @@ Policy:
 | Local project MCP (repo/data specific) | project | No (default) | Avoid cross-project leakage |
 | Cross-project utility MCP (read-mostly infra) | user/global | Yes (case-by-case) | Require explicit review sign-off |
 | External SaaS MCP with privileged tokens | project | Rarely | Prefer least-privilege per project |
+| Remote HTTP MCP with vendor auth | user/global | Yes (case-by-case) | Codex cannot access natively — needs local proxy or exclusion |
 | Experimental/community MCP | project | No | Trial only until validated |
 
 ## Plan Phases
@@ -239,6 +265,10 @@ Acceptance Criteria:
    - Mitigation: require explicit justification + least privilege + rollback doc.
 4. Risk: Migration churn across many manifests.
    - Mitigation: automate lint/validation and phase changes with migration notes.
+5. Risk: Codex stdio-only constraint limits remote MCP server access.
+   - Mitigation: mark remote-only servers as Codex-incompatible in registry. Evaluate local proxy (mcp-proxy, supergateway) in Phase 3 if needed.
+6. Risk: Multiple clients spawning same stdio server creates resource contention or stale state.
+   - Mitigation: document single-client-at-a-time expectation in Phase 1. Evaluate shared daemon (mcporter) if concurrent access becomes a need.
 
 ## Review Checklist (Team + External Agent)
 
@@ -256,6 +286,12 @@ Acceptance Criteria:
 2. Minimum required metadata for agents (just `agent_definition` vs richer execution metadata).
 3. Whether Gemini HTTP MCP install support should be automated now or documented as manual fallback.
 4. Whether always-on baseline should be enforced automatically or advisory-only in Phase 1.
+5. How to handle remote HTTP-only MCP servers (e.g., `stitch-mcp`) for Codex — exclude, proxy, or mark as degraded.
+6. Whether concurrent multi-client access to the same MCP server is a requirement or a deferrable nice-to-have.
+
+## Resolved Decisions
+
+1. **Runtime management (Phase 1):** Each client spawns its own stdio process. No shared daemon needed. Registry launcher metadata is the universal source of truth. (Resolved 2026-02-11, based on transport compatibility research.)
 
 ## Suggested Execution Order
 
