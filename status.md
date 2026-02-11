@@ -1,8 +1,8 @@
 ---
 project: "Capabilities Registry"
 stage: "Develop"
-updated: "2026-02-10"
-last_session: "2026-02-10"
+updated: "2026-02-11"
+last_session: "2026-02-11"
 ---
 
 # Status
@@ -47,3 +47,4 @@ last_session: "2026-02-10"
 | 2026-02-10 | stitch-mcp registration needs correction: used community npm wrapper (@_davideast/stitch-mcp, stdio) instead of official Google remote MCP server (HTTP transport, API key auth). KB has official setup info but URL truncated. Awaiting full server URL to fix capability.yaml. |
 | 2026-02-10 | Blocked on stitch-mcp fix — official Google docs (stitch.withgoogle.com) are JS-rendered SPAs, can't fetch. User to paste content from setup/guide/reference pages. Will then fix capability.yaml and update KB with complete info. |
 | 2026-02-10 | Fixed stitch-mcp: corrected to official Google remote HTTP MCP server (was community npm/stdio). Updated description, transport, upstream, install_id. Archived truncated KB entry, replaced with complete reference (5 tools, usage patterns, auth details). Still need setup page content for full server URL. |
+| 2026-02-11 | Reviewed cross-agent registry plan (docs/cross-agent-registry-plan.md). Disposition: Approve with changes. Key findings: Open Decision #1 (compatibility field shape) must be resolved before Phase 2, need concrete schema examples, content_fingerprint never populated, agent_definition in use but not in spec. KB updated with complete Stitch MCP reference. |
