@@ -1,6 +1,6 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-10 16:08*
+*Generated: 2026-02-10 17:25*
 
 ## Summary
 
@@ -93,7 +93,7 @@
 | github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
 | knowledge-base | internal | 95 | mcp, knowledge-base, semantic-search, content, intelligence | Knowledge Base MCP Server — semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle. |
 | memory-layer | internal | 95 | mcp, memory, context, retrieval, sqlite, chroma | Memory Layer MCP Server — persistent contextual memory service with namespace-scoped write/search/update/archive flows, review candidates, stats, reconciliation, and failed-memory lifecycle tools. |
-| stitch-mcp | community | 80 | mcp, ui, design, frontend, google, code-generation, stitch | Google Stitch MCP Server — official remote MCP server for AI-powered UI/UX design generation. Provides 5 tools: generate screens from text prompts, list/get projects and screens with full design details. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key authentication via stitch.withgoogle.com/settings. |
+| stitch-mcp | community | 80 | mcp, ui, design, frontend, google, code-generation, stitch | Google Stitch MCP Server — official remote MCP server for AI-powered UI/UX design generation. Provides 6 tools: create projects, generate screens from text prompts, list/get projects and screens. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key authentication via stitch.withgoogle.com/settings. |
 | stripe-mcp | anthropic | 0 | mcp, stripe, payments, billing | Stripe MCP server — payments, subscriptions, billing management |
 | supabase-mcp | anthropic | 0 | mcp, supabase, database, backend | Supabase MCP server — database management, auth, storage, edge functions |
 | vercel-mcp | anthropic | 0 | mcp, vercel, deployment, infrastructure | Vercel MCP server — deployment management, project configuration, domains |

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-10T16:08:43.328185",
+  "generated_at": "2026-02-10T17:25:48.713175",
   "summary": {
     "total": 60,
     "by_type": {
@@ -1105,7 +1105,7 @@
     {
       "name": "stitch-mcp",
       "type": "tool",
-      "description": "Google Stitch MCP Server \u2014 official remote MCP server for AI-powered UI/UX design generation. Provides 5 tools: generate screens from text prompts, list/get projects and screens with full design details. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key authentication via stitch.withgoogle.com/settings.",
+      "description": "Google Stitch MCP Server \u2014 official remote MCP server for AI-powered UI/UX design generation. Provides 6 tools: create projects, generate screens from text prompts, list/get projects and screens. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key authentication via stitch.withgoogle.com/settings.",
       "source": "community",
       "status": "active",
       "version": "",
@@ -1122,7 +1122,7 @@
       "upstream": "https://stitch.withgoogle.com/docs/mcp/setup",
       "path": "capabilities/tools/stitch-mcp",
       "added": "2026-02-10",
-      "updated": "2026-02-10"
+      "updated": "2026-02-11"
     },
     {
       "name": "stripe-mcp",
