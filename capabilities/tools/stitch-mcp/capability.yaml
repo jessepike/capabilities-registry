@@ -4,17 +4,33 @@ description: >-
   Google Stitch MCP Server — official remote MCP server for AI-powered UI/UX
   design generation. Provides 6 tools: create projects, generate screens from
   text prompts, list/get projects and screens. Outputs HTML/Tailwind CSS designs
-  convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key
-  authentication via stitch.withgoogle.com/settings.
+  convertible to React, Vue, Flutter, etc. Hosted by Google at
+  stitch.googleapis.com/mcp. Auth via API key or OAuth.
 source: community
 upstream: "https://stitch.withgoogle.com/docs/mcp/setup"
-quality: 80
+quality: 85
 tags: [mcp, ui, design, frontend, google, code-generation, stitch]
 status: active
 install_vector: standalone
 transport: http
 parent_plugin: null
 install_id: "stitch"
-install_level: project
+install_level: user
 added: "2026-02-10"
 updated: "2026-02-11"
+launcher:
+  type: http
+  url: "https://stitch.googleapis.com/mcp"
+  auth:
+    api_key:
+      header: "X-Goog-Api-Key"
+      source: "stitch.withgoogle.com/settings"
+    oauth:
+      requires: "gcloud auth application-default login"
+      headers: ["Authorization: Bearer <token>", "X-Goog-User-Project: <project-id>"]
+  clients:
+    claude-code: "claude mcp add stitch --transport http https://stitch.googleapis.com/mcp --header \"X-Goog-Api-Key: <key>\" -s user"
+    cursor: ".cursor/mcp.json with url + X-Goog-Api-Key header"
+    vscode: "MCP: Add Server → HTTP → https://stitch.googleapis.com/mcp"
+    gemini-cli: "gemini extensions install https://github.com/gemini-cli-extensions/stitch"
+    antigravity: "Agent Panel → MCP Servers → raw config with serverUrl + header"

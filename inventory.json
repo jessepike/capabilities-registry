@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-10T17:25:48.713175",
+  "generated_at": "2026-02-10T17:39:01.859826",
   "summary": {
     "total": 60,
     "by_type": {
@@ -1105,11 +1105,11 @@
     {
       "name": "stitch-mcp",
       "type": "tool",
-      "description": "Google Stitch MCP Server \u2014 official remote MCP server for AI-powered UI/UX design generation. Provides 6 tools: create projects, generate screens from text prompts, list/get projects and screens. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key authentication via stitch.withgoogle.com/settings.",
+      "description": "Google Stitch MCP Server \u2014 official remote MCP server for AI-powered UI/UX design generation. Provides 6 tools: create projects, generate screens from text prompts, list/get projects and screens. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google at stitch.googleapis.com/mcp. Auth via API key or OAuth.",
       "source": "community",
       "status": "active",
       "version": "",
-      "quality": 80,
+      "quality": 85,
       "tags": [
         "mcp",
         "ui",
