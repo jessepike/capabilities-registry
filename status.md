@@ -1,8 +1,8 @@
 ---
 project: "Capabilities Registry"
 stage: "Develop"
-updated: "2026-02-10"
-last_session: "2026-02-10"
+updated: "2026-02-11"
+last_session: "2026-02-11"
 ---
 
 # Status
@@ -24,9 +24,12 @@ last_session: "2026-02-10"
 
 ## What's Next
 
+- [ ] CR-5: Add `clients` compatibility block to schema (P1) — unblocks client tracking
+- [ ] CR-4 + CR-5: Schema updates (packaging layer + client compatibility) — do together
+- [ ] CR-6: Audit all 60 capabilities for per-client enablement (P1)
 - [ ] CR-1: Deep dive — agents capability type (P1)
 - [ ] CR-2: Deep dive — skills catalog leverage (P1)
-- [ ] CR-3: Add community sources to sync (P3)
+- [ ] CR-7/CR-8: Prune low-use skills, resolve quality=0 tool stubs (P2)
 
 ## Blockers
 
@@ -53,3 +56,4 @@ last_session: "2026-02-10"
 | 2026-02-11 | Pushed all commits to origin. Identified gap in cross-agent plan: MCP runtime management. |
 | 2026-02-11 | Researched MCP runtime management. Key finding: Codex is stdio-only (no HTTP/SSE). All 3 clients support stdio, so each can spawn its own process — no shared daemon needed for Phase 1. Updated cross-agent plan to v0.2: added transport compatibility matrix, runtime strategy, scope policy row for remote HTTP MCPs, 2 new risks, 2 new open decisions, 1 resolved decision. KB learning entry captured. Prior KB idea entry promoted to active. |
 | 2026-02-10 | Session start — reviewed status, no work items actioned. |
+| 2026-02-11 | Registry gap analysis session. Reviewed inventory (60 caps), backlog, cross-agent plan. Identified 5 gaps: no per-client enablement tracking, thin agent coverage, low-use skill noise, quality=0 tool stubs, no usage/activation data. Proposed CR-5 through CR-9 for backlog. Recommended top 3 priorities: CR-5+CR-4 (schema), CR-6 (client audit), CR-1 (agent deep dive). Proposed `clients` compatibility block schema resolving cross-agent plan Decision #1. Backlog updates pending user approval. |
