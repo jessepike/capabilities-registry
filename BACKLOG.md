@@ -32,6 +32,7 @@ Cross-references: skills can reference agents they delegate to, agents reference
 | CR-7 | Prune or flag low-use Anthropic skills — evaluate creative/document skills (algorithmic-art, brand-guidelines, canvas-design, slack-gif-creator, etc.) against actual usage; decline or demote unused | Maintenance | P2 | S | Pending |
 | CR-8 | Resolve quality=0 tool stubs — evaluate github-mcp, stripe-mcp, supabase-mcp, vercel-mcp; populate real metadata or move to declined.yaml | Maintenance | P2 | S | Pending |
 | CR-9 | Add usage/activation tracking — extend INVENTORY.md or add `data/activation-matrix.yaml` showing which capabilities are actually enabled per client, enabling optimization queries | Enhancement | P2 | M | Pending |
+| CR-10 | Register memory MCP in Codex and Gemini — Codex CLI installed + registered; Gemini API key configured + registered. Moved from memory-layer POST-05 | Setup | P2 | S | Pending |
 
 ---
 
