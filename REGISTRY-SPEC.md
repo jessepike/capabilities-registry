@@ -97,6 +97,14 @@ install_level: project               # Recommended install level: user | project
 install_vector: standalone           # standalone | plugin — how the MCP server is installed
 parent_plugin: null                  # Plugin name when install_vector: plugin
 transport: stdio                     # stdio | http | sse — MCP transport protocol
+launcher:                            # Optional concrete launch metadata for cross-client installers
+  type: stdio                        # stdio | http | sse
+  command: node                      # For stdio servers
+  args: ["/abs/path/to/server.js"]  # For stdio servers
+  env: { ADF_ROOT: "/abs/path" }    # Optional env vars for stdio
+  url: "https://example.com/mcp"    # For http/sse servers
+  headers: { Authorization: "Bearer ${TOKEN}" } # Optional request headers
+  bearer_token_env: MCP_TOKEN        # Optional env var name (Codex streamable-http)
 ```
 
 ---
@@ -219,6 +227,20 @@ Capabilities are organized by **name**, not by vendor.
 - Each entry records: name, source, reason for declining
 
 ---
+
+## MCP Installer Scripts
+
+The registry provides per-client installers for standalone MCP tools:
+
+- `scripts/install-mcp-codex.sh`
+- `scripts/install-mcp-claude.sh`
+- `scripts/install-mcp-gemini.sh`
+
+Behavior:
+- Reads `capabilities/tools/<name>/capability.yaml`
+- Requires `launcher` metadata for standalone entries
+- Defaults to dry-run; pass `--apply` to execute install commands
+- Skips plugin-bundled entries (`install_vector: plugin`)
 
 ## References
 

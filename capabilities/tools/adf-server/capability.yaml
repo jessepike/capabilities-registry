@@ -8,10 +8,17 @@ version: "1.0.0"
 quality: 100
 tags: [mcp, adf, orchestration, specs, review, validation]
 status: active
-install_vector: mcp
+install_vector: standalone
 transport: stdio
 parent_plugin: null
 install_id: "adf-server"
 install_level: project
+launcher:
+  type: stdio
+  command: node
+  args:
+    - "${HOME}/code/_shared/adf/adf-server/build/index.js"
+  env:
+    ADF_ROOT: "${HOME}/code/_shared/adf"
 added: "2026-02-04"
-updated: "2026-02-04"
+updated: "2026-02-10"

@@ -1,0 +1,22 @@
+name: work-management-mcp
+type: tool
+description: "MCP server for Work Management system, providing project and task tools."
+source: internal
+version: "1.0.0"
+quality: 100
+tags: [work-management, mcp, tools, projects, tasks]
+status: active
+install_vector: standalone
+transport: stdio
+parent_plugin: null
+install_id: "work-management-mcp"
+install_level: project
+launcher:
+  type: stdio
+  command: node
+  args:
+    - "${HOME}/code/_shared/work-management/mcp-server/dist/index.js"
+  env:
+    ADF_ROOT: "${HOME}/code/_shared/work-management"
+added: "2026-02-10"
+updated: "2026-02-10"

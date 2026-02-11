@@ -13,5 +13,13 @@ transport: stdio
 parent_plugin: null
 install_id: "knowledge-base"
 install_level: user
+launcher:
+  type: stdio
+  command: "${HOME}/code/_shared/knowledge-base/.venv/bin/python"
+  args:
+    - "-m"
+    - "kb_core.access.mcp_server"
+  env:
+    DATA_DIR: "${HOME}/code/_shared/knowledge-base/data"
 added: "2026-02-07"
-updated: "2026-02-07"
+updated: "2026-02-10"

@@ -1,23 +1,23 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-10 10:48*
+*Generated: 2026-02-10 16:08*
 
 ## Summary
 
-**Total capabilities:** 58
+**Total capabilities:** 60
 
 | Type | Count |
 |------|-------|
 | agent | 6 |
 | plugin | 23 |
 | skill | 22 |
-| tool | 7 |
+| tool | 9 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 38 |
 | community | 1 |
-| internal | 19 |
+| internal | 21 |
 
 ## Agents
 
@@ -92,10 +92,12 @@
 | adf-server | internal | 100 | mcp, adf, orchestration, specs, review, validation | ADF MCP Server — read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation. |
 | github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
 | knowledge-base | internal | 95 | mcp, knowledge-base, semantic-search, content, intelligence | Knowledge Base MCP Server — semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle. |
+| memory-layer | internal | 95 | mcp, memory, context, retrieval, sqlite, chroma | Memory Layer MCP Server — persistent contextual memory service with namespace-scoped write/search/update/archive flows, review candidates, stats, reconciliation, and failed-memory lifecycle tools. |
 | stitch-mcp | community | 80 | mcp, ui, design, frontend, google, code-generation, stitch | Google Stitch MCP Server — official remote MCP server for AI-powered UI/UX design generation. Provides 5 tools: generate screens from text prompts, list/get projects and screens with full design details. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google, requires API key authentication via stitch.withgoogle.com/settings. |
 | stripe-mcp | anthropic | 0 | mcp, stripe, payments, billing | Stripe MCP server — payments, subscriptions, billing management |
 | supabase-mcp | anthropic | 0 | mcp, supabase, database, backend | Supabase MCP server — database management, auth, storage, edge functions |
 | vercel-mcp | anthropic | 0 | mcp, vercel, deployment, infrastructure | Vercel MCP server — deployment management, project configuration, domains |
+| work-management-mcp | internal | 100 | work-management, mcp, tools, projects, tasks | MCP server for Work Management system, providing project and task tools. |
 
 ## Tags Index
 
@@ -118,6 +120,7 @@
 - **business**: internal-comms
 - **canvas**: canvas-design
 - **capability-assessment**: planner
+- **chroma**: memory-layer
 - **ci-cd**: commit-commands
 - **claude-md**: claude-md-management
 - **code**: github-mcp
@@ -132,7 +135,7 @@
 - **components**: frontend-design
 - **content**: knowledge-base, link-triage
 - **content-pipeline**: kb-manager
-- **context**: claude-md-management, context7
+- **context**: claude-md-management, context7, memory-layer
 - **creative**: algorithmic-art, slack-gif-creator
 - **criteria-checking**: validator
 - **cross-cutting**: improver, planner, reviewer, validator
@@ -187,7 +190,8 @@
 - **links**: link-triage
 - **lsp**: pyright-lsp, typescript-lsp
 - **maintenance**: adf-env, claude-md-management, doc-mgr
-- **mcp**: adf-server, external-review, github, github-mcp, knowledge-base, mcp-builder, stitch-mcp, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp
+- **mcp**: adf-server, external-review, github, github-mcp, knowledge-base, mcp-builder, memory-layer, stitch-mcp, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp, work-management-mcp
+- **memory**: memory-layer
 - **meta**: plugin-dev, skill-creator
 - **multi-model**: external-review
 - **onboarding**: claude-code-setup
@@ -204,6 +208,7 @@
 - **plugins**: plugin-dev
 - **pptx**: pptx
 - **presentations**: pptx
+- **projects**: work-management-mcp
 - **pull-requests**: github
 - **python**: agent-sdk-dev, pyright-lsp
 - **qa**: webapp-testing
@@ -211,6 +216,7 @@
 - **ralph-loop**: adf-review, adf-review
 - **recommendations**: claude-code-setup
 - **reference**: context7
+- **retrieval**: memory-layer
 - **review**: adf-review, adf-review, adf-server, external-review, ralph-loop, reviewer
 - **safety**: security-guidance
 - **scaffolding**: agent-sdk-dev, hookify
@@ -224,6 +230,7 @@
 - **source-control**: github
 - **specs**: adf-server
 - **spreadsheets**: xlsx
+- **sqlite**: memory-layer
 - **ssrf**: security-review
 - **stages**: adf-workflow
 - **stewardship**: ecosystem-steward
@@ -233,10 +240,11 @@
 - **supabase**: supabase, supabase-mcp
 - **supply-chain**: security-review
 - **synthesis**: kb-manager
+- **tasks**: work-management-mcp
 - **testing**: playwright, project-health, webapp-testing
 - **themes**: theme-factory
 - **threat-model**: security-review
-- **tools**: mcp-builder
+- **tools**: mcp-builder, work-management-mcp
 - **triage**: link-triage
 - **type-checking**: pyright-lsp
 - **typescript**: agent-sdk-dev, typescript-lsp
@@ -246,6 +254,7 @@
 - **vercel**: vercel, vercel-mcp
 - **web**: playwright, web-artifacts-builder, webapp-testing
 - **word**: docx
+- **work-management**: work-management-mcp
 - **workflow**: adf-workflow, commit-commands, feature-dev
 - **writing**: doc-coauthoring, internal-comms
 - **xlsx**: xlsx

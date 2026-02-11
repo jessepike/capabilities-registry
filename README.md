@@ -21,6 +21,29 @@ cat INVENTORY.md
 ./scripts/generate-inventory.sh
 ```
 
+
+## MCP Installers (Cross-Client)
+
+For standalone MCP tool capabilities that include `launcher` metadata in `capability.yaml`, use:
+
+```bash
+# Codex (dry-run by default)
+./scripts/install-mcp-codex.sh adf-server
+./scripts/install-mcp-codex.sh adf-server --apply
+
+# Claude Code
+./scripts/install-mcp-claude.sh adf-server --scope project
+./scripts/install-mcp-claude.sh adf-server --scope user --apply
+
+# Gemini CLI
+./scripts/install-mcp-gemini.sh adf-server --scope user
+./scripts/install-mcp-gemini.sh adf-server --scope user --apply
+```
+
+Notes:
+- Installers default to dry-run so you can inspect generated commands first.
+- Plugin-bundled MCP entries (`install_vector: plugin`) are intentionally skipped by these installers.
+
 ## Structure
 
 ```

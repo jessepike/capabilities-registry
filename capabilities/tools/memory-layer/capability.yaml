@@ -1,0 +1,27 @@
+name: memory-layer
+type: tool
+description: >-
+  Memory Layer MCP Server — persistent contextual memory service with namespace-scoped
+  write/search/update/archive flows, review candidates, stats, reconciliation, and
+  failed-memory lifecycle tools.
+source: internal
+upstream: "https://github.com/jessepike/memory-layer"
+version: "0.1.0"
+quality: 95
+tags: [mcp, memory, context, retrieval, sqlite, chroma]
+status: active
+install_vector: standalone
+transport: stdio
+parent_plugin: null
+install_id: "memory-layer"
+install_level: project
+launcher:
+  type: stdio
+  command: "${HOME}/code/_shared/memory/.venv/bin/python"
+  args:
+    - "-m"
+    - "memory_core.access.mcp_server"
+  env:
+    PYTHONPATH: "${HOME}/code/_shared/memory/src"
+added: "2026-02-11"
+updated: "2026-02-11"

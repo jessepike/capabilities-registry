@@ -1,16 +1,16 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-10T10:48:58.611163",
+  "generated_at": "2026-02-10T16:08:43.328185",
   "summary": {
-    "total": 58,
+    "total": 60,
     "by_type": {
       "agent": 6,
       "plugin": 23,
       "skill": 22,
-      "tool": 7
+      "tool": 9
     },
     "by_source": {
-      "internal": 19,
+      "internal": 21,
       "anthropic": 38,
       "community": 1
     }
@@ -1040,7 +1040,7 @@
       "upstream": "https://github.com/jessepike/adf",
       "path": "capabilities/tools/adf-server",
       "added": "2026-02-04",
-      "updated": "2026-02-04"
+      "updated": "2026-02-10"
     },
     {
       "name": "github-mcp",
@@ -1079,7 +1079,28 @@
       "upstream": "https://github.com/jessepike/knowledge-base",
       "path": "capabilities/tools/knowledge-base",
       "added": "2026-02-07",
-      "updated": "2026-02-07"
+      "updated": "2026-02-10"
+    },
+    {
+      "name": "memory-layer",
+      "type": "tool",
+      "description": "Memory Layer MCP Server \u2014 persistent contextual memory service with namespace-scoped write/search/update/archive flows, review candidates, stats, reconciliation, and failed-memory lifecycle tools.",
+      "source": "internal",
+      "status": "active",
+      "version": "0.1.0",
+      "quality": 95,
+      "tags": [
+        "mcp",
+        "memory",
+        "context",
+        "retrieval",
+        "sqlite",
+        "chroma"
+      ],
+      "upstream": "https://github.com/jessepike/memory-layer",
+      "path": "capabilities/tools/memory-layer",
+      "added": "2026-02-11",
+      "updated": "2026-02-11"
     },
     {
       "name": "stitch-mcp",
@@ -1159,6 +1180,26 @@
       "path": "capabilities/tools/vercel-mcp",
       "added": "2026-01-31",
       "updated": "2026-01-31"
+    },
+    {
+      "name": "work-management-mcp",
+      "type": "tool",
+      "description": "MCP server for Work Management system, providing project and task tools.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 100,
+      "tags": [
+        "work-management",
+        "mcp",
+        "tools",
+        "projects",
+        "tasks"
+      ],
+      "upstream": "",
+      "path": "capabilities/tools/work-management-mcp",
+      "added": "2026-02-10",
+      "updated": "2026-02-10"
     }
   ]
 }
