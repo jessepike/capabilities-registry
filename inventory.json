@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-10T17:39:01.859826",
+  "generated_at": "2026-02-11T11:31:23.062162",
   "summary": {
     "total": 60,
     "by_type": {
@@ -13,7 +13,8 @@
       "internal": 21,
       "anthropic": 38,
       "community": 1
-    }
+    },
+    "by_client": {}
   },
   "capabilities": [
     {

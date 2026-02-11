@@ -95,6 +95,8 @@ for cap_yaml in sorted(glob.glob(os.path.join(caps_dir, "**", "capability.yaml")
         "added": data.get("added", ""),
         "updated": data.get("updated", ""),
     }
+    if data.get("clients"):
+        cap["clients"] = data["clients"]
     capabilities.append(cap)
 
     t = cap["type"]
@@ -106,6 +108,18 @@ for cap_yaml in sorted(glob.glob(os.path.join(caps_dir, "**", "capability.yaml")
     for tag in cap["tags"]:
         by_tag.setdefault(tag, []).append(cap["name"])
 
+# Build by_client summary: count enabled capabilities per client
+by_client = {}
+for cap in capabilities:
+    clients = cap.get("clients", {})
+    for client_name, client_info in clients.items():
+        if client_name not in by_client:
+            by_client[client_name] = {"enabled": 0, "disabled": 0}
+        if client_info.get("enabled"):
+            by_client[client_name]["enabled"] += 1
+        else:
+            by_client[client_name]["disabled"] += 1
+
 # Write JSON
 inventory = {
     "version": "1.0",
@@ -114,6 +128,7 @@ inventory = {
         "total": len(capabilities),
         "by_type": by_type,
         "by_source": by_source,
+        "by_client": by_client,
     },
     "capabilities": capabilities,
 }
@@ -142,6 +157,17 @@ lines.append("|--------|-------|")
 for s, c in sorted(by_source.items()):
     lines.append(f"| {s} | {c} |")
 lines.append("")
+
+if by_client:
+    lines.append("## Client Enablement")
+    lines.append("")
+    lines.append("| Client | Enabled | Disabled |")
+    lines.append("|--------|---------|----------|")
+    for client in sorted(by_client.keys()):
+        e = by_client[client]["enabled"]
+        d = by_client[client]["disabled"]
+        lines.append(f"| {client} | {e} | {d} |")
+    lines.append("")
 
 # Group by type
 for cap_type in sorted(set(c["type"] for c in capabilities)):

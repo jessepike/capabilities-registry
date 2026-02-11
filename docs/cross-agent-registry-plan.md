@@ -282,7 +282,7 @@ Acceptance Criteria:
 
 ## Open Decisions Needed Before Execution
 
-1. Canonical compatibility field shape in `capability.yaml` (simple booleans vs per-client objects).
+1. ~~Canonical compatibility field shape in `capability.yaml` (simple booleans vs per-client objects).~~ **Resolved** — see Resolved Decisions.
 2. Minimum required metadata for agents (just `agent_definition` vs richer execution metadata).
 3. Whether Gemini HTTP MCP install support should be automated now or documented as manual fallback.
 4. Whether always-on baseline should be enforced automatically or advisory-only in Phase 1.
@@ -292,6 +292,7 @@ Acceptance Criteria:
 ## Resolved Decisions
 
 1. **Runtime management (Phase 1):** Each client spawns its own stdio process. No shared daemon needed. Registry launcher metadata is the universal source of truth. (Resolved 2026-02-11, based on transport compatibility research.)
+2. **Compatibility field shape (Decision #1):** Per-client objects, not simple booleans. Each client key contains `enabled` (bool, required), `scope` (user|project, optional), `install_vector` (plugin|standalone|mcp-config|manual, optional), `reason` (string, optional for disabled). New clients added by key — no schema rewrite. Implemented in REGISTRY-SPEC v1.3.0. (Resolved 2026-02-11, CR-5.)
 
 ## Suggested Execution Order
 

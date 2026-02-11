@@ -1,8 +1,8 @@
 ---
 type: "specification"
 description: "Defines the capability registry — structure, types, lifecycle, and data flow"
-version: "1.2.0"
-updated: "2026-01-30"
+version: "1.3.0"
+updated: "2026-02-11"
 lifecycle: "reference"
 ---
 
@@ -25,7 +25,11 @@ The registry is standalone. It is consumed by ACM stages but not coupled to ACM.
 | **Skill** | Procedural knowledge — instructions and supporting files | `SKILL.md` | frontend-design, pdf, webapp-testing |
 | **Tool** | MCP servers or deterministic scripts providing functional extensions | `README.md` or server config | memory-mcp, filesystem-mcp |
 | **Agent** | Sub-agent definitions with specialized domain expertise | Agent definition file | ui-reviewer, supabase-expert |
-| **Plugin** | Composite packages bundling skills, hooks, and commands | `plugin.json` | acm-env |
+| **Plugin** | Packaging/distribution layer that bundles skills, hooks, commands, and agents | `plugin.json` | acm-env |
+
+### Plugin as Packaging Layer
+
+Plugins are a **distribution/packaging mechanism**, not a peer capability type. A plugin bundles one or more skills, tools, and agents into a single installable unit. Use the `bundled_in` cross-reference field on child capabilities to link them to their parent plugin. The plugin's own `capability.yaml` describes the package; child capabilities retain their own entries with their own types.
 
 ---
 
@@ -105,6 +109,31 @@ launcher:                            # Optional concrete launch metadata for cro
   url: "https://example.com/mcp"    # For http/sse servers
   headers: { Authorization: "Bearer ${TOKEN}" } # Optional request headers
   bearer_token_env: MCP_TOKEN        # Optional env var name (Codex streamable-http)
+
+# Agent-specific fields (type: agent only)
+agent_definition: "agent-name.md"    # Filename for agent definition artifact
+
+# Cross-reference fields (CR-4: plugin as packaging layer)
+bundled_in: plugin-name              # Plugin that bundles this skill/tool/agent
+delegates_to: [agent-a, agent-b]    # Agents this skill delegates to
+requires_tools: [tool-a, tool-b]    # MCP tools this agent/skill needs
+
+# Client compatibility block (CR-5)
+clients:
+  claude-code:
+    enabled: true                    # bool, required — whether capability works in this client
+    scope: user                      # user | project, optional — recommended install scope
+    install_vector: plugin           # plugin | standalone | mcp-config | manual, optional
+  claude-desktop:
+    enabled: true
+    scope: user
+    install_vector: mcp-config
+  codex:
+    enabled: false
+    reason: "stdio-only; remote HTTP not supported"  # string, optional — why disabled
+  gemini:
+    enabled: false
+# New clients are added by key — no schema rewrite needed.
 ```
 
 ---

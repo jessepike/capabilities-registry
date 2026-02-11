@@ -1,6 +1,6 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-10 17:39*
+*Generated: 2026-02-11 11:31*
 
 ## Summary
 
