@@ -1,8 +1,8 @@
 ---
 project: "Capabilities Registry"
 stage: "Develop"
-updated: "2026-02-11"
-last_session: "2026-02-11"
+updated: "2026-02-10"
+last_session: "2026-02-10"
 ---
 
 # Status
@@ -52,3 +52,4 @@ last_session: "2026-02-11"
 | 2026-02-11 | Completed stitch-mcp registration with full server URL (stitch.googleapis.com/mcp), launcher block with auth methods (API key + OAuth), and install commands for 5 clients (Claude Code, Cursor, VSCode, Gemini CLI, Antigravity). KB consolidated to single complete entry covering setup/guide/reference pages. 3 prior incomplete KB entries archived. |
 | 2026-02-11 | Pushed all commits to origin. Identified gap in cross-agent plan: MCP runtime management. |
 | 2026-02-11 | Researched MCP runtime management. Key finding: Codex is stdio-only (no HTTP/SSE). All 3 clients support stdio, so each can spawn its own process — no shared daemon needed for Phase 1. Updated cross-agent plan to v0.2: added transport compatibility matrix, runtime strategy, scope policy row for remote HTTP MCPs, 2 new risks, 2 new open decisions, 1 resolved decision. KB learning entry captured. Prior KB idea entry promoted to active. |
+| 2026-02-10 | Session start — reviewed status, no work items actioned. |
