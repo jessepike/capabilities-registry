@@ -1,0 +1,18 @@
+name: plugin-validator
+type: agent
+description: >-
+  Plugin Validation Specialist Agent — comprehensive validation of Claude Code plugin structure,
+  plugin.json manifest, component files (commands, agents, skills, hooks), naming conventions,
+  MCP configuration, file organization, and security. Produces structured validation reports
+  with severity-rated findings.
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+version: "1.0.0"
+quality: 95
+tags: [plugin-validation, structure, configuration, security, quality]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: plugin-dev
+install_id: "plugin-dev@claude-plugins-official"

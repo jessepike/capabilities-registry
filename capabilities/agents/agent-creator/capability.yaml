@@ -1,0 +1,17 @@
+name: agent-creator
+type: agent
+description: >-
+  Agent Architect — translates user requirements into precisely-tuned agent specifications. Designs
+  expert persona, comprehensive system prompts, optimal configuration (model, color, tools), and
+  triggering examples. Generates complete agent .md files for Claude Code plugins.
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+version: "1.0.0"
+quality: 95
+tags: [agent-creation, plugin-dev, configuration, automation]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: plugin-dev
+install_id: "plugin-dev@claude-plugins-official"

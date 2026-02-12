@@ -1,0 +1,17 @@
+name: skill-reviewer
+type: agent
+description: >-
+  Skill Quality Reviewer Agent — reviews and improves Claude Code skills for structure quality,
+  description triggering effectiveness, progressive disclosure implementation, content organization,
+  and adherence to best practices. Provides severity-rated findings with specific fix recommendations.
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+version: "1.0.0"
+quality: 95
+tags: [skill-review, quality, description, progressive-disclosure]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: plugin-dev
+install_id: "plugin-dev@claude-plugins-official"

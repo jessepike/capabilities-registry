@@ -1,0 +1,17 @@
+name: code-reviewer
+type: agent
+description: >-
+  Expert Code Reviewer Agent — reviews code for bugs, logic errors, security vulnerabilities, and
+  code quality issues using confidence-based filtering (only reports issues with confidence >= 80).
+  Checks adherence to project conventions in CLAUDE.md. Groups findings by severity.
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+version: "1.0.0"
+quality: 95
+tags: [code-review, security, quality, bugs, conventions]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: feature-dev
+install_id: "feature-dev@claude-plugins-official"

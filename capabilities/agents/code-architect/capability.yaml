@@ -1,0 +1,17 @@
+name: code-architect
+type: agent
+description: >-
+  Senior Software Architect Agent — analyzes existing codebase patterns and conventions, then
+  delivers comprehensive implementation blueprints with specific files to create/modify, component
+  designs, data flows, and build sequences. Makes decisive architectural choices with rationale.
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+version: "1.0.0"
+quality: 95
+tags: [architecture, design, blueprints, codebase-analysis, planning]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: feature-dev
+install_id: "feature-dev@claude-plugins-official"
