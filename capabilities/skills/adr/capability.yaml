@@ -12,3 +12,17 @@ install_id: null
 install_level: null
 added: "2026-02-09"
 updated: "2026-02-09"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No skill support"
+  codex:
+    enabled: false
+    reason: "No skill support"
+  gemini:
+    enabled: false
+    reason: "No skill support"

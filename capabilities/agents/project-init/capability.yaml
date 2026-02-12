@@ -15,3 +15,17 @@ install_level: user
 added: "2026-02-11"
 updated: "2026-02-11"
 bundled_in: adf-env
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No subagent support"
+  codex:
+    enabled: false
+    reason: "No subagent support"
+  gemini:
+    enabled: false
+    reason: "No subagent support"

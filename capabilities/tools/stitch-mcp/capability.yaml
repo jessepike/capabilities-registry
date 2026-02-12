@@ -34,3 +34,19 @@ launcher:
     vscode: "MCP: Add Server → HTTP → https://stitch.googleapis.com/mcp"
     gemini-cli: "gemini extensions install https://github.com/gemini-cli-extensions/stitch"
     antigravity: "Agent Panel → MCP Servers → raw config with serverUrl + header"
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: standalone
+  claude-desktop:
+    enabled: true
+    scope: user
+    install_vector: mcp-config
+  codex:
+    enabled: false
+    reason: "stdio-only; remote HTTP not supported"
+  gemini:
+    enabled: true
+    scope: user
+    install_vector: standalone

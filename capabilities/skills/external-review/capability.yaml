@@ -14,3 +14,17 @@ install_id: "external-review"
 install_level: project
 added: "2026-02-04"
 updated: "2026-02-04"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: standalone
+  claude-desktop:
+    enabled: false
+    reason: "No skill support"
+  codex:
+    enabled: false
+    reason: "No skill support"
+  gemini:
+    enabled: false
+    reason: "No skill support"

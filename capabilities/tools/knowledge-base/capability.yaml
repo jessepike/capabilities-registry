@@ -23,3 +23,20 @@ launcher:
     DATA_DIR: "${HOME}/code/_shared/knowledge-base/data"
 added: "2026-02-07"
 updated: "2026-02-10"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: standalone
+  claude-desktop:
+    enabled: true
+    scope: project
+    install_vector: mcp-config
+  codex:
+    enabled: true
+    scope: project
+    install_vector: standalone
+  gemini:
+    enabled: true
+    scope: project
+    install_vector: standalone

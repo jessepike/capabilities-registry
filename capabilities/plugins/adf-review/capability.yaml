@@ -12,3 +12,17 @@ install_id: "adf-review@adf-plugins"
 install_level: user
 added: "2026-02-04"
 updated: "2026-02-04"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No plugin support"
+  codex:
+    enabled: false
+    reason: "No plugin support"
+  gemini:
+    enabled: false
+    reason: "No plugin support"

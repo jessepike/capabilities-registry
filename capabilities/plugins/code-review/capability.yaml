@@ -11,3 +11,17 @@ install_level: project
 quality: 90
 added: "2026-01-30"
 updated: "2026-01-30"
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No plugin support"
+  codex:
+    enabled: false
+    reason: "No plugin support"
+  gemini:
+    enabled: false
+    reason: "No plugin support"

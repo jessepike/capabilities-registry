@@ -12,3 +12,17 @@ install_id: "link-triage@link-triage-pipeline"
 install_level: project
 added: "2026-02-07"
 updated: "2026-02-07"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No plugin support"
+  codex:
+    enabled: false
+    reason: "No plugin support"
+  gemini:
+    enabled: false
+    reason: "No plugin support"

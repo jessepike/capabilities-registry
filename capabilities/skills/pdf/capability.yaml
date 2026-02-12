@@ -10,3 +10,17 @@ tags: [documents, pdf]
 status: active
 added: "2026-01-29"
 updated: "2026-01-29"
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No skill support"
+  codex:
+    enabled: false
+    reason: "No skill support"
+  gemini:
+    enabled: false
+    reason: "No skill support"

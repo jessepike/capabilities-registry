@@ -10,3 +10,20 @@ transport: stdio
 upstream: "https://github.com/anthropics/claude-code-plugins"
 added: "2026-01-31"
 updated: "2026-01-31"
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: plugin
+  claude-desktop:
+    enabled: true
+    scope: user
+    install_vector: mcp-config
+  codex:
+    enabled: true
+    scope: user
+    install_vector: manual
+  gemini:
+    enabled: true
+    scope: user
+    install_vector: manual
