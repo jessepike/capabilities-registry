@@ -1,13 +1,34 @@
 name: doc-mgr
 type: agent
-description: >-
-  Documentation Specialist Agent — plans, creates, validates, and maintains project documentation throughout the development lifecycle. Handles documentation audits, post-implementation docs, and knowledge alignment.
+description: Documentation Specialist Agent — plans, creates, validates, and maintains
+  project documentation throughout the development lifecycle. Handles documentation
+  audits, post-implementation docs, and knowledge alignment.
 source: internal
 upstream: null
-version: "1.0.0"
+version: 1.0.0
 quality: 90
-tags: [documentation, maintenance, validation, lifecycle, planning]
+tags:
+- documentation
+- maintenance
+- validation
+- lifecycle
+- planning
 status: active
 install_level: user
-added: "2026-02-07"
-updated: "2026-02-07"
+added: '2026-02-07'
+updated: '2026-02-11'
+agent_definition: ~/.claude/agents/doc-mgr.md
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: No subagent support
+  codex:
+    enabled: false
+    reason: No subagent support
+  gemini:
+    enabled: false
+    reason: No subagent support
