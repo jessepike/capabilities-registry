@@ -1,33 +1,53 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-11 11:31*
+*Generated: 2026-02-11 19:37*
 
 ## Summary
 
-**Total capabilities:** 60
+**Total capabilities:** 71
 
 | Type | Count |
 |------|-------|
-| agent | 6 |
+| agent | 17 |
 | plugin | 23 |
 | skill | 22 |
 | tool | 9 |
 
 | Source | Count |
 |--------|-------|
-| anthropic | 38 |
+| anthropic | 44 |
 | community | 1 |
-| internal | 21 |
+| internal | 26 |
+
+## Client Enablement
+
+| Client | Enabled | Disabled |
+|--------|---------|----------|
+| claude-code | 71 | 0 |
+| claude-desktop | 9 | 62 |
+| codex | 7 | 64 |
+| gemini | 8 | 63 |
 
 ## Agents
 
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
+| agent-creator | anthropic | 95 | agent-creation, plugin-dev, configuration, automation | Agent Architect — translates user requirements into precisely-tuned agent specifications. Designs expert persona, comprehensive system prompts, optimal configuration (model, color, tools), and triggering examples. Generates complete agent .md files for Claude Code plugins. |
+| code-architect | anthropic | 95 | architecture, design, blueprints, codebase-analysis, planning | Senior Software Architect Agent — analyzes existing codebase patterns and conventions, then delivers comprehensive implementation blueprints with specific files to create/modify, component designs, data flows, and build sequences. Makes decisive architectural choices with rationale. |
+| code-explorer | anthropic | 95 | code-analysis, tracing, architecture, dependencies, exploration | Expert Code Analyst Agent — traces execution paths, maps architecture layers, understands patterns and abstractions, and documents dependencies to inform new development. Provides complete understanding of feature implementations from entry points to data storage through all layers. |
+| code-reviewer | anthropic | 95 | code-review, security, quality, bugs, conventions | Expert Code Reviewer Agent — reviews code for bugs, logic errors, security vulnerabilities, and code quality issues using confidence-based filtering (only reports issues with confidence >= 80). Checks adherence to project conventions in CLAUDE.md. Groups findings by severity. |
 | doc-mgr | internal | 90 | documentation, maintenance, validation, lifecycle, planning | Documentation Specialist Agent — plans, creates, validates, and maintains project documentation throughout the development lifecycle. Handles documentation audits, post-implementation docs, and knowledge alignment. |
 | ecosystem-steward | internal | 90 | ecosystem, alignment, validation, cross-project, drift-detection, stewardship, adf | Ecosystem Steward Agent — responsible for cross-project alignment across the ADF ecosystem. Runs 6 alignment checks (governing docs, interface contracts, dependency chain, terminology, intent, decisions), produces structured reports with severity-rated findings, and proposes backlog items routed to the correct project. Supports full audit, targeted check, drift scan, and follow-up modes. |
 | improver | internal | 90 | improvement, learning, cross-cutting, patterns, optimization, architecture | Cross-cutting Improvement Team agent — identifies improvement opportunities from patterns across completed work, KB, memory, and operational data. Produces improvement proposals as backlog items. Part of the Improvement Team defined in the Agentic Work System Architecture. Does NOT execute improvements — it proposes them. Does NOT assess current quality (that's the reviewer) or verify completion (that's the validator). Focuses on "how do we get better?" |
+| kb-manager | internal | 90 | knowledge-base, digest, curation, synthesis, recommendations, content | KB Intelligence Agent — provides digest, curation, synthesis, recommendation, and content pipeline assessment services over the Knowledge Base. Consumes 16 KB MCP tools as a client. Supports 5 modes: DIGEST (activity dashboard), CURATE (health audit), SYNTHESIZE (combine related entries), RECOMMEND (project-relevant entries), and CONTENT (publication readiness assessment). |
+| orchestrator | internal | 90 | orchestration, execution, planning, parallel, coordination, adf | Execute-Plan Orchestrator — phase-level execution coordinator that parses plan.md and tasks.md, spawns 3-5 parallel task-executor agents per phase, monitors progress via TaskList, invokes ralph-loop at phase boundaries, and validates exit criteria via phase-validator. Manages fix tasks, run logs, checkpoints, and session logs. |
+| phase-validator | internal | 90 | validation, exit-criteria, testing, execution, quality-gates | Execute-Plan Phase Validator — exit criteria checker that parses criteria from plan.md, categorizes by type (test-based, execution-based, artifact-based, manual review), runs validation checks, and generates structured pass/fail reports for the orchestrator. |
 | planner | internal | 90 | planning, decomposition, parallelization, capability-assessment, cross-cutting, architecture | Planning Agent — implements the ADF-PLANNING-SPEC methodology. Decomposes intent into executable work organized for parallel execution by agents with verified capabilities. Runs the seven-step planning process: understand intent, decompose into work units, organize phases, parallelization strategy, capability assessment (hard gate), testing strategy, risk/contingency. Produces plan.md and tasks.md drafts. Subordinate to Work Manager in the Work Management hierarchy. |
+| plugin-validator | anthropic | 95 | plugin-validation, structure, configuration, security, quality | Plugin Validation Specialist Agent — comprehensive validation of Claude Code plugin structure, plugin.json manifest, component files (commands, agents, skills, hooks), naming conventions, MCP configuration, file organization, and security. Produces structured validation reports with severity-rated findings. |
+| project-init | internal | 90 | project-init, scaffolding, adf, bootstrap, git, structure | ADF Project Initialization Agent — bootstraps ADF project structure from an existing concept brief. Creates folders, moves files, configures git, drafts initial intent.md from brief content, and validates structure. Infrastructure setup and initial intent extraction only — does not do full Discover stage work. |
 | reviewer | internal | 90 | review, quality, cross-cutting, gap-analysis, feedback, architecture | Cross-cutting Review Team agent — quality assessment for any artifact across any project or domain. Evaluates plans, designs, code, briefs, and other artifacts against quality standards. Provides structured feedback with severity-rated findings (Critical/High/Low). Part of the Review Team defined in the Agentic Work System Architecture. Dispatched by orchestrators, Work Manager, or humans with artifact + review criteria as input. Does NOT verify completion (that's the validator). Focuses on "is this good?" not "is this done?" |
+| skill-reviewer | anthropic | 95 | skill-review, quality, description, progressive-disclosure | Skill Quality Reviewer Agent — reviews and improves Claude Code skills for structure quality, description triggering effectiveness, progressive disclosure implementation, content organization, and adherence to best practices. Provides severity-rated findings with specific fix recommendations. |
+| task-executor | internal | 90 | execution, tdd, implementation, testing, commits, worker | Execute-Plan Task Executor — task-level worker agent that receives 1-4 assigned tasks from the orchestrator, implements changes, validates acceptance criteria, and commits atomically. Supports TDD workflow (write tests first, red-green cycle) from Phase 5 onward. |
 | validator | internal | 90 | validation, completion, drift-detection, cross-cutting, criteria-checking, architecture | Cross-cutting Validation Team agent — completion verification and drift detection for any work across any project or domain. Checks current state against target state (acceptance criteria, checklists, exit criteria). Produces structured pass/fail reports. Part of the Validation Team defined in the Agentic Work System Architecture. Does NOT assess quality (that's the reviewer). Focuses on "is this done?" not "is this good?" |
 
 ## Plugins
@@ -101,22 +121,26 @@
 
 ## Tags Index
 
-- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager, project-health, security-review
+- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager, orchestrator, project-health, project-init, security-review
 - **adr**: adr
+- **agent-creation**: agent-creator
 - **agent-sdk**: agent-sdk-dev
 - **alignment**: ecosystem-alignment, ecosystem-steward
 - **animation**: slack-gif-creator
-- **architecture**: adr, feature-dev, improver, planner, reviewer, validator
+- **architecture**: adr, code-architect, code-explorer, feature-dev, improver, planner, reviewer, validator
 - **art**: algorithmic-art
 - **artifacts**: web-artifacts-builder
 - **audit**: project-health, security-review
 - **auth**: supabase
 - **authoring**: plugin-dev
-- **automation**: claude-code-setup, code-review, commit-commands, hookify, link-triage, playwright
+- **automation**: agent-creator, claude-code-setup, code-review, commit-commands, hookify, link-triage, playwright
 - **backend**: stripe, supabase, supabase-mcp
 - **billing**: stripe, stripe-mcp
+- **blueprints**: code-architect
+- **bootstrap**: project-init
 - **branding**: brand-guidelines
 - **browser**: playwright
+- **bugs**: code-reviewer
 - **business**: internal-comms
 - **canvas**: canvas-design
 - **capability-assessment**: planner
@@ -124,47 +148,58 @@
 - **ci-cd**: commit-commands
 - **claude-md**: claude-md-management
 - **code**: github-mcp
+- **code-analysis**: code-explorer
 - **code-generation**: stitch-mcp
 - **code-hygiene**: project-health
 - **code-navigation**: pyright-lsp, typescript-lsp
-- **code-review**: code-review
+- **code-review**: code-review, code-reviewer
+- **codebase-analysis**: code-architect
 - **collaboration**: doc-coauthoring
 - **commands**: adf-review
+- **commits**: task-executor
 - **communications**: internal-comms
 - **completion**: validator
 - **components**: frontend-design
-- **content**: knowledge-base, link-triage
+- **configuration**: agent-creator, plugin-validator
+- **content**: kb-manager, knowledge-base, link-triage
 - **content-pipeline**: kb-manager
 - **context**: claude-md-management, context7, memory-layer
+- **conventions**: code-reviewer
+- **coordination**: orchestrator
 - **creative**: algorithmic-art, slack-gif-creator
 - **criteria-checking**: validator
 - **cross-cutting**: improver, planner, reviewer, validator
 - **cross-project**: ecosystem-alignment, ecosystem-steward
 - **cryptography**: security-review
 - **css**: frontend-design, theme-factory
-- **curation**: kb-manager
+- **curation**: kb-manager, kb-manager
 - **database**: supabase, supabase-mcp
 - **decisions**: adr
 - **decomposition**: planner
-- **dependencies**: project-health
+- **dependencies**: code-explorer, project-health
 - **deployment**: vercel, vercel-mcp
-- **design**: brand-guidelines, canvas-design, frontend-design, stitch-mcp, theme-factory
+- **description**: skill-reviewer
+- **design**: brand-guidelines, canvas-design, code-architect, frontend-design, stitch-mcp, theme-factory
 - **design-drift**: project-health
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
+- **digest**: kb-manager
 - **documentation**: adr, claude-md-management, context7, doc-mgr, project-health
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
 - **docx**: docx
 - **drift-detection**: ecosystem-alignment, ecosystem-steward, validator
 - **ecosystem**: ecosystem-alignment, ecosystem-steward
 - **environment**: adf-env
+- **execution**: orchestrator, phase-validator, task-executor
+- **exit-criteria**: phase-validator
+- **exploration**: code-explorer
 - **external**: external-review
 - **feedback**: reviewer
 - **frontend**: frontend-design, stitch-mcp
 - **gap-analysis**: reviewer
 - **generative**: algorithmic-art
 - **gif**: slack-gif-creator
-- **git**: commit-commands, github
+- **git**: commit-commands, github, project-init
 - **github**: github, github-mcp
 - **google**: stitch-mcp
 - **governance**: adr
@@ -175,6 +210,7 @@
 - **hooks**: hookify, security-guidance
 - **hosting**: vercel
 - **html**: web-artifacts-builder
+- **implementation**: task-executor
 - **improvement**: improver
 - **infrastructure**: vercel, vercel-mcp
 - **injection**: security-review
@@ -183,7 +219,7 @@
 - **issues**: github
 - **iteration**: ralph-loop
 - **javascript**: web-artifacts-builder
-- **knowledge-base**: kb-manager, knowledge-base
+- **knowledge-base**: kb-manager, kb-manager, knowledge-base
 - **learning**: improver
 - **libraries**: context7
 - **lifecycle**: doc-mgr
@@ -196,35 +232,42 @@
 - **multi-model**: external-review
 - **onboarding**: claude-code-setup
 - **optimization**: improver
-- **orchestration**: adf-server, adf-workflow
+- **orchestration**: adf-server, adf-workflow, orchestrator
 - **owasp**: security-review
 - **p5js**: algorithmic-art
+- **parallel**: orchestrator
 - **parallelization**: planner
 - **patterns**: improver
 - **payments**: stripe, stripe-mcp
 - **pdf**: pdf
 - **pipeline**: link-triage
-- **planning**: doc-mgr, feature-dev, planner
+- **planning**: code-architect, doc-mgr, feature-dev, orchestrator, planner
+- **plugin-dev**: agent-creator
+- **plugin-validation**: plugin-validator
 - **plugins**: plugin-dev
 - **pptx**: pptx
 - **presentations**: pptx
+- **progressive-disclosure**: skill-reviewer
+- **project-init**: project-init
 - **projects**: work-management-mcp
 - **pull-requests**: github
 - **python**: agent-sdk-dev, pyright-lsp
 - **qa**: webapp-testing
-- **quality**: adf-review, code-review, ralph-loop, reviewer
+- **quality**: adf-review, code-review, code-reviewer, plugin-validator, ralph-loop, reviewer, skill-reviewer
+- **quality-gates**: phase-validator
 - **ralph-loop**: adf-review, adf-review
-- **recommendations**: claude-code-setup
+- **recommendations**: claude-code-setup, kb-manager
 - **reference**: context7
 - **retrieval**: memory-layer
 - **review**: adf-review, adf-review, adf-server, external-review, ralph-loop, reviewer
 - **safety**: security-guidance
-- **scaffolding**: agent-sdk-dev, hookify
+- **scaffolding**: agent-sdk-dev, hookify, project-init
 - **secrets**: project-health
-- **security**: project-health, security-guidance, security-review
+- **security**: code-reviewer, plugin-validator, project-health, security-guidance, security-review
 - **semantic-search**: knowledge-base
 - **session-discipline**: adf-env
 - **setup**: claude-code-setup
+- **skill-review**: skill-reviewer
 - **skills**: plugin-dev, skill-creator
 - **slack**: slack-gif-creator
 - **source-control**: github
@@ -237,24 +280,28 @@
 - **stitch**: stitch-mcp
 - **storage**: supabase
 - **stripe**: stripe, stripe-mcp
+- **structure**: plugin-validator, project-init
 - **supabase**: supabase, supabase-mcp
 - **supply-chain**: security-review
-- **synthesis**: kb-manager
+- **synthesis**: kb-manager, kb-manager
 - **tasks**: work-management-mcp
-- **testing**: playwright, project-health, webapp-testing
+- **tdd**: task-executor
+- **testing**: phase-validator, playwright, project-health, task-executor, webapp-testing
 - **themes**: theme-factory
 - **threat-model**: security-review
 - **tools**: mcp-builder, work-management-mcp
+- **tracing**: code-explorer
 - **triage**: link-triage
 - **type-checking**: pyright-lsp
 - **typescript**: agent-sdk-dev, typescript-lsp
 - **ui**: canvas-design, frontend-design, stitch-mcp, theme-factory
-- **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, security-guidance, validator
+- **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, phase-validator, security-guidance, validator
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp
 - **web**: playwright, web-artifacts-builder, webapp-testing
 - **word**: docx
 - **work-management**: work-management-mcp
+- **worker**: task-executor
 - **workflow**: adf-workflow, commit-commands, feature-dev
 - **writing**: doc-coauthoring, internal-comms
 - **xlsx**: xlsx

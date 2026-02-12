@@ -1,22 +1,194 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-11T11:31:23.062162",
+  "generated_at": "2026-02-11T19:37:34.370972",
   "summary": {
-    "total": 60,
+    "total": 71,
     "by_type": {
-      "agent": 6,
+      "agent": 17,
       "plugin": 23,
       "skill": 22,
       "tool": 9
     },
     "by_source": {
-      "internal": 21,
-      "anthropic": 38,
+      "anthropic": 44,
+      "internal": 26,
       "community": 1
     },
-    "by_client": {}
+    "by_client": {
+      "claude-code": {
+        "enabled": 71,
+        "disabled": 0
+      },
+      "claude-desktop": {
+        "enabled": 9,
+        "disabled": 62
+      },
+      "codex": {
+        "enabled": 7,
+        "disabled": 64
+      },
+      "gemini": {
+        "enabled": 8,
+        "disabled": 63
+      }
+    }
   },
   "capabilities": [
+    {
+      "name": "agent-creator",
+      "type": "agent",
+      "description": "Agent Architect \u2014 translates user requirements into precisely-tuned agent specifications. Designs expert persona, comprehensive system prompts, optimal configuration (model, color, tools), and triggering examples. Generates complete agent .md files for Claude Code plugins.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "agent-creation",
+        "plugin-dev",
+        "configuration",
+        "automation"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/agent-creator",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "code-architect",
+      "type": "agent",
+      "description": "Senior Software Architect Agent \u2014 analyzes existing codebase patterns and conventions, then delivers comprehensive implementation blueprints with specific files to create/modify, component designs, data flows, and build sequences. Makes decisive architectural choices with rationale.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "architecture",
+        "design",
+        "blueprints",
+        "codebase-analysis",
+        "planning"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/code-architect",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "code-explorer",
+      "type": "agent",
+      "description": "Expert Code Analyst Agent \u2014 traces execution paths, maps architecture layers, understands patterns and abstractions, and documents dependencies to inform new development. Provides complete understanding of feature implementations from entry points to data storage through all layers.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "code-analysis",
+        "tracing",
+        "architecture",
+        "dependencies",
+        "exploration"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/code-explorer",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "code-reviewer",
+      "type": "agent",
+      "description": "Expert Code Reviewer Agent \u2014 reviews code for bugs, logic errors, security vulnerabilities, and code quality issues using confidence-based filtering (only reports issues with confidence >= 80). Checks adherence to project conventions in CLAUDE.md. Groups findings by severity.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "code-review",
+        "security",
+        "quality",
+        "bugs",
+        "conventions"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/code-reviewer",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
     {
       "name": "doc-mgr",
       "type": "agent",
@@ -35,7 +207,26 @@
       "upstream": null,
       "path": "capabilities/agents/doc-mgr",
       "added": "2026-02-07",
-      "updated": "2026-02-07"
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
     },
     {
       "name": "ecosystem-steward",
@@ -57,7 +248,26 @@
       "upstream": null,
       "path": "capabilities/agents/ecosystem-steward",
       "added": "2026-02-07",
-      "updated": "2026-02-07"
+      "updated": "2026-02-07",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
     },
     {
       "name": "improver",
@@ -78,7 +288,145 @@
       "upstream": null,
       "path": "capabilities/agents/improver",
       "added": "2026-02-09",
-      "updated": "2026-02-09"
+      "updated": "2026-02-09",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "kb-manager",
+      "type": "agent",
+      "description": "KB Intelligence Agent \u2014 provides digest, curation, synthesis, recommendation, and content pipeline assessment services over the Knowledge Base. Consumes 16 KB MCP tools as a client. Supports 5 modes: DIGEST (activity dashboard), CURATE (health audit), SYNTHESIZE (combine related entries), RECOMMEND (project-relevant entries), and CONTENT (publication readiness assessment).",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "knowledge-base",
+        "digest",
+        "curation",
+        "synthesis",
+        "recommendations",
+        "content"
+      ],
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/agents/kb-manager",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "orchestrator",
+      "type": "agent",
+      "description": "Execute-Plan Orchestrator \u2014 phase-level execution coordinator that parses plan.md and tasks.md, spawns 3-5 parallel task-executor agents per phase, monitors progress via TaskList, invokes ralph-loop at phase boundaries, and validates exit criteria via phase-validator. Manages fix tasks, run logs, checkpoints, and session logs.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "orchestration",
+        "execution",
+        "planning",
+        "parallel",
+        "coordination",
+        "adf"
+      ],
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/agents/orchestrator",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "phase-validator",
+      "type": "agent",
+      "description": "Execute-Plan Phase Validator \u2014 exit criteria checker that parses criteria from plan.md, categorizes by type (test-based, execution-based, artifact-based, manual review), runs validation checks, and generates structured pass/fail reports for the orchestrator.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "validation",
+        "exit-criteria",
+        "testing",
+        "execution",
+        "quality-gates"
+      ],
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/agents/phase-validator",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
     },
     {
       "name": "planner",
@@ -99,7 +447,105 @@
       "upstream": null,
       "path": "capabilities/agents/planner",
       "added": "2026-02-09",
-      "updated": "2026-02-09"
+      "updated": "2026-02-09",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "plugin-validator",
+      "type": "agent",
+      "description": "Plugin Validation Specialist Agent \u2014 comprehensive validation of Claude Code plugin structure, plugin.json manifest, component files (commands, agents, skills, hooks), naming conventions, MCP configuration, file organization, and security. Produces structured validation reports with severity-rated findings.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "plugin-validation",
+        "structure",
+        "configuration",
+        "security",
+        "quality"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/plugin-validator",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "project-init",
+      "type": "agent",
+      "description": "ADF Project Initialization Agent \u2014 bootstraps ADF project structure from an existing concept brief. Creates folders, moves files, configures git, drafts initial intent.md from brief content, and validates structure. Infrastructure setup and initial intent extraction only \u2014 does not do full Discover stage work.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "project-init",
+        "scaffolding",
+        "adf",
+        "bootstrap",
+        "git",
+        "structure"
+      ],
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/agents/project-init",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
     },
     {
       "name": "reviewer",
@@ -120,7 +566,104 @@
       "upstream": null,
       "path": "capabilities/agents/reviewer",
       "added": "2026-02-09",
-      "updated": "2026-02-09"
+      "updated": "2026-02-09",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "skill-reviewer",
+      "type": "agent",
+      "description": "Skill Quality Reviewer Agent \u2014 reviews and improves Claude Code skills for structure quality, description triggering effectiveness, progressive disclosure implementation, content organization, and adherence to best practices. Provides severity-rated findings with specific fix recommendations.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "skill-review",
+        "quality",
+        "description",
+        "progressive-disclosure"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/skill-reviewer",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "task-executor",
+      "type": "agent",
+      "description": "Execute-Plan Task Executor \u2014 task-level worker agent that receives 1-4 assigned tasks from the orchestrator, implements changes, validates acceptance criteria, and commits atomically. Supports TDD workflow (write tests first, red-green cycle) from Phase 5 onward.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "execution",
+        "tdd",
+        "implementation",
+        "testing",
+        "commits",
+        "worker"
+      ],
+      "upstream": "https://github.com/jessepike/adf-plugins",
+      "path": "capabilities/agents/task-executor",
+      "added": "2026-02-11",
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
     },
     {
       "name": "validator",
@@ -141,7 +684,26 @@
       "upstream": null,
       "path": "capabilities/agents/validator",
       "added": "2026-02-09",
-      "updated": "2026-02-09"
+      "updated": "2026-02-09",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
     },
     {
       "name": "adf-env",
@@ -161,7 +723,26 @@
       "upstream": "https://github.com/jessepike/adf-plugins",
       "path": "capabilities/plugins/adf-env",
       "added": "2026-01-29",
-      "updated": "2026-02-04"
+      "updated": "2026-02-04",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "adf-review",
@@ -181,7 +762,26 @@
       "upstream": "https://github.com/jessepike/adf-plugins",
       "path": "capabilities/plugins/adf-review",
       "added": "2026-02-04",
-      "updated": "2026-02-04"
+      "updated": "2026-02-04",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "agent-sdk-dev",
@@ -201,7 +801,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/agent-sdk-dev",
       "path": "capabilities/plugins/agent-sdk-dev",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "claude-code-setup",
@@ -220,7 +839,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/claude-code-setup",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "claude-md-management",
@@ -239,7 +877,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/claude-md-management",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "code-review",
@@ -258,7 +915,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
       "path": "capabilities/plugins/code-review",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "commit-commands",
@@ -277,7 +953,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/commit-commands",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "context7",
@@ -296,7 +991,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/context7",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "ecosystem-alignment",
@@ -318,7 +1032,26 @@
       "upstream": "https://github.com/jessepike/adf-plugins",
       "path": "capabilities/plugins/ecosystem-alignment",
       "added": "2026-02-07",
-      "updated": "2026-02-07"
+      "updated": "2026-02-07",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "feature-dev",
@@ -337,7 +1070,26 @@
       "upstream": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev",
       "path": "capabilities/plugins/feature-dev",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "github",
@@ -358,7 +1110,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github",
       "path": "capabilities/plugins/github",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "hookify",
@@ -377,7 +1148,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify",
       "path": "capabilities/plugins/hookify",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "kb-manager",
@@ -398,7 +1188,26 @@
       "upstream": "https://github.com/jessepike/adf-plugins",
       "path": "capabilities/plugins/kb-manager",
       "added": "2026-02-07",
-      "updated": "2026-02-07"
+      "updated": "2026-02-07",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "link-triage",
@@ -418,7 +1227,26 @@
       "upstream": "https://github.com/jessepike/link-triage-pipeline",
       "path": "capabilities/plugins/link-triage",
       "added": "2026-02-07",
-      "updated": "2026-02-07"
+      "updated": "2026-02-07",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "playwright",
@@ -437,7 +1265,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/playwright",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "plugin-dev",
@@ -457,7 +1304,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official",
       "path": "capabilities/plugins/plugin-dev",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "pyright-lsp",
@@ -477,7 +1343,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pyright-lsp",
       "path": "capabilities/plugins/pyright-lsp",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "ralph-loop",
@@ -496,7 +1381,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop",
       "path": "capabilities/plugins/ralph-loop",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "security-guidance",
@@ -515,7 +1419,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
       "path": "capabilities/plugins/security-guidance",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "stripe",
@@ -535,7 +1458,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/stripe",
       "path": "capabilities/plugins/stripe",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "supabase",
@@ -556,7 +1498,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/supabase",
       "path": "capabilities/plugins/supabase",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "typescript-lsp",
@@ -575,7 +1536,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp",
       "path": "capabilities/plugins/typescript-lsp",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "vercel",
@@ -595,7 +1575,26 @@
       "upstream": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/vercel",
       "path": "capabilities/plugins/vercel",
       "added": "2026-01-30",
-      "updated": "2026-01-30"
+      "updated": "2026-01-30",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No plugin support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No plugin support"
+        }
+      }
     },
     {
       "name": "adf-review",
@@ -615,7 +1614,26 @@
       "upstream": "https://github.com/jessepike/adf",
       "path": "capabilities/skills/adf-review",
       "added": "2026-02-04",
-      "updated": "2026-02-04"
+      "updated": "2026-02-04",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "adf-workflow",
@@ -635,7 +1653,26 @@
       "upstream": "https://github.com/jessepike/adf",
       "path": "capabilities/skills/adf-workflow",
       "added": "2026-02-04",
-      "updated": "2026-02-04"
+      "updated": "2026-02-04",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "adr",
@@ -656,7 +1693,26 @@
       "upstream": "https://github.com/jessepike/adf",
       "path": "capabilities/skills/adr",
       "added": "2026-02-09",
-      "updated": "2026-02-09"
+      "updated": "2026-02-09",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "algorithmic-art",
@@ -675,7 +1731,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art",
       "path": "capabilities/skills/algorithmic-art",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "brand-guidelines",
@@ -693,7 +1768,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
       "path": "capabilities/skills/brand-guidelines",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "canvas-design",
@@ -712,7 +1806,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
       "path": "capabilities/skills/canvas-design",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "doc-coauthoring",
@@ -730,7 +1843,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring",
       "path": "capabilities/skills/doc-coauthoring",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "docx",
@@ -748,7 +1880,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/docx",
       "path": "capabilities/skills/docx",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "external-review",
@@ -768,7 +1919,26 @@
       "upstream": "https://github.com/jessepike/adf",
       "path": "capabilities/skills/external-review",
       "added": "2026-02-04",
-      "updated": "2026-02-04"
+      "updated": "2026-02-04",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "frontend-design",
@@ -788,7 +1958,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
       "path": "capabilities/skills/frontend-design",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "internal-comms",
@@ -806,7 +1995,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/internal-comms",
       "path": "capabilities/skills/internal-comms",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "mcp-builder",
@@ -824,7 +2032,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
       "path": "capabilities/skills/mcp-builder",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "pdf",
@@ -841,7 +2068,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/pdf",
       "path": "capabilities/skills/pdf",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "pptx",
@@ -859,7 +2105,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/pptx",
       "path": "capabilities/skills/pptx",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "project-health",
@@ -884,7 +2149,26 @@
       "upstream": "https://github.com/jessepike/adf",
       "path": "capabilities/skills/project-health",
       "added": "2026-02-09",
-      "updated": "2026-02-09"
+      "updated": "2026-02-09",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "security-review",
@@ -909,7 +2193,26 @@
       "upstream": "https://github.com/jessepike/adf",
       "path": "capabilities/skills/security-review",
       "added": "2026-02-09",
-      "updated": "2026-02-09"
+      "updated": "2026-02-09",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "skill-creator",
@@ -927,7 +2230,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
       "path": "capabilities/skills/skill-creator",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "slack-gif-creator",
@@ -946,7 +2268,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator",
       "path": "capabilities/skills/slack-gif-creator",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "theme-factory",
@@ -965,7 +2306,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/theme-factory",
       "path": "capabilities/skills/theme-factory",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "web-artifacts-builder",
@@ -984,7 +2344,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder",
       "path": "capabilities/skills/web-artifacts-builder",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "webapp-testing",
@@ -1002,7 +2381,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
       "path": "capabilities/skills/webapp-testing",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "xlsx",
@@ -1020,7 +2418,26 @@
       "upstream": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
       "path": "capabilities/skills/xlsx",
       "added": "2026-01-29",
-      "updated": "2026-01-29"
+      "updated": "2026-01-29",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
     },
     {
       "name": "adf-server",
@@ -1041,7 +2458,29 @@
       "upstream": "https://github.com/jessepike/adf",
       "path": "capabilities/tools/adf-server",
       "added": "2026-02-04",
-      "updated": "2026-02-10"
+      "updated": "2026-02-10",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "gemini": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        }
+      }
     },
     {
       "name": "github-mcp",
@@ -1060,7 +2499,27 @@
       "upstream": "https://github.com/anthropics/claude-code-plugins",
       "path": "capabilities/tools/github-mcp",
       "added": "2026-01-31",
-      "updated": "2026-01-31"
+      "updated": "2026-01-31",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "Plugin-bundled; manual config possible"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "Plugin-bundled; manual config possible"
+        }
+      }
     },
     {
       "name": "knowledge-base",
@@ -1080,7 +2539,29 @@
       "upstream": "https://github.com/jessepike/knowledge-base",
       "path": "capabilities/tools/knowledge-base",
       "added": "2026-02-07",
-      "updated": "2026-02-10"
+      "updated": "2026-02-10",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "gemini": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        }
+      }
     },
     {
       "name": "memory-layer",
@@ -1101,7 +2582,29 @@
       "upstream": "https://github.com/jessepike/memory-layer",
       "path": "capabilities/tools/memory-layer",
       "added": "2026-02-11",
-      "updated": "2026-02-11"
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "gemini": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        }
+      }
     },
     {
       "name": "stitch-mcp",
@@ -1123,7 +2626,28 @@
       "upstream": "https://stitch.withgoogle.com/docs/mcp/setup",
       "path": "capabilities/tools/stitch-mcp",
       "added": "2026-02-10",
-      "updated": "2026-02-11"
+      "updated": "2026-02-11",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "stdio-only; remote HTTP not supported"
+        },
+        "gemini": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "standalone"
+        }
+      }
     },
     {
       "name": "stripe-mcp",
@@ -1142,7 +2666,29 @@
       "upstream": "https://github.com/anthropics/claude-code-plugins",
       "path": "capabilities/tools/stripe-mcp",
       "added": "2026-01-31",
-      "updated": "2026-01-31"
+      "updated": "2026-01-31",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "manual"
+        },
+        "gemini": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "manual"
+        }
+      }
     },
     {
       "name": "supabase-mcp",
@@ -1161,7 +2707,29 @@
       "upstream": "https://github.com/anthropics/claude-code-plugins",
       "path": "capabilities/tools/supabase-mcp",
       "added": "2026-01-31",
-      "updated": "2026-01-31"
+      "updated": "2026-01-31",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "manual"
+        },
+        "gemini": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "manual"
+        }
+      }
     },
     {
       "name": "vercel-mcp",
@@ -1180,7 +2748,29 @@
       "upstream": "https://github.com/anthropics/claude-code-plugins",
       "path": "capabilities/tools/vercel-mcp",
       "added": "2026-01-31",
-      "updated": "2026-01-31"
+      "updated": "2026-01-31",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "manual"
+        },
+        "gemini": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "manual"
+        }
+      }
     },
     {
       "name": "work-management-mcp",
@@ -1200,7 +2790,29 @@
       "upstream": "",
       "path": "capabilities/tools/work-management-mcp",
       "added": "2026-02-10",
-      "updated": "2026-02-10"
+      "updated": "2026-02-10",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "mcp-config"
+        },
+        "codex": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        },
+        "gemini": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "standalone"
+        }
+      }
     }
   ]
 }
