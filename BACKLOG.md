@@ -23,7 +23,7 @@ Cross-references: skills can reference agents they delegate to, agents reference
 
 | ID | Item | Type | Pri | Size | Status |
 |----|------|------|-----|------|--------|
-| CR-1 | Populate `capabilities/agents/` — sync from 3 sources: `anthropics/claude-plugins-official` (official), `VoltAgent/awesome-claude-code-subagents` (curated, 100+), `hesreallyhim/a-list-of-claude-code-agents` (community). Include personal agents from `~/.claude/agents/` | Research | P1 | L | Pending |
+| CR-1 | Populate `capabilities/agents/` — sync from 3 sources: `anthropics/claude-plugins-official` (official), `VoltAgent/awesome-claude-code-subagents` (curated, 100+), `hesreallyhim/a-list-of-claude-code-agents` (community). Include personal agents from `~/.claude/agents/` | Research | P1 | L | Done |
 | CR-2 | Deep dive: skills catalog — review registered skills, sync from `anthropics/skills` + community collections, identify leverage opportunities for ACM workflows | Research | P1 | L | Pending |
 | CR-3 | Extend community source sync to skills and agents (MCP sync complete) | Enhancement | P2 | M | Pending |
 | CR-4 | Update `REGISTRY-SPEC.md` — make plugins a packaging layer (not peer type), add cross-reference fields (`bundled_in`, `delegates_to`, `requires_tools`) | Spec | P2 | S | Pending |

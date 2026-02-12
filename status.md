@@ -10,14 +10,15 @@ last_session: "2026-02-11"
 ## Current State
 
 - **Stage:** Develop
-- **Focus:** Project bootstrapping — own backlog, status, and CLAUDE.md established
+- **Focus:** CR-1 complete — agents populated, external sources triaged
 
 ## What's Complete
 
 - [x] Registry extracted from ACM (21 initial capabilities)
 - [x] REGISTRY-SPEC.md (v1.2.0) — 4 capability types, MCP-specific fields, community sources
-- [x] 39 capabilities registered (16 skills, 4 tools, 19 plugins)
-- [x] 27 entries in declined.yaml
+- [x] 71 capabilities registered (22 skills, 9 tools, 23 plugins, 17 agents)
+- [x] 68 entries in declined.yaml
+- [x] CR-1: Agent deep dive — 11 new agents registered, 19 staged, 41 declined
 - [x] Scripts: sync, promote, generate-inventory, check-freshness
 - [x] B34 MCP Server Registry — plugin-bundled MCPs, community scanning, triage workflow
 - [x] First MCP triage report (500+ servers scanned, 0 high-relevance)
@@ -27,7 +28,7 @@ last_session: "2026-02-11"
 - [ ] CR-5: Add `clients` compatibility block to schema (P1) — unblocks client tracking
 - [ ] CR-4 + CR-5: Schema updates (packaging layer + client compatibility) — do together
 - [ ] CR-6: Audit all 60 capabilities for per-client enablement (P1)
-- [ ] CR-1: Deep dive — agents capability type (P1)
+- [x] CR-1: Deep dive — agents capability type (P1) ✓
 - [ ] CR-2: Deep dive — skills catalog leverage (P1)
 - [ ] CR-7/CR-8: Prune low-use skills, resolve quality=0 tool stubs (P2)
 
@@ -58,3 +59,4 @@ last_session: "2026-02-11"
 | 2026-02-10 | Session start — reviewed status, no work items actioned. |
 | 2026-02-11 | Registry gap analysis session. Reviewed inventory (60 caps), backlog, cross-agent plan. Identified 5 gaps: no per-client enablement tracking, thin agent coverage, low-use skill noise, quality=0 tool stubs, no usage/activation data. Proposed CR-5 through CR-9 for backlog. Recommended top 3 priorities: CR-5+CR-4 (schema), CR-6 (client audit), CR-1 (agent deep dive). Proposed `clients` compatibility block schema resolving cross-agent plan Decision #1. Backlog updates pending user approval. |
 | 2026-02-10 | Reviewed backlog, confirmed CR-1 (agents deep dive) still open. Parallel session on CR-5/CR-6 in progress. Ready to start CR-1 next. |
+| 2026-02-11 | CR-1 complete. Phase 1: registered 11 new agents (5 ADF plugin, 6 Anthropic official), fixed 5 existing entries (removed broken agent_definition refs, noted external paths). 60→71 capabilities, 6→17 agents. Phase 2: triaged 3 external sources — 19 agents staged (8 Anthropic uninstalled, 10 VoltAgent, 1 hesreallyhim), 41 declined (unused languages, frontend, business roles, duplicates). declined.yaml: 27→68. |
