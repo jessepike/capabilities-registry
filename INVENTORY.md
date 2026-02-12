@@ -1,32 +1,32 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-11 19:38*
+*Generated: 2026-02-12 14:17*
 
 ## Summary
 
-**Total capabilities:** 71
+**Total capabilities:** 72
 
 | Type | Count |
 |------|-------|
 | agent | 17 |
 | plugin | 23 |
 | skill | 22 |
-| tool | 9 |
+| tool | 10 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 44 |
 | community | 1 |
-| internal | 26 |
+| internal | 27 |
 
 ## Client Enablement
 
 | Client | Enabled | Disabled |
 |--------|---------|----------|
-| claude-code | 71 | 0 |
-| claude-desktop | 9 | 62 |
-| codex | 7 | 64 |
-| gemini | 8 | 63 |
+| claude-code | 72 | 0 |
+| claude-desktop | 9 | 63 |
+| codex | 7 | 65 |
+| gemini | 8 | 64 |
 
 ## Agents
 
@@ -110,6 +110,7 @@
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
 | adf-server | internal | 100 | mcp, adf, orchestration, specs, review, validation | ADF MCP Server — read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation. |
+| diagram-forge | internal | 95 | mcp, diagrams, architecture, visualization, ai-image-generation, design | Diagram Forge MCP Server — generates enterprise-grade architecture diagrams from natural language using template-driven prompt engineering and AI image providers (Google Gemini, OpenAI GPT Image, Replicate Flux). Provides 7 diagram templates (architecture, data flow, component, sequence, integration, infographic, generic), style references, and cost tracking. Includes Claude Code plugin with guided commands and context-gatherer agent. |
 | github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
 | knowledge-base | internal | 95 | mcp, knowledge-base, semantic-search, content, intelligence | Knowledge Base MCP Server — semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle. |
 | memory-layer | internal | 95 | mcp, memory, context, retrieval, sqlite, chroma | Memory Layer MCP Server — persistent contextual memory service with namespace-scoped write/search/update/archive flows, review candidates, stats, reconciliation, and failed-memory lifecycle tools. |
@@ -124,10 +125,11 @@
 - **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager, orchestrator, project-health, project-init, security-review
 - **adr**: adr
 - **agent-creation**: agent-creator
+- **ai-image-generation**: diagram-forge
 - **agent-sdk**: agent-sdk-dev
 - **alignment**: ecosystem-alignment, ecosystem-steward
 - **animation**: slack-gif-creator
-- **architecture**: adr, code-architect, code-explorer, feature-dev, improver, planner, reviewer, validator
+- **architecture**: adr, code-architect, code-explorer, diagram-forge, feature-dev, improver, planner, reviewer, validator
 - **art**: algorithmic-art
 - **artifacts**: web-artifacts-builder
 - **audit**: project-health, security-review
@@ -175,11 +177,12 @@
 - **curation**: kb-manager, kb-manager
 - **database**: supabase, supabase-mcp
 - **decisions**: adr
+- **diagrams**: diagram-forge
 - **decomposition**: planner
 - **dependencies**: code-explorer, project-health
 - **deployment**: vercel, vercel-mcp
 - **description**: skill-reviewer
-- **design**: brand-guidelines, canvas-design, code-architect, frontend-design, stitch-mcp, theme-factory
+- **design**: brand-guidelines, canvas-design, code-architect, diagram-forge, frontend-design, stitch-mcp, theme-factory
 - **design-drift**: project-health
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
@@ -226,7 +229,7 @@
 - **links**: link-triage
 - **lsp**: pyright-lsp, typescript-lsp
 - **maintenance**: adf-env, claude-md-management, doc-mgr
-- **mcp**: adf-server, external-review, github, github-mcp, knowledge-base, mcp-builder, memory-layer, stitch-mcp, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp, work-management-mcp
+- **mcp**: adf-server, diagram-forge, external-review, github, github-mcp, knowledge-base, mcp-builder, memory-layer, stitch-mcp, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp, work-management-mcp
 - **memory**: memory-layer
 - **meta**: plugin-dev, skill-creator
 - **multi-model**: external-review
@@ -296,6 +299,7 @@
 - **typescript**: agent-sdk-dev, typescript-lsp
 - **ui**: canvas-design, frontend-design, stitch-mcp, theme-factory
 - **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, phase-validator, security-guidance, validator
+- **visualization**: diagram-forge
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp
 - **web**: playwright, web-artifacts-builder, webapp-testing
