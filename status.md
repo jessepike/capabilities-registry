@@ -2,7 +2,7 @@
 project: "Capabilities Registry"
 stage: "Develop"
 updated: "2026-02-12"
-last_session: "2026-02-12"
+last_session: "2026-02-12 (session 2)"
 ---
 
 # Status
@@ -10,7 +10,7 @@ last_session: "2026-02-12"
 ## Current State
 
 - **Stage:** Develop
-- **Focus:** Scoping project-docs plugin — diagram-forge MCP + unified doc tooling
+- **Focus:** project-docs plugin v0.1 built and registered
 
 ## What's Complete
 
@@ -22,6 +22,7 @@ last_session: "2026-02-12"
 - [x] Scripts: sync, promote, generate-inventory, check-freshness
 - [x] B34 MCP Server Registry — plugin-bundled MCPs, community scanning, triage workflow
 - [x] First MCP triage report (500+ servers scanned, 0 high-relevance)
+- [x] project-docs plugin v0.1 — 4 commands, 1 agent (4 modes), 1 skill, doc-expectations reference
 
 ## What's Next
 
@@ -61,3 +62,4 @@ last_session: "2026-02-12"
 | 2026-02-10 | Reviewed backlog, confirmed CR-1 (agents deep dive) still open. Parallel session on CR-5/CR-6 in progress. Ready to start CR-1 next. |
 | 2026-02-11 | CR-1 complete. Phase 1: registered 11 new agents (5 ADF plugin, 6 Anthropic official), fixed 5 existing entries (removed broken agent_definition refs, noted external paths). 60→71 capabilities, 6→17 agents. Phase 2: triaged 3 external sources — 19 agents staged (8 Anthropic uninstalled, 10 VoltAgent, 1 hesreallyhim), 41 declined (unused languages, frontend, business roles, duplicates). declined.yaml: 27→68. Pushed to origin. |
 | 2026-02-12 | Scoped diagram-forge MCP registration + broader doc tooling. Explored diagram-forge project (7 MCP tools, 3 providers, 7 templates, stdio transport, bundled plugin). Audited existing doc capabilities (doc-mgr agent, doc-coauthoring skill, adr skill, claude-md-management plugin, project-health skill, context7). Identified gap: no unified orchestration for keeping project docs updated. Proposed `project-docs` plugin design — bundles diagram-forge MCP, adds /docs:audit /docs:generate /docs:update /docs:diagram commands, doc-intelligence skill, doc-analyst agent, post-implement hooks. Awaiting user decision to proceed with build. |
+| 2026-02-12 | Built project-docs plugin v0.1 (10 files). 4 commands (/docs:status, /docs:audit, /docs:update, /docs:generate), doc-ops agent (4 modes: AUDIT/GENERATE/UPDATE/PLAN, absorbs doc-mgr content), doc-intelligence routing skill, doc-expectations.yaml reference (3 project types). Registered in marketplace.json. Deferred: diagram-forge MCP (PD-1), hooks (PD-2), doc-coauthoring (PD-3). |
