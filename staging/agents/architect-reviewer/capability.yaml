@@ -1,0 +1,14 @@
+name: architect-reviewer
+type: agent
+description: >-
+  Architecture Review Agent — reviews system architecture for design patterns, scalability,
+  separation of concerns, and alignment with best practices. Community-sourced from VoltAgent
+  collection.
+source: community
+upstream: "https://github.com/VoltAgent/awesome-claude-code-subagents"
+version: "1.0.0"
+quality: 70
+tags: [architecture, review, design-patterns, scalability]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

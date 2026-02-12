@@ -1,0 +1,13 @@
+name: backend-typescript-architect
+type: agent
+description: >-
+  Backend TypeScript Architect Agent — senior backend architect for Bun runtime, API design,
+  and scalable TypeScript architectures. Community-sourced from hesreallyhim collection.
+source: community
+upstream: "https://github.com/hesreallyhim/a-list-of-claude-code-agents"
+version: "1.0.0"
+quality: 65
+tags: [typescript, backend, architecture, bun, api-design]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

@@ -1,0 +1,14 @@
+name: performance-engineer
+type: agent
+description: >-
+  Performance Engineering Agent — profiling, benchmarking, and optimization specialist for
+  identifying bottlenecks and improving application performance. Community-sourced from
+  VoltAgent collection.
+source: community
+upstream: "https://github.com/VoltAgent/awesome-claude-code-subagents"
+version: "1.0.0"
+quality: 70
+tags: [performance, optimization, profiling, benchmarking]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

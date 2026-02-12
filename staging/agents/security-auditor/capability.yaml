@@ -1,0 +1,13 @@
+name: security-auditor
+type: agent
+description: >-
+  Security Audit Agent — identifies security vulnerabilities, reviews authentication/authorization
+  patterns, and assesses OWASP compliance. Community-sourced from VoltAgent collection.
+source: community
+upstream: "https://github.com/VoltAgent/awesome-claude-code-subagents"
+version: "1.0.0"
+quality: 70
+tags: [security, audit, vulnerabilities, owasp]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

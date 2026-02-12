@@ -1,0 +1,16 @@
+name: code-simplifier
+type: agent
+description: >-
+  Code Simplification Agent — simplifies and refines code for clarity, consistency, and
+  maintainability while preserving all functionality. Focuses on recently modified code.
+  Available in both pr-review-toolkit and standalone code-simplifier plugins.
+source: anthropic
+upstream: "https://github.com/anthropics/claude-plugins-official"
+version: "1.0.0"
+quality: 95
+tags: [code-review, simplification, refactoring, clarity]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: pr-review-toolkit
+install_id: "pr-review-toolkit@claude-plugins-official"

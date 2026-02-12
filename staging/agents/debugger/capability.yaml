@@ -1,0 +1,13 @@
+name: debugger
+type: agent
+description: >-
+  Advanced Debugging Agent — systematic debugging specialist for complex issues including race
+  conditions, memory leaks, and hard-to-reproduce bugs. Community-sourced from VoltAgent collection.
+source: community
+upstream: "https://github.com/VoltAgent/awesome-claude-code-subagents"
+version: "1.0.0"
+quality: 70
+tags: [debugging, troubleshooting, error-analysis, diagnostics]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

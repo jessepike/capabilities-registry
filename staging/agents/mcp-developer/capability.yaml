@@ -1,0 +1,13 @@
+name: mcp-developer
+type: agent
+description: >-
+  MCP Developer Agent — Model Context Protocol specialist for building, debugging, and optimizing
+  MCP servers and tool integrations. Community-sourced from VoltAgent collection.
+source: community
+upstream: "https://github.com/VoltAgent/awesome-claude-code-subagents"
+version: "1.0.0"
+quality: 70
+tags: [mcp, tool-development, protocol, integration]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

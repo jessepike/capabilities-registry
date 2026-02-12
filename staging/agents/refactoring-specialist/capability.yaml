@@ -1,0 +1,14 @@
+name: refactoring-specialist
+type: agent
+description: >-
+  Code Refactoring Agent — systematic approach to improving code structure, reducing complexity,
+  and enhancing maintainability without changing external behavior. Community-sourced from
+  VoltAgent collection.
+source: community
+upstream: "https://github.com/VoltAgent/awesome-claude-code-subagents"
+version: "1.0.0"
+quality: 70
+tags: [refactoring, code-quality, maintainability, clean-code]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

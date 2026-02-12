@@ -1,0 +1,13 @@
+name: typescript-pro
+type: agent
+description: >-
+  TypeScript Specialist Agent — deep expertise in TypeScript type system, generics, utility types,
+  module patterns, and ecosystem best practices. Community-sourced from VoltAgent collection.
+source: community
+upstream: "https://github.com/VoltAgent/awesome-claude-code-subagents"
+version: "1.0.0"
+quality: 70
+tags: [typescript, language-specialist, types, development]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

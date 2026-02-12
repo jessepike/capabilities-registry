@@ -1,0 +1,13 @@
+name: documentation-engineer
+type: agent
+description: >-
+  Technical Documentation Agent — creates and maintains API docs, architecture guides, developer
+  onboarding materials, and inline documentation. Community-sourced from VoltAgent collection.
+source: community
+upstream: "https://github.com/VoltAgent/awesome-claude-code-subagents"
+version: "1.0.0"
+quality: 70
+tags: [documentation, technical-writing, api-docs, developer-experience]
+status: staging
+added: "2026-02-11"
+updated: "2026-02-11"

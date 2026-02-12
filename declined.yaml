@@ -3,7 +3,7 @@
 # Sync will skip these. Refresh will report them as "declined" not "new".
 # Remove an entry from this list to re-evaluate it on next refresh.
 
-updated: "2026-01-31"
+updated: "2026-02-11"
 
 declined:
   # MCP tools — redundant with Claude Code built-ins
@@ -90,3 +90,134 @@ declined:
   - name: swift-lsp
     source: anthropic
     reason: "No Swift projects"
+
+  # Agents — Anthropic uninstalled plugins (CR-1 triage, 2026-02-11)
+  - name: conversation-analyzer
+    source: anthropic
+    reason: "Niche — hookify agent for analyzing conversation transcripts. No current use case."
+
+  # Agents — hesreallyhim community (CR-1 triage, 2026-02-11)
+  - name: senior-code-reviewer
+    source: community
+    reason: "Duplicates existing code-reviewer (feature-dev) and reviewer (internal)"
+  - name: ui-engineer
+    source: community
+    reason: "Frontend-only — not primary development focus"
+  - name: react-coder
+    source: community
+    reason: "Frontend-only — React specialist, not primary development focus"
+
+  # Agents — VoltAgent community (CR-1 triage, 2026-02-11)
+  # Declined categories: unused language specialists, frontend-only, blockchain, fintech,
+  # gaming, IoT, business/product roles, redundant with registered agents
+  - name: blockchain-developer
+    source: community
+    reason: "No blockchain/Web3 projects"
+  - name: game-developer
+    source: community
+    reason: "No game development projects"
+  - name: iot-engineer
+    source: community
+    reason: "No IoT projects"
+  - name: fintech-engineer
+    source: community
+    reason: "No fintech projects"
+  - name: payment-integration
+    source: community
+    reason: "No payment integration projects"
+  - name: quant-analyst
+    source: community
+    reason: "No quantitative analysis projects"
+  - name: embedded-systems
+    source: community
+    reason: "No embedded systems projects"
+  - name: seo-specialist
+    source: community
+    reason: "No SEO-focused work"
+  - name: wordpress-master
+    source: community
+    reason: "No WordPress projects"
+  - name: content-marketer
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: customer-success-manager
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: legal-advisor
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: product-manager
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: project-manager
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: sales-engineer
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: scrum-master
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: ux-researcher
+    source: community
+    reason: "Business/product role — not primary focus"
+  - name: market-researcher
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: competitive-analyst
+    source: community
+    reason: "Business role — not a technical agent"
+  - name: ui-designer
+    source: community
+    reason: "Frontend-only — visual design not primary focus"
+  - name: mobile-developer
+    source: community
+    reason: "No mobile development projects"
+  - name: mobile-app-developer
+    source: community
+    reason: "No mobile development projects"
+  - name: swift-expert
+    source: community
+    reason: "No Swift/iOS projects"
+  - name: flutter-expert
+    source: community
+    reason: "No Flutter projects"
+  - name: csharp-developer
+    source: community
+    reason: "No C#/.NET projects"
+  - name: dotnet-core-expert
+    source: community
+    reason: "No .NET projects"
+  - name: dotnet-framework-4.8-expert
+    source: community
+    reason: "No .NET Framework projects"
+  - name: php-pro
+    source: community
+    reason: "No PHP projects"
+  - name: laravel-specialist
+    source: community
+    reason: "No Laravel projects"
+  - name: java-architect
+    source: community
+    reason: "No Java projects"
+  - name: spring-boot-engineer
+    source: community
+    reason: "No Java/Spring Boot projects"
+  - name: kotlin-specialist
+    source: community
+    reason: "No Kotlin projects"
+  - name: golang-pro
+    source: community
+    reason: "No Go projects"
+  - name: rust-engineer
+    source: community
+    reason: "No Rust projects"
+  - name: cpp-pro
+    source: community
+    reason: "No C++ projects"
+  - name: elixir-expert
+    source: community
+    reason: "No Elixir projects"
+  - name: ruby-on-rails-expert
+    source: community
+    reason: "No Ruby projects"
