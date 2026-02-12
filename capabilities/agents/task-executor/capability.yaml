@@ -1,0 +1,16 @@
+name: task-executor
+type: agent
+description: >-
+  Execute-Plan Task Executor — task-level worker agent that receives 1-4 assigned tasks from
+  the orchestrator, implements changes, validates acceptance criteria, and commits atomically.
+  Supports TDD workflow (write tests first, red-green cycle) from Phase 5 onward.
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "1.0.0"
+quality: 90
+tags: [execution, tdd, implementation, testing, commits, worker]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: execute-plan

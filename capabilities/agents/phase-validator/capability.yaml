@@ -1,0 +1,16 @@
+name: phase-validator
+type: agent
+description: >-
+  Execute-Plan Phase Validator — exit criteria checker that parses criteria from plan.md, categorizes
+  by type (test-based, execution-based, artifact-based, manual review), runs validation checks, and
+  generates structured pass/fail reports for the orchestrator.
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "1.0.0"
+quality: 90
+tags: [validation, exit-criteria, testing, execution, quality-gates]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: execute-plan

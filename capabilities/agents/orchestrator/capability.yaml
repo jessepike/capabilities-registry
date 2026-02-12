@@ -1,0 +1,18 @@
+name: orchestrator
+type: agent
+description: >-
+  Execute-Plan Orchestrator — phase-level execution coordinator that parses plan.md and tasks.md,
+  spawns 3-5 parallel task-executor agents per phase, monitors progress via TaskList, invokes
+  ralph-loop at phase boundaries, and validates exit criteria via phase-validator. Manages fix
+  tasks, run logs, checkpoints, and session logs.
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "1.0.0"
+quality: 90
+tags: [orchestration, execution, planning, parallel, coordination, adf]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: execute-plan
+delegates_to: [task-executor, phase-validator]

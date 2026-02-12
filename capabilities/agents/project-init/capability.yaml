@@ -1,0 +1,17 @@
+name: project-init
+type: agent
+description: >-
+  ADF Project Initialization Agent — bootstraps ADF project structure from an existing concept
+  brief. Creates folders, moves files, configures git, drafts initial intent.md from brief content,
+  and validates structure. Infrastructure setup and initial intent extraction only — does not do
+  full Discover stage work.
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "1.0.0"
+quality: 90
+tags: [project-init, scaffolding, adf, bootstrap, git, structure]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: adf-env

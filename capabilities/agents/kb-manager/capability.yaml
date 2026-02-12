@@ -1,0 +1,18 @@
+name: kb-manager
+type: agent
+description: >-
+  KB Intelligence Agent — provides digest, curation, synthesis, recommendation, and content pipeline
+  assessment services over the Knowledge Base. Consumes 16 KB MCP tools as a client. Supports 5
+  modes: DIGEST (activity dashboard), CURATE (health audit), SYNTHESIZE (combine related entries),
+  RECOMMEND (project-relevant entries), and CONTENT (publication readiness assessment).
+source: internal
+upstream: "https://github.com/jessepike/adf-plugins"
+version: "1.0.0"
+quality: 90
+tags: [knowledge-base, digest, curation, synthesis, recommendations, content]
+status: active
+install_level: user
+added: "2026-02-11"
+updated: "2026-02-11"
+bundled_in: kb-manager
+requires_tools: [knowledge-base-mcp]
