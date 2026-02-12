@@ -18,8 +18,9 @@ launcher:
     - "${HOME}/code/_shared/work-management/mcp-server/dist/index.js"
   env:
     ADF_ROOT: "${HOME}/code/_shared/work-management"
+    API_URL: "https://work-management-kappa.vercel.app/api"
 added: "2026-02-10"
-updated: "2026-02-10"
+updated: "2026-02-12"
 clients:
   claude-code:
     enabled: true
