@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-11T19:38:20.105786",
+  "generated_at": "2026-02-24T12:56:23.881444",
   "summary": {
     "total": 71,
     "by_type": {
@@ -2790,7 +2790,7 @@
       "upstream": "",
       "path": "capabilities/tools/work-management-mcp",
       "added": "2026-02-10",
-      "updated": "2026-02-10",
+      "updated": "2026-02-12",
       "clients": {
         "claude-code": {
           "enabled": true,
