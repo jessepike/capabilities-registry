@@ -1,0 +1,41 @@
+name: diagram-forge
+type: tool
+description: >-
+  Diagram Forge MCP Server — AI-powered architecture diagram generation using Gemini, OpenAI, or Replicate. 7 tools for generating, editing, and managing diagrams with template and style reference support.
+source: internal
+version: "0.1.0"
+quality: 80
+tags: [mcp, diagrams, architecture, visualization, image-generation]
+status: active
+install_vector: standalone
+transport: stdio
+parent_plugin: diagram-forge
+install_id: "diagram-forge"
+install_level: user
+launcher:
+  type: stdio
+  command: python
+  args:
+    - "-m"
+    - "diagram_forge"
+  env:
+    GEMINI_API_KEY: "${GEMINI_API_KEY}"
+    OPENAI_API_KEY: "${OPENAI_API_KEY}"
+    REPLICATE_API_TOKEN: "${REPLICATE_API_TOKEN}"
+requires_tools: []
+added: "2026-02-11"
+updated: "2026-03-16"
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: standalone
+  claude-desktop:
+    enabled: false
+    reason: "Requires plugin ecosystem"
+  codex:
+    enabled: false
+    reason: "stdio-only; needs env vars"
+  gemini:
+    enabled: false
+    reason: "No MCP support"

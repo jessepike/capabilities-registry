@@ -1,35 +1,35 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-24T12:56:23.881444",
+  "generated_at": "2026-03-16T19:19:52.476551",
   "summary": {
-    "total": 71,
+    "total": 89,
     "by_type": {
-      "agent": 17,
+      "agent": 32,
       "plugin": 23,
       "skill": 22,
-      "tool": 9
+      "tool": 12
     },
     "by_source": {
-      "anthropic": 44,
-      "internal": 26,
+      "anthropic": 51,
+      "internal": 37,
       "community": 1
     },
     "by_client": {
       "claude-code": {
-        "enabled": 71,
+        "enabled": 82,
         "disabled": 0
       },
       "claude-desktop": {
         "enabled": 9,
-        "disabled": 62
+        "disabled": 73
       },
       "codex": {
-        "enabled": 7,
-        "disabled": 64
+        "enabled": 8,
+        "disabled": 74
       },
       "gemini": {
         "enabled": 8,
-        "disabled": 63
+        "disabled": 74
       }
     }
   },
@@ -56,6 +56,161 @@
         "claude-code": {
           "enabled": true,
           "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "agent-sdk-verifier-py",
+      "type": "agent",
+      "description": "Agent SDK Verifier (Python) \u2014 verifies that a Python Agent SDK application is properly configured, follows SDK best practices and documentation recommendations, and is ready for deployment or testing. Part of the agent-sdk-dev plugin.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "agent-sdk",
+        "python",
+        "verification",
+        "deployment"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/agent-sdk-verifier-py",
+      "added": "2026-02-11",
+      "updated": "2026-02-11"
+    },
+    {
+      "name": "agent-sdk-verifier-ts",
+      "type": "agent",
+      "description": "Agent SDK Verifier (TypeScript) \u2014 verifies that a TypeScript Agent SDK application is properly configured, follows SDK best practices and documentation recommendations, and is ready for deployment or testing. Part of the agent-sdk-dev plugin.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "agent-sdk",
+        "typescript",
+        "verification",
+        "deployment"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/agent-sdk-verifier-ts",
+      "added": "2026-02-11",
+      "updated": "2026-02-11"
+    },
+    {
+      "name": "cfo",
+      "type": "agent",
+      "description": "Chief Financial Officer \u2014 financial data integrity, pricing consistency, unit economics validation, revenue projection arithmetic, operating budget accuracy. Portfolio-level.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.1.0",
+      "quality": 95,
+      "tags": [
+        "executive",
+        "finance",
+        "pricing",
+        "revenue",
+        "portfolio"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/cfo",
+      "added": "2026-03-16",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "ciso",
+      "type": "agent",
+      "description": "Chief Information Security Officer \u2014 AI-native security architecture, threat modeling for LLM systems, OWASP Top 10 for LLM Apps, compliance posture. Portfolio-level.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.1.0",
+      "quality": 95,
+      "tags": [
+        "executive",
+        "security",
+        "compliance",
+        "threat-modeling",
+        "portfolio"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/ciso",
+      "added": "2026-03-16",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "cmo",
+      "type": "agent",
+      "description": "Chief Marketing Officer \u2014 positioning strategy (April Dunford), developer-first messaging, category design, content strategy, go-to-market narrative. Portfolio-level.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.1.0",
+      "quality": 95,
+      "tags": [
+        "executive",
+        "marketing",
+        "positioning",
+        "content",
+        "portfolio"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/cmo",
+      "added": "2026-03-16",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
           "install_vector": "plugin"
         },
         "claude-desktop": {
@@ -173,6 +328,161 @@
         "claude-code": {
           "enabled": true,
           "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "code-simplifier",
+      "type": "agent",
+      "description": "Code Simplification Agent \u2014 simplifies and refines code for clarity, consistency, and maintainability while preserving all functionality. Focuses on recently modified code. Available in both pr-review-toolkit and standalone code-simplifier plugins.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "code-review",
+        "simplification",
+        "refactoring",
+        "clarity"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/code-simplifier",
+      "added": "2026-02-11",
+      "updated": "2026-02-11"
+    },
+    {
+      "name": "comment-analyzer",
+      "type": "agent",
+      "description": "PR Review Agent \u2014 analyzes code comments for accuracy, completeness, and long-term maintainability. Part of the pr-review-toolkit plugin.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "code-review",
+        "comments",
+        "documentation",
+        "pr-review"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/comment-analyzer",
+      "added": "2026-02-11",
+      "updated": "2026-02-11"
+    },
+    {
+      "name": "cpo",
+      "type": "agent",
+      "description": "Chief Product Officer \u2014 product strategy, PMF assessment, product-market alignment, roadmap governance, feature scoping, stage-gate readiness. Portfolio-level.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "executive",
+        "product",
+        "strategy",
+        "pmf",
+        "portfolio"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/cpo",
+      "added": "2026-03-16",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "cro",
+      "type": "agent",
+      "description": "Chief Revenue Officer \u2014 revenue strategy, GTM motion, growth loops, activation/conversion optimization, pricing execution, churn analysis. Portfolio-level.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "executive",
+        "revenue",
+        "gtm",
+        "growth",
+        "portfolio"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/cro",
+      "added": "2026-03-16",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "cto",
+      "type": "agent",
+      "description": "Chief Technology Officer \u2014 cross-project architectural governance, technology strategy, system design, integration coherence, technical debt management. Portfolio-level.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "executive",
+        "architecture",
+        "strategy",
+        "portfolio",
+        "governance"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/cto",
+      "added": "2026-03-16",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
           "install_vector": "plugin"
         },
         "claude-desktop": {
@@ -350,6 +660,45 @@
       }
     },
     {
+      "name": "krypton",
+      "type": "agent",
+      "description": "Personal AI Chief of Staff \u2014 cross-system intelligence, morning briefings, priority recommendations, operational decisions. Synthesizes KB, ADF, WM, Memory.",
+      "source": "internal",
+      "status": "active",
+      "version": "0.1.0",
+      "quality": 90,
+      "tags": [
+        "executive",
+        "chief-of-staff",
+        "intelligence",
+        "briefings",
+        "portfolio"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/krypton",
+      "added": "2026-03-16",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
       "name": "orchestrator",
       "type": "agent",
       "description": "Execute-Plan Orchestrator \u2014 phase-level execution coordinator that parses plan.md and tasks.md, spawns 3-5 parallel task-executor agents per phase, monitors progress via TaskList, invokes ralph-loop at phase boundaries, and validates exit criteria via phase-validator. Manages fix tasks, run logs, checkpoints, and session logs.",
@@ -508,6 +857,25 @@
       }
     },
     {
+      "name": "pr-test-analyzer",
+      "type": "agent",
+      "description": "PR Review Agent \u2014 reviews pull requests for test coverage quality and completeness. Part of the pr-review-toolkit plugin.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "code-review",
+        "testing",
+        "coverage",
+        "pr-review"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/pr-test-analyzer",
+      "added": "2026-02-11",
+      "updated": "2026-02-11"
+    },
+    {
       "name": "project-init",
       "type": "agent",
       "description": "ADF Project Initialization Agent \u2014 bootstraps ADF project structure from an existing concept brief. Creates folders, moves files, configures git, drafts initial intent.md from brief content, and validates structure. Infrastructure setup and initial intent extraction only \u2014 does not do full Discover stage work.",
@@ -588,6 +956,25 @@
       }
     },
     {
+      "name": "silent-failure-hunter",
+      "type": "agent",
+      "description": "PR Review Agent \u2014 identifies silent failures, inadequate error handling, and inappropriate fallback behavior in code changes. Part of the pr-review-toolkit plugin.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "code-review",
+        "error-handling",
+        "silent-failures",
+        "pr-review"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/silent-failure-hunter",
+      "added": "2026-02-11",
+      "updated": "2026-02-11"
+    },
+    {
       "name": "skill-reviewer",
       "type": "agent",
       "description": "Skill Quality Reviewer Agent \u2014 reviews and improves Claude Code skills for structure quality, description triggering effectiveness, progressive disclosure implementation, content organization, and adherence to best practices. Provides severity-rated findings with specific fix recommendations.",
@@ -664,6 +1051,66 @@
           "reason": "No subagent support"
         }
       }
+    },
+    {
+      "name": "tools",
+      "type": "agent",
+      "description": "Claude Code Infrastructure Specialist \u2014 MCP servers, plugins, skills, agents, hooks, commands. Development, configuration, validation, health monitoring, troubleshooting.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.1.0",
+      "quality": 90,
+      "tags": [
+        "infrastructure",
+        "mcp",
+        "plugins",
+        "agents",
+        "tools",
+        "portfolio"
+      ],
+      "upstream": null,
+      "path": "capabilities/agents/tools",
+      "added": "2026-03-16",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No subagent support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No subagent support"
+        }
+      }
+    },
+    {
+      "name": "type-design-analyzer",
+      "type": "agent",
+      "description": "PR Review Agent \u2014 expert analysis of type design in codebases, evaluating type safety, generics usage, and type architecture. Part of the pr-review-toolkit plugin.",
+      "source": "anthropic",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 95,
+      "tags": [
+        "code-review",
+        "types",
+        "typescript",
+        "type-safety",
+        "pr-review"
+      ],
+      "upstream": "https://github.com/anthropics/claude-plugins-official",
+      "path": "capabilities/agents/type-design-analyzer",
+      "added": "2026-02-11",
+      "updated": "2026-02-11"
     },
     {
       "name": "validator",
@@ -2483,6 +2930,83 @@
       }
     },
     {
+      "name": "diagram-forge",
+      "type": "tool",
+      "description": "Diagram Forge MCP Server \u2014 AI-powered architecture diagram generation using Gemini, OpenAI, or Replicate. 7 tools for generating, editing, and managing diagrams with template and style reference support.",
+      "source": "internal",
+      "status": "active",
+      "version": "0.1.0",
+      "quality": 80,
+      "tags": [
+        "mcp",
+        "diagrams",
+        "architecture",
+        "visualization",
+        "image-generation"
+      ],
+      "upstream": "",
+      "path": "capabilities/tools/diagram-forge",
+      "added": "2026-02-11",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "Requires plugin ecosystem"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "stdio-only; needs env vars"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No MCP support"
+        }
+      }
+    },
+    {
+      "name": "external-review",
+      "type": "tool",
+      "description": "External Review MCP Server \u2014 code review via external AI models (Moonshot, Google). Provides independent code review perspective outside the primary Claude session.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 70,
+      "tags": [
+        "mcp",
+        "code-review",
+        "external-model",
+        "quality"
+      ],
+      "upstream": "",
+      "path": "capabilities/tools/external-review",
+      "added": "2026-02-07",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "Requires ADF project structure"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "Requires env vars and venv"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No MCP support"
+        }
+      }
+    },
+    {
       "name": "github-mcp",
       "type": "tool",
       "description": "GitHub MCP server \u2014 repo management, issues, PRs, code search",
@@ -2518,6 +3042,49 @@
         "gemini": {
           "enabled": false,
           "reason": "Plugin-bundled; manual config possible"
+        }
+      }
+    },
+    {
+      "name": "google-workspace",
+      "type": "tool",
+      "description": "Google Workspace MCP Server \u2014 Drive, Docs, Sheets, Forms, Gmail, Calendar, Slides, Tasks access via gws CLI in MCP mode. Full Google Workspace integration.",
+      "source": "internal",
+      "status": "active",
+      "version": "0.6.0",
+      "quality": 90,
+      "tags": [
+        "mcp",
+        "google",
+        "drive",
+        "docs",
+        "sheets",
+        "gmail",
+        "calendar",
+        "productivity"
+      ],
+      "upstream": "",
+      "path": "capabilities/tools/google-workspace",
+      "added": "2026-03-07",
+      "updated": "2026-03-16",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "standalone"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "Requires gws CLI auth"
+        },
+        "codex": {
+          "enabled": true,
+          "scope": "user",
+          "install_vector": "standalone"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No MCP support"
         }
       }
     },
@@ -2564,7 +3131,7 @@
       }
     },
     {
-      "name": "memory-layer",
+      "name": "memory",
       "type": "tool",
       "description": "Memory Layer MCP Server \u2014 persistent contextual memory service with namespace-scoped write/search/update/archive flows, review candidates, stats, reconciliation, and failed-memory lifecycle tools.",
       "source": "internal",
@@ -2580,7 +3147,7 @@
         "chroma"
       ],
       "upstream": "https://github.com/jessepike/memory-layer",
-      "path": "capabilities/tools/memory-layer",
+      "path": "capabilities/tools/memory",
       "added": "2026-02-11",
       "updated": "2026-02-11",
       "clients": {

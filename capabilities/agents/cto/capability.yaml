@@ -1,0 +1,41 @@
+name: cto
+type: agent
+description: Chief Technology Officer — cross-project architectural governance, technology
+  strategy, system design, integration coherence, technical debt management. Portfolio-level.
+source: internal
+upstream: null
+version: 1.0.0
+quality: 95
+tags:
+- executive
+- architecture
+- strategy
+- portfolio
+- governance
+status: active
+install_level: user
+added: '2026-03-16'
+updated: '2026-03-16'
+agent_definition: ~/code/_shared/pike-agents/plugins/cto/agents/cto.md
+bundled_in: cto
+requires_tools:
+- mcp__memory__*
+- mcp__knowledge-base__*
+- mcp__diagram-forge__*
+- mcp__google-workspace__*
+- mcp__external-review__*
+- mcp__slack__*
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: No subagent support
+  codex:
+    enabled: false
+    reason: No subagent support
+  gemini:
+    enabled: false
+    reason: No subagent support

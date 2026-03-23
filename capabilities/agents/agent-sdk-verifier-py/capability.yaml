@@ -1,15 +1,15 @@
-name: agent-sdk-verifier-ts
+name: agent-sdk-verifier-py
 type: agent
 description: >-
-  Agent SDK Verifier (TypeScript) — verifies that a TypeScript Agent SDK application is properly
+  Agent SDK Verifier (Python) — verifies that a Python Agent SDK application is properly
   configured, follows SDK best practices and documentation recommendations, and is ready for
   deployment or testing. Part of the agent-sdk-dev plugin.
 source: anthropic
 upstream: "https://github.com/anthropics/claude-plugins-official"
 version: "1.0.0"
 quality: 95
-tags: [agent-sdk, typescript, verification, deployment]
-status: staging
+tags: [agent-sdk, python, verification, deployment]
+status: active
 added: "2026-02-11"
 updated: "2026-02-11"
 bundled_in: agent-sdk-dev

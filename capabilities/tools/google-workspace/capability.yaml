@@ -1,0 +1,39 @@
+name: google-workspace
+type: tool
+description: >-
+  Google Workspace MCP Server — Drive, Docs, Sheets, Forms, Gmail, Calendar, Slides, Tasks access via gws CLI in MCP mode. Full Google Workspace integration.
+source: internal
+version: "0.6.0"
+quality: 90
+tags: [mcp, google, drive, docs, sheets, gmail, calendar, productivity]
+status: active
+install_vector: standalone
+transport: stdio
+parent_plugin: null
+install_id: "google-workspace"
+install_level: user
+launcher:
+  type: stdio
+  command: gws
+  args:
+    - mcp
+    - "-s"
+    - "drive,docs,sheets,forms,gmail,calendar,slides,tasks"
+requires_tools: []
+added: "2026-03-07"
+updated: "2026-03-16"
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: standalone
+  claude-desktop:
+    enabled: false
+    reason: "Requires gws CLI auth"
+  codex:
+    enabled: true
+    scope: user
+    install_vector: standalone
+  gemini:
+    enabled: false
+    reason: "No MCP support"

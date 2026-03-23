@@ -1,14 +1,14 @@
-name: comment-analyzer
+name: pr-test-analyzer
 type: agent
 description: >-
-  PR Review Agent — analyzes code comments for accuracy, completeness, and long-term
-  maintainability. Part of the pr-review-toolkit plugin.
+  PR Review Agent — reviews pull requests for test coverage quality and completeness.
+  Part of the pr-review-toolkit plugin.
 source: anthropic
 upstream: "https://github.com/anthropics/claude-plugins-official"
 version: "1.0.0"
 quality: 95
-tags: [code-review, comments, documentation, pr-review]
-status: staging
+tags: [code-review, testing, coverage, pr-review]
+status: active
 added: "2026-02-11"
 updated: "2026-02-11"
 bundled_in: pr-review-toolkit

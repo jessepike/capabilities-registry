@@ -1,4 +1,4 @@
-name: memory-layer
+name: memory
 type: tool
 description: >-
   Memory Layer MCP Server — persistent contextual memory service with namespace-scoped
