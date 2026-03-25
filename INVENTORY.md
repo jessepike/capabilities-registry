@@ -1,53 +1,68 @@
 # Capability Registry Inventory
 
-*Generated: 2026-02-24 12:56*
+*Generated: 2026-03-24 06:51*
 
 ## Summary
 
-**Total capabilities:** 71
+**Total capabilities:** 91
 
 | Type | Count |
 |------|-------|
-| agent | 17 |
+| agent | 32 |
 | plugin | 23 |
-| skill | 22 |
-| tool | 9 |
+| skill | 24 |
+| tool | 12 |
 
 | Source | Count |
 |--------|-------|
-| anthropic | 44 |
+| anthropic | 51 |
 | community | 1 |
-| internal | 26 |
+| internal | 39 |
 
 ## Client Enablement
 
 | Client | Enabled | Disabled |
 |--------|---------|----------|
-| claude-code | 71 | 0 |
-| claude-desktop | 9 | 62 |
-| codex | 7 | 64 |
-| gemini | 8 | 63 |
+| claude-code | 84 | 0 |
+| claude-desktop | 9 | 75 |
+| codex | 8 | 76 |
+| gemini | 8 | 76 |
 
 ## Agents
 
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
 | agent-creator | anthropic | 95 | agent-creation, plugin-dev, configuration, automation | Agent Architect — translates user requirements into precisely-tuned agent specifications. Designs expert persona, comprehensive system prompts, optimal configuration (model, color, tools), and triggering examples. Generates complete agent .md files for Claude Code plugins. |
+| agent-sdk-verifier-py | anthropic | 95 | agent-sdk, python, verification, deployment | Agent SDK Verifier (Python) — verifies that a Python Agent SDK application is properly configured, follows SDK best practices and documentation recommendations, and is ready for deployment or testing. Part of the agent-sdk-dev plugin. |
+| agent-sdk-verifier-ts | anthropic | 95 | agent-sdk, typescript, verification, deployment | Agent SDK Verifier (TypeScript) — verifies that a TypeScript Agent SDK application is properly configured, follows SDK best practices and documentation recommendations, and is ready for deployment or testing. Part of the agent-sdk-dev plugin. |
+| cfo | internal | 95 | executive, finance, pricing, revenue, portfolio | Chief Financial Officer — financial data integrity, pricing consistency, unit economics validation, revenue projection arithmetic, operating budget accuracy. Portfolio-level. |
+| ciso | internal | 95 | executive, security, compliance, threat-modeling, portfolio | Chief Information Security Officer — AI-native security architecture, threat modeling for LLM systems, OWASP Top 10 for LLM Apps, compliance posture. Portfolio-level. |
+| cmo | internal | 95 | executive, marketing, positioning, content, portfolio | Chief Marketing Officer — positioning strategy (April Dunford), developer-first messaging, category design, content strategy, go-to-market narrative. Portfolio-level. |
 | code-architect | anthropic | 95 | architecture, design, blueprints, codebase-analysis, planning | Senior Software Architect Agent — analyzes existing codebase patterns and conventions, then delivers comprehensive implementation blueprints with specific files to create/modify, component designs, data flows, and build sequences. Makes decisive architectural choices with rationale. |
 | code-explorer | anthropic | 95 | code-analysis, tracing, architecture, dependencies, exploration | Expert Code Analyst Agent — traces execution paths, maps architecture layers, understands patterns and abstractions, and documents dependencies to inform new development. Provides complete understanding of feature implementations from entry points to data storage through all layers. |
 | code-reviewer | anthropic | 95 | code-review, security, quality, bugs, conventions | Expert Code Reviewer Agent — reviews code for bugs, logic errors, security vulnerabilities, and code quality issues using confidence-based filtering (only reports issues with confidence >= 80). Checks adherence to project conventions in CLAUDE.md. Groups findings by severity. |
+| code-simplifier | anthropic | 95 | code-review, simplification, refactoring, clarity | Code Simplification Agent — simplifies and refines code for clarity, consistency, and maintainability while preserving all functionality. Focuses on recently modified code. Available in both pr-review-toolkit and standalone code-simplifier plugins. |
+| comment-analyzer | anthropic | 95 | code-review, comments, documentation, pr-review | PR Review Agent — analyzes code comments for accuracy, completeness, and long-term maintainability. Part of the pr-review-toolkit plugin. |
+| cpo | internal | 95 | executive, product, strategy, pmf, portfolio | Chief Product Officer — product strategy, PMF assessment, product-market alignment, roadmap governance, feature scoping, stage-gate readiness. Portfolio-level. |
+| cro | internal | 95 | executive, revenue, gtm, growth, portfolio | Chief Revenue Officer — revenue strategy, GTM motion, growth loops, activation/conversion optimization, pricing execution, churn analysis. Portfolio-level. |
+| cto | internal | 95 | executive, architecture, strategy, portfolio, governance | Chief Technology Officer — cross-project architectural governance, technology strategy, system design, integration coherence, technical debt management. Portfolio-level. |
 | doc-mgr | internal | 90 | documentation, maintenance, validation, lifecycle, planning | Documentation Specialist Agent — plans, creates, validates, and maintains project documentation throughout the development lifecycle. Handles documentation audits, post-implementation docs, and knowledge alignment. |
 | ecosystem-steward | internal | 90 | ecosystem, alignment, validation, cross-project, drift-detection, stewardship, adf | Ecosystem Steward Agent — responsible for cross-project alignment across the ADF ecosystem. Runs 6 alignment checks (governing docs, interface contracts, dependency chain, terminology, intent, decisions), produces structured reports with severity-rated findings, and proposes backlog items routed to the correct project. Supports full audit, targeted check, drift scan, and follow-up modes. |
 | improver | internal | 90 | improvement, learning, cross-cutting, patterns, optimization, architecture | Cross-cutting Improvement Team agent — identifies improvement opportunities from patterns across completed work, KB, memory, and operational data. Produces improvement proposals as backlog items. Part of the Improvement Team defined in the Agentic Work System Architecture. Does NOT execute improvements — it proposes them. Does NOT assess current quality (that's the reviewer) or verify completion (that's the validator). Focuses on "how do we get better?" |
 | kb-manager | internal | 90 | knowledge-base, digest, curation, synthesis, recommendations, content | KB Intelligence Agent — provides digest, curation, synthesis, recommendation, and content pipeline assessment services over the Knowledge Base. Consumes 16 KB MCP tools as a client. Supports 5 modes: DIGEST (activity dashboard), CURATE (health audit), SYNTHESIZE (combine related entries), RECOMMEND (project-relevant entries), and CONTENT (publication readiness assessment). |
+| krypton | internal | 90 | executive, chief-of-staff, intelligence, briefings, portfolio | Personal AI Chief of Staff — cross-system intelligence, morning briefings, priority recommendations, operational decisions. Synthesizes KB, ADF, WM, Memory. |
 | orchestrator | internal | 90 | orchestration, execution, planning, parallel, coordination, adf | Execute-Plan Orchestrator — phase-level execution coordinator that parses plan.md and tasks.md, spawns 3-5 parallel task-executor agents per phase, monitors progress via TaskList, invokes ralph-loop at phase boundaries, and validates exit criteria via phase-validator. Manages fix tasks, run logs, checkpoints, and session logs. |
 | phase-validator | internal | 90 | validation, exit-criteria, testing, execution, quality-gates | Execute-Plan Phase Validator — exit criteria checker that parses criteria from plan.md, categorizes by type (test-based, execution-based, artifact-based, manual review), runs validation checks, and generates structured pass/fail reports for the orchestrator. |
 | planner | internal | 90 | planning, decomposition, parallelization, capability-assessment, cross-cutting, architecture | Planning Agent — implements the ADF-PLANNING-SPEC methodology. Decomposes intent into executable work organized for parallel execution by agents with verified capabilities. Runs the seven-step planning process: understand intent, decompose into work units, organize phases, parallelization strategy, capability assessment (hard gate), testing strategy, risk/contingency. Produces plan.md and tasks.md drafts. Subordinate to Work Manager in the Work Management hierarchy. |
 | plugin-validator | anthropic | 95 | plugin-validation, structure, configuration, security, quality | Plugin Validation Specialist Agent — comprehensive validation of Claude Code plugin structure, plugin.json manifest, component files (commands, agents, skills, hooks), naming conventions, MCP configuration, file organization, and security. Produces structured validation reports with severity-rated findings. |
+| pr-test-analyzer | anthropic | 95 | code-review, testing, coverage, pr-review | PR Review Agent — reviews pull requests for test coverage quality and completeness. Part of the pr-review-toolkit plugin. |
 | project-init | internal | 90 | project-init, scaffolding, adf, bootstrap, git, structure | ADF Project Initialization Agent — bootstraps ADF project structure from an existing concept brief. Creates folders, moves files, configures git, drafts initial intent.md from brief content, and validates structure. Infrastructure setup and initial intent extraction only — does not do full Discover stage work. |
 | reviewer | internal | 90 | review, quality, cross-cutting, gap-analysis, feedback, architecture | Cross-cutting Review Team agent — quality assessment for any artifact across any project or domain. Evaluates plans, designs, code, briefs, and other artifacts against quality standards. Provides structured feedback with severity-rated findings (Critical/High/Low). Part of the Review Team defined in the Agentic Work System Architecture. Dispatched by orchestrators, Work Manager, or humans with artifact + review criteria as input. Does NOT verify completion (that's the validator). Focuses on "is this good?" not "is this done?" |
+| silent-failure-hunter | anthropic | 95 | code-review, error-handling, silent-failures, pr-review | PR Review Agent — identifies silent failures, inadequate error handling, and inappropriate fallback behavior in code changes. Part of the pr-review-toolkit plugin. |
 | skill-reviewer | anthropic | 95 | skill-review, quality, description, progressive-disclosure | Skill Quality Reviewer Agent — reviews and improves Claude Code skills for structure quality, description triggering effectiveness, progressive disclosure implementation, content organization, and adherence to best practices. Provides severity-rated findings with specific fix recommendations. |
 | task-executor | internal | 90 | execution, tdd, implementation, testing, commits, worker | Execute-Plan Task Executor — task-level worker agent that receives 1-4 assigned tasks from the orchestrator, implements changes, validates acceptance criteria, and commits atomically. Supports TDD workflow (write tests first, red-green cycle) from Phase 5 onward. |
+| tools | internal | 90 | infrastructure, mcp, plugins, agents, tools, portfolio | Claude Code Infrastructure Specialist — MCP servers, plugins, skills, agents, hooks, commands. Development, configuration, validation, health monitoring, troubleshooting. |
+| type-design-analyzer | anthropic | 95 | code-review, types, typescript, type-safety, pr-review | PR Review Agent — expert analysis of type design in codebases, evaluating type safety, generics usage, and type architecture. Part of the pr-review-toolkit plugin. |
 | validator | internal | 90 | validation, completion, drift-detection, cross-cutting, criteria-checking, architecture | Cross-cutting Validation Team agent — completion verification and drift detection for any work across any project or domain. Checks current state against target state (acceptance criteria, checklists, exit criteria). Produces structured pass/fail reports. Part of the Validation Team defined in the Agentic Work System Architecture. Does NOT assess quality (that's the reviewer). Focuses on "is this done?" not "is this good?" |
 
 ## Plugins
@@ -82,7 +97,9 @@
 
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
-| adf-review | internal | 100 | review, adf, validation, quality, ralph-loop | ADF Review Skill — orchestrates two-phase artifact reviews (internal Ralph Loop + external multi-model). Unified entry point for all ADF review processes. |
+| adf-init | internal | 80 | adf, scaffolding, init, project-setup, governance | ADF project scaffolding — folder structure, root artifacts, dual-runtime support (Claude + Codex). |
+| adf-review | internal | 90 | adf, review, validation, quality, stage-gate | ADF structured reviews — internal self-review with severity/complexity matrix, YAGNI enforcement, issue logging. External review optional. |
+| adf-stage | internal | 80 | adf, stages, workflow, transitions, governance | ADF stage workflow management — detect stage, load guidance, validate exit criteria, execute transitions. |
 | adf-workflow | internal | 100 | workflow, adf, orchestration, stages, guidance | ADF Workflow Skill — companion skill that teaches agents when and how to use ADF MCP server tools. Provides narrative workflow instructions for stage transitions, reviews, and artifact management. |
 | adr | internal | 100 | adr, adf, decisions, architecture, governance, documentation | ADR Skill — manages Architecture Decision Records as ADF decision-type artifacts. Supports create (auto-numbering, template), list (status table), update-status (with archive moves), and link (connect to design.md Decision Log) workflows. |
 | algorithmic-art | anthropic | 100 | art, generative, p5js, creative | Creating algorithmic art using p5.js with seeded randomness and interactive |
@@ -110,9 +127,12 @@
 | Name | Source | Quality | Tags | Description |
 |------|--------|---------|------|-------------|
 | adf-server | internal | 100 | mcp, adf, orchestration, specs, review, validation | ADF MCP Server — read-only interface to ADF specs, prompts, stubs, knowledge base, and capabilities registry. Provides tools for stage workflow, review prompts, artifact specs, project validation. |
+| diagram-forge | internal | 80 | mcp, diagrams, architecture, visualization, image-generation | Diagram Forge MCP Server — AI-powered architecture diagram generation using Gemini, OpenAI, or Replicate. 7 tools for generating, editing, and managing diagrams with template and style reference support. |
+| external-review | internal | 70 | mcp, code-review, external-model, quality | External Review MCP Server — code review via external AI models (Moonshot, Google). Provides independent code review perspective outside the primary Claude session. |
 | github-mcp | anthropic | 0 | mcp, github, vcs, code | GitHub MCP server — repo management, issues, PRs, code search |
+| google-workspace | internal | 90 | mcp, google, drive, docs, sheets, gmail, calendar, productivity | Google Workspace MCP Server — Drive, Docs, Sheets, Forms, Gmail, Calendar, Slides, Tasks access via gws CLI in MCP mode. Full Google Workspace integration. |
 | knowledge-base | internal | 95 | mcp, knowledge-base, semantic-search, content, intelligence | Knowledge Base MCP Server — semantic search, capture, query, and management of a personal knowledge base. Provides 16 tools for search, retrieval, backlog management, focus topics, and content lifecycle. |
-| memory-layer | internal | 95 | mcp, memory, context, retrieval, sqlite, chroma | Memory Layer MCP Server — persistent contextual memory service with namespace-scoped write/search/update/archive flows, review candidates, stats, reconciliation, and failed-memory lifecycle tools. |
+| memory | internal | 95 | mcp, memory, context, retrieval, sqlite, chroma | Memory Layer MCP Server — persistent contextual memory service with namespace-scoped write/search/update/archive flows, review candidates, stats, reconciliation, and failed-memory lifecycle tools. |
 | stitch-mcp | community | 85 | mcp, ui, design, frontend, google, code-generation, stitch | Google Stitch MCP Server — official remote MCP server for AI-powered UI/UX design generation. Provides 6 tools: create projects, generate screens from text prompts, list/get projects and screens. Outputs HTML/Tailwind CSS designs convertible to React, Vue, Flutter, etc. Hosted by Google at stitch.googleapis.com/mcp. Auth via API key or OAuth. |
 | stripe-mcp | anthropic | 0 | mcp, stripe, payments, billing | Stripe MCP server — payments, subscriptions, billing management |
 | supabase-mcp | anthropic | 0 | mcp, supabase, database, backend | Supabase MCP server — database management, auth, storage, edge functions |
@@ -121,13 +141,14 @@
 
 ## Tags Index
 
-- **adf**: adf-env, adf-review, adf-review, adf-server, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager, orchestrator, project-health, project-init, security-review
+- **adf**: adf-env, adf-init, adf-review, adf-review, adf-server, adf-stage, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager, orchestrator, project-health, project-init, security-review
 - **adr**: adr
 - **agent-creation**: agent-creator
-- **agent-sdk**: agent-sdk-dev
+- **agent-sdk**: agent-sdk-dev, agent-sdk-verifier-py, agent-sdk-verifier-ts
+- **agents**: tools
 - **alignment**: ecosystem-alignment, ecosystem-steward
 - **animation**: slack-gif-creator
-- **architecture**: adr, code-architect, code-explorer, feature-dev, improver, planner, reviewer, validator
+- **architecture**: adr, code-architect, code-explorer, cto, diagram-forge, feature-dev, improver, planner, reviewer, validator
 - **art**: algorithmic-art
 - **artifacts**: web-artifacts-builder
 - **audit**: project-health, security-review
@@ -139,33 +160,40 @@
 - **blueprints**: code-architect
 - **bootstrap**: project-init
 - **branding**: brand-guidelines
+- **briefings**: krypton
 - **browser**: playwright
 - **bugs**: code-reviewer
 - **business**: internal-comms
+- **calendar**: google-workspace
 - **canvas**: canvas-design
 - **capability-assessment**: planner
-- **chroma**: memory-layer
+- **chief-of-staff**: krypton
+- **chroma**: memory
 - **ci-cd**: commit-commands
+- **clarity**: code-simplifier
 - **claude-md**: claude-md-management
 - **code**: github-mcp
 - **code-analysis**: code-explorer
 - **code-generation**: stitch-mcp
 - **code-hygiene**: project-health
 - **code-navigation**: pyright-lsp, typescript-lsp
-- **code-review**: code-review, code-reviewer
+- **code-review**: code-review, code-reviewer, code-simplifier, comment-analyzer, external-review, pr-test-analyzer, silent-failure-hunter, type-design-analyzer
 - **codebase-analysis**: code-architect
 - **collaboration**: doc-coauthoring
 - **commands**: adf-review
+- **comments**: comment-analyzer
 - **commits**: task-executor
 - **communications**: internal-comms
 - **completion**: validator
+- **compliance**: ciso
 - **components**: frontend-design
 - **configuration**: agent-creator, plugin-validator
-- **content**: kb-manager, knowledge-base, link-triage
+- **content**: cmo, kb-manager, knowledge-base, link-triage
 - **content-pipeline**: kb-manager
-- **context**: claude-md-management, context7, memory-layer
+- **context**: claude-md-management, context7, memory
 - **conventions**: code-reviewer
 - **coordination**: orchestrator
+- **coverage**: pr-test-analyzer
 - **creative**: algorithmic-art, slack-gif-creator
 - **criteria-checking**: validator
 - **cross-cutting**: improver, planner, reviewer, validator
@@ -177,45 +205,57 @@
 - **decisions**: adr
 - **decomposition**: planner
 - **dependencies**: code-explorer, project-health
-- **deployment**: vercel, vercel-mcp
+- **deployment**: agent-sdk-verifier-py, agent-sdk-verifier-ts, vercel, vercel-mcp
 - **description**: skill-reviewer
 - **design**: brand-guidelines, canvas-design, code-architect, frontend-design, stitch-mcp, theme-factory
 - **design-drift**: project-health
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
+- **diagrams**: diagram-forge
 - **digest**: kb-manager
-- **documentation**: adr, claude-md-management, context7, doc-mgr, project-health
+- **docs**: google-workspace
+- **documentation**: adr, claude-md-management, comment-analyzer, context7, doc-mgr, project-health
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
 - **docx**: docx
 - **drift-detection**: ecosystem-alignment, ecosystem-steward, validator
+- **drive**: google-workspace
 - **ecosystem**: ecosystem-alignment, ecosystem-steward
 - **environment**: adf-env
+- **error-handling**: silent-failure-hunter
 - **execution**: orchestrator, phase-validator, task-executor
+- **executive**: cfo, ciso, cmo, cpo, cro, cto, krypton
 - **exit-criteria**: phase-validator
 - **exploration**: code-explorer
 - **external**: external-review
+- **external-model**: external-review
 - **feedback**: reviewer
+- **finance**: cfo
 - **frontend**: frontend-design, stitch-mcp
 - **gap-analysis**: reviewer
 - **generative**: algorithmic-art
 - **gif**: slack-gif-creator
 - **git**: commit-commands, github, project-init
 - **github**: github, github-mcp
-- **google**: stitch-mcp
-- **governance**: adr
+- **gmail**: google-workspace
+- **google**: google-workspace, stitch-mcp
+- **governance**: adf-init, adf-stage, adr, cto
 - **graphics**: canvas-design
+- **growth**: cro
+- **gtm**: cro
 - **guidance**: adf-workflow
 - **guidelines**: brand-guidelines
 - **health**: project-health
 - **hooks**: hookify, security-guidance
 - **hosting**: vercel
 - **html**: web-artifacts-builder
+- **image-generation**: diagram-forge
 - **implementation**: task-executor
 - **improvement**: improver
-- **infrastructure**: vercel, vercel-mcp
+- **infrastructure**: tools, vercel, vercel-mcp
+- **init**: adf-init
 - **injection**: security-review
 - **integration**: ecosystem-alignment
-- **intelligence**: kb-manager, knowledge-base
+- **intelligence**: kb-manager, knowledge-base, krypton
 - **issues**: github
 - **iteration**: ralph-loop
 - **javascript**: web-artifacts-builder
@@ -226,8 +266,9 @@
 - **links**: link-triage
 - **lsp**: pyright-lsp, typescript-lsp
 - **maintenance**: adf-env, claude-md-management, doc-mgr
-- **mcp**: adf-server, external-review, github, github-mcp, knowledge-base, mcp-builder, memory-layer, stitch-mcp, stripe, stripe-mcp, supabase, supabase-mcp, vercel, vercel-mcp, work-management-mcp
-- **memory**: memory-layer
+- **marketing**: cmo
+- **mcp**: adf-server, diagram-forge, external-review, external-review, github, github-mcp, google-workspace, knowledge-base, mcp-builder, memory, stitch-mcp, stripe, stripe-mcp, supabase, supabase-mcp, tools, vercel, vercel-mcp, work-management-mcp
+- **memory**: memory
 - **meta**: plugin-dev, skill-creator
 - **multi-model**: external-review
 - **onboarding**: claude-code-setup
@@ -244,41 +285,56 @@
 - **planning**: code-architect, doc-mgr, feature-dev, orchestrator, planner
 - **plugin-dev**: agent-creator
 - **plugin-validation**: plugin-validator
-- **plugins**: plugin-dev
+- **plugins**: plugin-dev, tools
+- **pmf**: cpo
+- **portfolio**: cfo, ciso, cmo, cpo, cro, cto, krypton, tools
+- **positioning**: cmo
 - **pptx**: pptx
+- **pr-review**: comment-analyzer, pr-test-analyzer, silent-failure-hunter, type-design-analyzer
 - **presentations**: pptx
+- **pricing**: cfo
+- **product**: cpo
+- **productivity**: google-workspace
 - **progressive-disclosure**: skill-reviewer
 - **project-init**: project-init
+- **project-setup**: adf-init
 - **projects**: work-management-mcp
 - **pull-requests**: github
-- **python**: agent-sdk-dev, pyright-lsp
+- **python**: agent-sdk-dev, agent-sdk-verifier-py, pyright-lsp
 - **qa**: webapp-testing
-- **quality**: adf-review, code-review, code-reviewer, plugin-validator, ralph-loop, reviewer, skill-reviewer
+- **quality**: adf-review, code-review, code-reviewer, external-review, plugin-validator, ralph-loop, reviewer, skill-reviewer
 - **quality-gates**: phase-validator
-- **ralph-loop**: adf-review, adf-review
+- **ralph-loop**: adf-review
 - **recommendations**: claude-code-setup, kb-manager
+- **refactoring**: code-simplifier
 - **reference**: context7
-- **retrieval**: memory-layer
+- **retrieval**: memory
+- **revenue**: cfo, cro
 - **review**: adf-review, adf-review, adf-server, external-review, ralph-loop, reviewer
 - **safety**: security-guidance
-- **scaffolding**: agent-sdk-dev, hookify, project-init
+- **scaffolding**: adf-init, agent-sdk-dev, hookify, project-init
 - **secrets**: project-health
-- **security**: code-reviewer, plugin-validator, project-health, security-guidance, security-review
+- **security**: ciso, code-reviewer, plugin-validator, project-health, security-guidance, security-review
 - **semantic-search**: knowledge-base
 - **session-discipline**: adf-env
 - **setup**: claude-code-setup
+- **sheets**: google-workspace
+- **silent-failures**: silent-failure-hunter
+- **simplification**: code-simplifier
 - **skill-review**: skill-reviewer
 - **skills**: plugin-dev, skill-creator
 - **slack**: slack-gif-creator
 - **source-control**: github
 - **specs**: adf-server
 - **spreadsheets**: xlsx
-- **sqlite**: memory-layer
+- **sqlite**: memory
 - **ssrf**: security-review
-- **stages**: adf-workflow
+- **stage-gate**: adf-review
+- **stages**: adf-stage, adf-workflow
 - **stewardship**: ecosystem-steward
 - **stitch**: stitch-mcp
 - **storage**: supabase
+- **strategy**: cpo, cto
 - **stripe**: stripe, stripe-mcp
 - **structure**: plugin-validator, project-init
 - **supabase**: supabase, supabase-mcp
@@ -286,23 +342,29 @@
 - **synthesis**: kb-manager, kb-manager
 - **tasks**: work-management-mcp
 - **tdd**: task-executor
-- **testing**: phase-validator, playwright, project-health, task-executor, webapp-testing
+- **testing**: phase-validator, playwright, pr-test-analyzer, project-health, task-executor, webapp-testing
 - **themes**: theme-factory
 - **threat-model**: security-review
-- **tools**: mcp-builder, work-management-mcp
+- **threat-modeling**: ciso
+- **tools**: mcp-builder, tools, work-management-mcp
 - **tracing**: code-explorer
+- **transitions**: adf-stage
 - **triage**: link-triage
 - **type-checking**: pyright-lsp
-- **typescript**: agent-sdk-dev, typescript-lsp
+- **type-safety**: type-design-analyzer
+- **types**: type-design-analyzer
+- **typescript**: agent-sdk-dev, agent-sdk-verifier-ts, type-design-analyzer, typescript-lsp
 - **ui**: canvas-design, frontend-design, stitch-mcp, theme-factory
 - **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, phase-validator, security-guidance, validator
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp
+- **verification**: agent-sdk-verifier-py, agent-sdk-verifier-ts
+- **visualization**: diagram-forge
 - **web**: playwright, web-artifacts-builder, webapp-testing
 - **word**: docx
 - **work-management**: work-management-mcp
 - **worker**: task-executor
-- **workflow**: adf-workflow, commit-commands, feature-dev
+- **workflow**: adf-stage, adf-workflow, commit-commands, feature-dev
 - **writing**: doc-coauthoring, internal-comms
 - **xlsx**: xlsx
 - **xss**: security-review
