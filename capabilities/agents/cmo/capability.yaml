@@ -1,0 +1,41 @@
+name: cmo
+type: agent
+description: Chief Marketing Officer — positioning strategy (April Dunford), developer-first
+  messaging, category design, content strategy, go-to-market narrative. Portfolio-level.
+source: internal
+upstream: null
+version: 1.1.0
+quality: 95
+tags:
+- executive
+- marketing
+- positioning
+- content
+- portfolio
+status: active
+install_level: user
+added: '2026-03-16'
+updated: '2026-03-16'
+agent_definition: ~/code/_shared/pike-agents/plugins/cmo/agents/cmo.md
+bundled_in: cmo
+requires_tools:
+- mcp__memory__*
+- mcp__knowledge-base__*
+- mcp__diagram-forge__*
+- mcp__google-workspace__*
+- mcp__external-review__*
+- mcp__slack__*
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: No subagent support
+  codex:
+    enabled: false
+    reason: No subagent support
+  gemini:
+    enabled: false
+    reason: No subagent support

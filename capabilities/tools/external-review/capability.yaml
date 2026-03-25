@@ -1,0 +1,39 @@
+name: external-review
+type: tool
+description: >-
+  External Review MCP Server — code review via external AI models (Moonshot, Google). Provides independent code review perspective outside the primary Claude session.
+source: internal
+version: "1.0.0"
+quality: 70
+tags: [mcp, code-review, external-model, quality]
+status: active
+install_vector: standalone
+transport: stdio
+parent_plugin: null
+install_id: "external-review"
+install_level: user
+launcher:
+  type: stdio
+  command: "${HOME}/code/_shared/adf/skills/external-review/server/venv/bin/python"
+  args:
+    - "${HOME}/code/_shared/adf/skills/external-review/server/external_review_server.py"
+  env:
+    MOONSHOT_API_KEY: "${MOONSHOT_API_KEY}"
+    GOOGLE_API_KEY: "${GOOGLE_API_KEY}"
+requires_tools: []
+added: "2026-02-07"
+updated: "2026-03-16"
+clients:
+  claude-code:
+    enabled: true
+    scope: user
+    install_vector: standalone
+  claude-desktop:
+    enabled: false
+    reason: "Requires ADF project structure"
+  codex:
+    enabled: false
+    reason: "Requires env vars and venv"
+  gemini:
+    enabled: false
+    reason: "No MCP support"

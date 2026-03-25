@@ -37,8 +37,8 @@ Never hand-edit `inventory.json` or `INVENTORY.md` — they are derived.
 
 | Repo | Location | Relationship |
 |------|----------|-------------|
-| ACM | `~/code/_shared/acm/` | Parent framework — specs, stages, prompts |
-| acm-env plugin | `~/.claude/plugins/acm-plugins/plugins/acm-env/` | Consumes registry via refresh/capabilities commands |
+| ADF | `~/code/_shared/adf/` | Parent framework — specs, stages, prompts |
+| adf-env plugin | `~/.claude/plugins/adf-plugins/plugins/adf-env/` | Consumes registry via refresh/capabilities commands |
 | link-triage-pipeline | `~/code/_shared/link-triage-pipeline/` | Sibling project |
 
 ## Working Norms
