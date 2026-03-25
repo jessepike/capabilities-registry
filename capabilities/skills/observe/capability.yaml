@@ -1,0 +1,28 @@
+name: observe
+type: skill
+description: >-
+  Quick-capture observation for living systems — appends signals to observations.md with auto-detected type and severity.
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 80
+tags: [adf, operate, observation, signal-capture, quick-capture]
+status: active
+install_id: null
+install_level: null
+added: "2026-03-24"
+updated: "2026-03-24"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No skill support"
+  codex:
+    enabled: false
+    reason: "No skill support"
+  gemini:
+    enabled: false
+    reason: "No skill support"

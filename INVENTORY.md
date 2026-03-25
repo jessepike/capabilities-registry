@@ -1,32 +1,32 @@
 # Capability Registry Inventory
 
-*Generated: 2026-03-24 21:09*
+*Generated: 2026-03-24 21:35*
 
 ## Summary
 
-**Total capabilities:** 91
+**Total capabilities:** 101
 
 | Type | Count |
 |------|-------|
 | agent | 32 |
 | plugin | 23 |
-| skill | 24 |
+| skill | 34 |
 | tool | 12 |
 
 | Source | Count |
 |--------|-------|
 | anthropic | 51 |
 | community | 1 |
-| internal | 39 |
+| internal | 49 |
 
 ## Client Enablement
 
 | Client | Enabled | Disabled |
 |--------|---------|----------|
-| claude-code | 84 | 0 |
-| claude-desktop | 9 | 75 |
-| codex | 8 | 76 |
-| gemini | 8 | 76 |
+| claude-code | 94 | 0 |
+| claude-desktop | 9 | 85 |
+| codex | 8 | 86 |
+| gemini | 8 | 86 |
 
 ## Agents
 
@@ -105,15 +105,25 @@
 | algorithmic-art | anthropic | 100 | art, generative, p5js, creative | Creating algorithmic art using p5.js with seeded randomness and interactive |
 | brand-guidelines | anthropic | 100 | design, branding, guidelines | Applies Anthropic's official brand colors and typography to any sort |
 | canvas-design | anthropic | 100 | ui, design, canvas, graphics | Create beautiful visual art in .png and .pdf documents using design philosophy. |
+| codex-delegate | internal | 85 | multi-model, codex, delegation, implementation, handoff | Delegates implementation tasks to Codex CLI while Claude retains planning and review. Multi-model handoff pattern. |
+| deliver-sprint | internal | 85 | adf, deliver, sprint, autonomous, deployment, security, qa, operate-seeding | Autonomous Deliver stage — re-validates build, security audit, deployment, browser QA, production validation, access docs, closeout, and Operate seeding. |
+| develop-sprint | internal | 90 | adf, develop, sprint, autonomous, codex, implementation, testing | Autonomous Develop stage — breaks design into tasks, delegates to Codex, reviews, health checks, tests, iterates until build matches design. |
+| diagrams | internal | 85 | diagrams, excalidraw, visualization, architecture, flowchart, infographic | Diagram routing — Excalidraw Architect for quick architecture sketches (free, editable) or Diagram Forge for polished presentation-grade visuals (AI image generation). |
+| discover-sprint | internal | 90 | adf, discover, sprint, autonomous, brief, research, validation | Guided autonomous Discover stage — research, draft/refine brief, challenge assumptions, multi-model reviews, iterate until exit criteria pass. |
 | doc-coauthoring | anthropic | 100 | documents, writing, collaboration | Guide users through a structured workflow for co-authoring documentation. |
 | docx | anthropic | 100 | documents, docx, word | 'Comprehensive document creation, editing, and analysis with support |
 | external-review | internal | 100 | review, mcp, external, multi-model, validation | External Review MCP Server — sends artifacts to external LLM models (GPT, Gemini, Kimi) for independent review. Provides list_models and review tools with parallel execution and cost tracking. |
 | frontend-design | anthropic | 100 | ui, frontend, design, css, components | Create distinctive, production-grade frontend interfaces with high design |
 | internal-comms | anthropic | 100 | writing, communications, business | A set of resources to help me write all kinds of internal communications, |
 | mcp-builder | anthropic | 100 | mcp, development, tools | Guide for creating high-quality MCP (Model Context Protocol) servers |
+| observe | internal | 80 | adf, operate, observation, signal-capture, quick-capture | Quick-capture observation for living systems — appends signals to observations.md with auto-detected type and severity. |
+| office-hours | internal | 85 | adf, discovery, challenge, assumptions, validation, stress-test | Structured product challenge session — pressure-tests assumptions, finds blind spots, strengthens briefs and designs before committing to build. |
+| operate-synthesis | internal | 85 | adf, operate, synthesis, observation, intent-alignment, kb-integration, lifecycle | Operate & Learn cycle — observation tracking, synthesis with KB integration, intent alignment assessment, cycle decisions (continue/fix/new-discover/retire). |
 | pdf | anthropic | 100 | documents, pdf | Comprehensive PDF manipulation toolkit for extracting text and tables, |
 | pptx | anthropic | 100 | documents, pptx, presentations | 'Presentation creation, editing, and analysis. When Claude needs to work |
 | project-health | internal | 100 | health, audit, testing, dependencies, security, code-hygiene, adf, secrets, design-drift, documentation | Project Health Auditor — code-level health auditing with 19 checks across 6 categories (test health, dependency health, code hygiene, secrets & config, build-to-design drift, documentation sync). Complements adf-env (governance layer) and adf-review (artifact quality). Supports Python, TypeScript, Go, Rust with auto-detection and stage-aware check selection. |
+| research-swarm | internal | 85 | adf, discovery, research, parallel-agents, market-research, validation | Spawns parallel research agents to investigate topics, technologies, markets, or problem spaces before planning or building. |
+| review-loop | internal | 85 | adf, review, multi-model, autonomous, validation, quality | Full autonomous review cycle — internal self-review iterations, then external multi-model reviews via Codex and Claude, iterating until clean. |
 | security-review | internal | 100 | security, owasp, injection, xss, ssrf, cryptography, supply-chain, threat-model, audit, adf | Security Review — code-level and design-level security analysis with 22 checks across 5 categories (injection & input validation, cryptography, unsafe operations, supply chain, design security posture). Complements project-health (secrets, CVEs) and security-guidance (runtime prevention). Supports Python, TypeScript, Go, Rust with auto-detection, stage-aware check selection, and OWASP pattern matching. |
 | skill-creator | anthropic | 100 | development, skills, meta | Guide for creating effective skills. This skill should be used when users |
 | slack-gif-creator | anthropic | 100 | slack, gif, animation, creative | Knowledge and utilities for creating animated GIFs optimized for Slack. |
@@ -141,25 +151,28 @@
 
 ## Tags Index
 
-- **adf**: adf-env, adf-init, adf-review, adf-review, adf-server, adf-stage, adf-workflow, adr, ecosystem-alignment, ecosystem-steward, kb-manager, orchestrator, project-health, project-init, security-review
+- **adf**: adf-env, adf-init, adf-review, adf-review, adf-server, adf-stage, adf-workflow, adr, deliver-sprint, develop-sprint, discover-sprint, ecosystem-alignment, ecosystem-steward, kb-manager, observe, office-hours, operate-synthesis, orchestrator, project-health, project-init, research-swarm, review-loop, security-review
 - **adr**: adr
 - **agent-creation**: agent-creator
 - **agent-sdk**: agent-sdk-dev, agent-sdk-verifier-py, agent-sdk-verifier-ts
 - **agents**: tools
 - **alignment**: ecosystem-alignment, ecosystem-steward
 - **animation**: slack-gif-creator
-- **architecture**: adr, code-architect, code-explorer, cto, diagram-forge, feature-dev, improver, planner, reviewer, validator
+- **architecture**: adr, code-architect, code-explorer, cto, diagram-forge, diagrams, feature-dev, improver, planner, reviewer, validator
 - **art**: algorithmic-art
 - **artifacts**: web-artifacts-builder
+- **assumptions**: office-hours
 - **audit**: project-health, security-review
 - **auth**: supabase
 - **authoring**: plugin-dev
 - **automation**: agent-creator, claude-code-setup, code-review, commit-commands, hookify, link-triage, playwright
+- **autonomous**: deliver-sprint, develop-sprint, discover-sprint, review-loop
 - **backend**: stripe, supabase, supabase-mcp
 - **billing**: stripe, stripe-mcp
 - **blueprints**: code-architect
 - **bootstrap**: project-init
 - **branding**: brand-guidelines
+- **brief**: discover-sprint
 - **briefings**: krypton
 - **browser**: playwright
 - **bugs**: code-reviewer
@@ -167,6 +180,7 @@
 - **calendar**: google-workspace
 - **canvas**: canvas-design
 - **capability-assessment**: planner
+- **challenge**: office-hours
 - **chief-of-staff**: krypton
 - **chroma**: memory
 - **ci-cd**: commit-commands
@@ -179,6 +193,7 @@
 - **code-navigation**: pyright-lsp, typescript-lsp
 - **code-review**: code-review, code-reviewer, code-simplifier, comment-analyzer, external-review, pr-test-analyzer, silent-failure-hunter, type-design-analyzer
 - **codebase-analysis**: code-architect
+- **codex**: codex-delegate, develop-sprint
 - **collaboration**: doc-coauthoring
 - **commands**: adf-review
 - **comments**: comment-analyzer
@@ -204,15 +219,20 @@
 - **database**: supabase, supabase-mcp
 - **decisions**: adr
 - **decomposition**: planner
+- **delegation**: codex-delegate
+- **deliver**: deliver-sprint
 - **dependencies**: code-explorer, project-health
-- **deployment**: agent-sdk-verifier-py, agent-sdk-verifier-ts, vercel, vercel-mcp
+- **deployment**: agent-sdk-verifier-py, agent-sdk-verifier-ts, deliver-sprint, vercel, vercel-mcp
 - **description**: skill-reviewer
 - **design**: brand-guidelines, canvas-design, code-architect, frontend-design, stitch-mcp, theme-factory
 - **design-drift**: project-health
+- **develop**: develop-sprint
 - **development**: agent-sdk-dev, code-review, feature-dev, hookify, mcp-builder, plugin-dev, ralph-loop, skill-creator
 - **diagnostics**: pyright-lsp, typescript-lsp
-- **diagrams**: diagram-forge
+- **diagrams**: diagram-forge, diagrams
 - **digest**: kb-manager
+- **discover**: discover-sprint
+- **discovery**: office-hours, research-swarm
 - **docs**: google-workspace
 - **documentation**: adr, claude-md-management, comment-analyzer, context7, doc-mgr, project-health
 - **documents**: doc-coauthoring, docx, pdf, pptx, xlsx
@@ -222,6 +242,7 @@
 - **ecosystem**: ecosystem-alignment, ecosystem-steward
 - **environment**: adf-env
 - **error-handling**: silent-failure-hunter
+- **excalidraw**: diagrams
 - **execution**: orchestrator, phase-validator, task-executor
 - **executive**: cfo, ciso, cmo, cpo, cro, cto, krypton
 - **exit-criteria**: phase-validator
@@ -230,6 +251,7 @@
 - **external-model**: external-review
 - **feedback**: reviewer
 - **finance**: cfo
+- **flowchart**: diagrams
 - **frontend**: frontend-design, stitch-mcp
 - **gap-analysis**: reviewer
 - **generative**: algorithmic-art
@@ -244,39 +266,48 @@
 - **gtm**: cro
 - **guidance**: adf-workflow
 - **guidelines**: brand-guidelines
+- **handoff**: codex-delegate
 - **health**: project-health
 - **hooks**: hookify, security-guidance
 - **hosting**: vercel
 - **html**: web-artifacts-builder
 - **image-generation**: diagram-forge
-- **implementation**: task-executor
+- **implementation**: codex-delegate, develop-sprint, task-executor
 - **improvement**: improver
+- **infographic**: diagrams
 - **infrastructure**: tools, vercel, vercel-mcp
 - **init**: adf-init
 - **injection**: security-review
 - **integration**: ecosystem-alignment
 - **intelligence**: kb-manager, knowledge-base, krypton
+- **intent-alignment**: operate-synthesis
 - **issues**: github
 - **iteration**: ralph-loop
 - **javascript**: web-artifacts-builder
+- **kb-integration**: operate-synthesis
 - **knowledge-base**: kb-manager, kb-manager, knowledge-base
 - **learning**: improver
 - **libraries**: context7
-- **lifecycle**: doc-mgr
+- **lifecycle**: doc-mgr, operate-synthesis
 - **links**: link-triage
 - **lsp**: pyright-lsp, typescript-lsp
 - **maintenance**: adf-env, claude-md-management, doc-mgr
+- **market-research**: research-swarm
 - **marketing**: cmo
 - **mcp**: adf-server, diagram-forge, external-review, external-review, github, github-mcp, google-workspace, knowledge-base, mcp-builder, memory, stitch-mcp, stripe, stripe-mcp, supabase, supabase-mcp, tools, vercel, vercel-mcp, work-management-mcp
 - **memory**: memory
 - **meta**: plugin-dev, skill-creator
-- **multi-model**: external-review
+- **multi-model**: codex-delegate, external-review, review-loop
+- **observation**: observe, operate-synthesis
 - **onboarding**: claude-code-setup
+- **operate**: observe, operate-synthesis
+- **operate-seeding**: deliver-sprint
 - **optimization**: improver
 - **orchestration**: adf-server, adf-workflow, orchestrator
 - **owasp**: security-review
 - **p5js**: algorithmic-art
 - **parallel**: orchestrator
+- **parallel-agents**: research-swarm
 - **parallelization**: planner
 - **patterns**: improver
 - **payments**: stripe, stripe-mcp
@@ -301,24 +332,27 @@
 - **projects**: work-management-mcp
 - **pull-requests**: github
 - **python**: agent-sdk-dev, agent-sdk-verifier-py, pyright-lsp
-- **qa**: webapp-testing
-- **quality**: adf-review, code-review, code-reviewer, external-review, plugin-validator, ralph-loop, reviewer, skill-reviewer
+- **qa**: deliver-sprint, webapp-testing
+- **quality**: adf-review, code-review, code-reviewer, external-review, plugin-validator, ralph-loop, review-loop, reviewer, skill-reviewer
 - **quality-gates**: phase-validator
+- **quick-capture**: observe
 - **ralph-loop**: adf-review
 - **recommendations**: claude-code-setup, kb-manager
 - **refactoring**: code-simplifier
 - **reference**: context7
+- **research**: discover-sprint, research-swarm
 - **retrieval**: memory
 - **revenue**: cfo, cro
-- **review**: adf-review, adf-review, adf-server, external-review, ralph-loop, reviewer
+- **review**: adf-review, adf-review, adf-server, external-review, ralph-loop, review-loop, reviewer
 - **safety**: security-guidance
 - **scaffolding**: adf-init, agent-sdk-dev, hookify, project-init
 - **secrets**: project-health
-- **security**: ciso, code-reviewer, plugin-validator, project-health, security-guidance, security-review
+- **security**: ciso, code-reviewer, deliver-sprint, plugin-validator, project-health, security-guidance, security-review
 - **semantic-search**: knowledge-base
 - **session-discipline**: adf-env
 - **setup**: claude-code-setup
 - **sheets**: google-workspace
+- **signal-capture**: observe
 - **silent-failures**: silent-failure-hunter
 - **simplification**: code-simplifier
 - **skill-review**: skill-reviewer
@@ -327,6 +361,7 @@
 - **source-control**: github
 - **specs**: adf-server
 - **spreadsheets**: xlsx
+- **sprint**: deliver-sprint, develop-sprint, discover-sprint
 - **sqlite**: memory
 - **ssrf**: security-review
 - **stage-gate**: adf-review
@@ -335,14 +370,15 @@
 - **stitch**: stitch-mcp
 - **storage**: supabase
 - **strategy**: cpo, cto
+- **stress-test**: office-hours
 - **stripe**: stripe, stripe-mcp
 - **structure**: plugin-validator, project-init
 - **supabase**: supabase, supabase-mcp
 - **supply-chain**: security-review
-- **synthesis**: kb-manager, kb-manager
+- **synthesis**: kb-manager, kb-manager, operate-synthesis
 - **tasks**: work-management-mcp
 - **tdd**: task-executor
-- **testing**: phase-validator, playwright, pr-test-analyzer, project-health, task-executor, webapp-testing
+- **testing**: develop-sprint, phase-validator, playwright, pr-test-analyzer, project-health, task-executor, webapp-testing
 - **themes**: theme-factory
 - **threat-model**: security-review
 - **threat-modeling**: ciso
@@ -355,11 +391,11 @@
 - **types**: type-design-analyzer
 - **typescript**: agent-sdk-dev, agent-sdk-verifier-ts, type-design-analyzer, typescript-lsp
 - **ui**: canvas-design, frontend-design, stitch-mcp, theme-factory
-- **validation**: adf-env, adf-review, adf-review, adf-server, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, phase-validator, security-guidance, validator
+- **validation**: adf-env, adf-review, adf-review, adf-server, discover-sprint, doc-mgr, ecosystem-alignment, ecosystem-steward, external-review, office-hours, phase-validator, research-swarm, review-loop, security-guidance, validator
 - **vcs**: github-mcp
 - **vercel**: vercel, vercel-mcp
 - **verification**: agent-sdk-verifier-py, agent-sdk-verifier-ts
-- **visualization**: diagram-forge
+- **visualization**: diagram-forge, diagrams
 - **web**: playwright, web-artifacts-builder, webapp-testing
 - **word**: docx
 - **work-management**: work-management-mcp

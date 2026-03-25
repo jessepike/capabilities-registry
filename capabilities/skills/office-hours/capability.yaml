@@ -1,0 +1,28 @@
+name: office-hours
+type: skill
+description: >-
+  Structured product challenge session — pressure-tests assumptions, finds blind spots, strengthens briefs and designs before committing to build.
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 85
+tags: [adf, discovery, challenge, assumptions, validation, stress-test]
+status: active
+install_id: null
+install_level: null
+added: "2026-03-24"
+updated: "2026-03-24"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No skill support"
+  codex:
+    enabled: false
+    reason: "No skill support"
+  gemini:
+    enabled: false
+    reason: "No skill support"

@@ -1,35 +1,35 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-24T21:09:19.217192",
+  "generated_at": "2026-03-24T21:35:12.926262",
   "summary": {
-    "total": 91,
+    "total": 101,
     "by_type": {
       "agent": 32,
       "plugin": 23,
-      "skill": 24,
+      "skill": 34,
       "tool": 12
     },
     "by_source": {
       "anthropic": 51,
-      "internal": 39,
+      "internal": 49,
       "community": 1
     },
     "by_client": {
       "claude-code": {
-        "enabled": 84,
+        "enabled": 94,
         "disabled": 0
       },
       "claude-desktop": {
         "enabled": 9,
-        "disabled": 75
+        "disabled": 85
       },
       "codex": {
         "enabled": 8,
-        "disabled": 76
+        "disabled": 86
       },
       "gemini": {
         "enabled": 8,
-        "disabled": 76
+        "disabled": 86
       }
     }
   },
@@ -2353,6 +2353,209 @@
       }
     },
     {
+      "name": "codex-delegate",
+      "type": "skill",
+      "description": "Delegates implementation tasks to Codex CLI while Claude retains planning and review. Multi-model handoff pattern.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 85,
+      "tags": [
+        "multi-model",
+        "codex",
+        "delegation",
+        "implementation",
+        "handoff"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/codex-delegate",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
+      "name": "deliver-sprint",
+      "type": "skill",
+      "description": "Autonomous Deliver stage \u2014 re-validates build, security audit, deployment, browser QA, production validation, access docs, closeout, and Operate seeding.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 85,
+      "tags": [
+        "adf",
+        "deliver",
+        "sprint",
+        "autonomous",
+        "deployment",
+        "security",
+        "qa",
+        "operate-seeding"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/deliver-sprint",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
+      "name": "develop-sprint",
+      "type": "skill",
+      "description": "Autonomous Develop stage \u2014 breaks design into tasks, delegates to Codex, reviews, health checks, tests, iterates until build matches design.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "adf",
+        "develop",
+        "sprint",
+        "autonomous",
+        "codex",
+        "implementation",
+        "testing"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/develop-sprint",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
+      "name": "diagrams",
+      "type": "skill",
+      "description": "Diagram routing \u2014 Excalidraw Architect for quick architecture sketches (free, editable) or Diagram Forge for polished presentation-grade visuals (AI image generation).",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 85,
+      "tags": [
+        "diagrams",
+        "excalidraw",
+        "visualization",
+        "architecture",
+        "flowchart",
+        "infographic"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/diagrams",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
+      "name": "discover-sprint",
+      "type": "skill",
+      "description": "Guided autonomous Discover stage \u2014 research, draft/refine brief, challenge assumptions, multi-model reviews, iterate until exit criteria pass.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 90,
+      "tags": [
+        "adf",
+        "discover",
+        "sprint",
+        "autonomous",
+        "brief",
+        "research",
+        "validation"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/discover-sprint",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
       "name": "doc-coauthoring",
       "type": "skill",
       "description": "Guide users through a structured workflow for co-authoring documentation.",
@@ -2579,6 +2782,126 @@
       }
     },
     {
+      "name": "observe",
+      "type": "skill",
+      "description": "Quick-capture observation for living systems \u2014 appends signals to observations.md with auto-detected type and severity.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 80,
+      "tags": [
+        "adf",
+        "operate",
+        "observation",
+        "signal-capture",
+        "quick-capture"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/observe",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
+      "name": "office-hours",
+      "type": "skill",
+      "description": "Structured product challenge session \u2014 pressure-tests assumptions, finds blind spots, strengthens briefs and designs before committing to build.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 85,
+      "tags": [
+        "adf",
+        "discovery",
+        "challenge",
+        "assumptions",
+        "validation",
+        "stress-test"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/office-hours",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
+      "name": "operate-synthesis",
+      "type": "skill",
+      "description": "Operate & Learn cycle \u2014 observation tracking, synthesis with KB integration, intent alignment assessment, cycle decisions (continue/fix/new-discover/retire).",
+      "source": "internal",
+      "status": "active",
+      "version": "1.1.0",
+      "quality": 85,
+      "tags": [
+        "adf",
+        "operate",
+        "synthesis",
+        "observation",
+        "intent-alignment",
+        "kb-integration",
+        "lifecycle"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/operate-synthesis",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
       "name": "pdf",
       "type": "skill",
       "description": "Comprehensive PDF manipulation toolkit for extracting text and tables,",
@@ -2675,6 +2998,86 @@
       "path": "capabilities/skills/project-health",
       "added": "2026-02-09",
       "updated": "2026-02-09",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
+      "name": "research-swarm",
+      "type": "skill",
+      "description": "Spawns parallel research agents to investigate topics, technologies, markets, or problem spaces before planning or building.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 85,
+      "tags": [
+        "adf",
+        "discovery",
+        "research",
+        "parallel-agents",
+        "market-research",
+        "validation"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/research-swarm",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
+      "clients": {
+        "claude-code": {
+          "enabled": true,
+          "scope": "project",
+          "install_vector": "plugin"
+        },
+        "claude-desktop": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "codex": {
+          "enabled": false,
+          "reason": "No skill support"
+        },
+        "gemini": {
+          "enabled": false,
+          "reason": "No skill support"
+        }
+      }
+    },
+    {
+      "name": "review-loop",
+      "type": "skill",
+      "description": "Full autonomous review cycle \u2014 internal self-review iterations, then external multi-model reviews via Codex and Claude, iterating until clean.",
+      "source": "internal",
+      "status": "active",
+      "version": "1.0.0",
+      "quality": 85,
+      "tags": [
+        "adf",
+        "review",
+        "multi-model",
+        "autonomous",
+        "validation",
+        "quality"
+      ],
+      "upstream": null,
+      "path": "capabilities/skills/review-loop",
+      "added": "2026-03-24",
+      "updated": "2026-03-24",
       "clients": {
         "claude-code": {
           "enabled": true,

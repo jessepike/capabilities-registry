@@ -175,6 +175,34 @@ Determine next stage:
 - If 2+ of those are true → transition to Operate
 - If not → seal as Complete
 
+**If transitioning to Operate — seed initial observations:**
+
+Deliver has already surfaced real findings. Don't lose them. Create `docs/active/observations.md` and seed it with observations extracted from earlier phases:
+
+1. **From Re-validation (Phase 1):**
+   - Any non-critical issues that passed but are worth watching (e.g., test coverage gaps, minor design drift)
+   - Dependency warnings (outdated but not CVE-level)
+
+2. **From Security Audit (Phase 2):**
+   - Low/Med findings that weren't blocking but should be monitored
+   - Areas flagged for hardening in future iterations
+
+3. **From Browser QA (Phase 6):**
+   - UX friction noticed during flow testing
+   - Responsive layout quirks
+   - Edge cases that worked but felt brittle
+
+4. **From Production Validation (Phase 7):**
+   - Performance baselines worth tracking (load times, response times)
+   - Tier 3 manual test notes from the human
+
+Format each as a standard observation row:
+```markdown
+| {date} | {finding from deliver phase} | {type} | {severity} | Seeded from Deliver — {phase name} |
+```
+
+This gives Operate a running start instead of a blank log. Only seed findings that are **worth watching** — don't dump every passing check into the log.
+
 Commit: `chore(deliver): stage complete — {summary}`
 
 ### Final Report

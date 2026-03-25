@@ -1,0 +1,28 @@
+name: diagrams
+type: skill
+description: >-
+  Diagram routing — Excalidraw Architect for quick architecture sketches (free, editable) or Diagram Forge for polished presentation-grade visuals (AI image generation).
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 85
+tags: [diagrams, excalidraw, visualization, architecture, flowchart, infographic]
+status: active
+install_id: null
+install_level: null
+added: "2026-03-24"
+updated: "2026-03-24"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No skill support"
+  codex:
+    enabled: false
+    reason: "No skill support"
+  gemini:
+    enabled: false
+    reason: "No skill support"

@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-REGISTRY_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+export REGISTRY_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 CAPS_DIR="$REGISTRY_ROOT/capabilities"
 JSON_OUT="$REGISTRY_ROOT/inventory.json"
 MD_OUT="$REGISTRY_ROOT/INVENTORY.md"

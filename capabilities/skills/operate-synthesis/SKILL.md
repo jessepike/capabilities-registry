@@ -104,7 +104,22 @@ When cadence is reached or manually triggered:
    - Priority: based on severity and frequency
    - Why: link to specific observations
 
-6. **External perspective** (optional but recommended):
+6. **Cross-project pattern check** — before writing the report, search KB for similar signals from other projects:
+
+   Use `mcp__knowledge-base__search_knowledge` with queries derived from each cluster:
+   ```
+   For each cluster:
+     search_knowledge(query: "{cluster theme} {system type}", content_type: "learning", limit: 5)
+   ```
+
+   If relevant results found:
+   - Note them in the synthesis report under "Cross-Project Patterns"
+   - Flag if another project solved a similar problem (avoid reinventing)
+   - Flag if the same pattern is recurring across projects (systemic issue)
+
+   If no relevant results → skip the section. Don't force it.
+
+7. **External perspective** (optional but recommended):
    ```bash
    codex exec --sandbox read-only --json -C "$(pwd)" - <<'PROMPT'
    Review these system observations and the original intent:
@@ -117,7 +132,7 @@ When cadence is reached or manually triggered:
    PROMPT
    ```
 
-7. **Write synthesis report** to `docs/active/synthesis-{date}.md`:
+8. **Write synthesis report** to `docs/active/synthesis-{date}.md`:
 
 ```markdown
 ## Synthesis Report — {date}
@@ -141,6 +156,11 @@ When cadence is reached or manually triggered:
 #### {Cluster 2 name} — {classification}
 ...
 
+### Cross-Project Patterns
+{Only include if KB search returned relevant results}
+- {Pattern from project X}: {how it relates to current observations}
+- {Pattern from project Y}: {solved via Z — consider similar approach}
+
 ### BACKLOG Items Created
 - {B-ID}: {item} — from cluster {name}
 
@@ -148,6 +168,29 @@ When cadence is reached or manually triggered:
 {Continue observing / Fix in place / Launch new Discover / Retire}
 Rationale: {why}
 ```
+
+9. **Save learnings to KB** — after writing the report, persist key insights for cross-project value:
+
+   For each cluster classified as **Systematic gap** or **Usage evolution**, save a learning:
+   ```
+   mcp__knowledge-base__send_to_kb(
+     content: "{cluster summary}. Observed in {project name} during Operate cycle. Intent alignment: {rating}. {what was learned}",
+     content_type: "learning",
+     title: "{cluster theme} — {project name} operate cycle",
+     topics: ["{system type}", "operate", "{cluster theme}"],
+     source_project: "{project name}"
+   )
+   ```
+
+   **What to save:**
+   - Patterns that would help a future project avoid the same friction
+   - Usage evolution insights (how real usage diverged from design assumptions)
+   - Systemic gaps that might affect similar system types
+
+   **What NOT to save:**
+   - Project-specific bugs (those go to BACKLOG, not KB)
+   - Noise clusters
+   - Incremental improvements (too granular for cross-project value)
 
 ### Phase 4: Cycle Decision
 
@@ -207,11 +250,9 @@ Based on human's choice:
 
 ## KB Integration
 
-After each synthesis:
-- **Save key learnings to KB** — patterns that apply beyond this project
-- **Check KB for similar patterns** from other projects — cross-pollinate insights
+KB integration is built into the synthesis pipeline — steps 6 (cross-project search) and 9 (save learnings). The compounding effect: each Operate cycle makes the KB smarter. Similar systems in the future start with prior evidence, not assumptions.
 
-The compounding effect: each Operate cycle makes the KB smarter. Similar systems in the future start with prior evidence, not assumptions.
+**Requires:** Knowledge Base MCP server running (`mcp__knowledge-base__*` tools available). If KB is unavailable, skip steps 6 and 9 — log a note in the report that KB integration was skipped.
 
 ## Important Notes
 

@@ -1,0 +1,28 @@
+name: review-loop
+type: skill
+description: >-
+  Full autonomous review cycle — internal self-review iterations, then external multi-model reviews via Codex and Claude, iterating until clean.
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 85
+tags: [adf, review, multi-model, autonomous, validation, quality]
+status: active
+install_id: null
+install_level: null
+added: "2026-03-24"
+updated: "2026-03-24"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No skill support"
+  codex:
+    enabled: false
+    reason: "No skill support"
+  gemini:
+    enabled: false
+    reason: "No skill support"
