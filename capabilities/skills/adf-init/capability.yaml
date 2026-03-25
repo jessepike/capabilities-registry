@@ -1,0 +1,28 @@
+name: adf-init
+type: skill
+description: >-
+  ADF project scaffolding — folder structure, root artifacts, dual-runtime support (Claude + Codex).
+source: internal
+upstream: null
+version: "1.0.0"
+quality: 80
+tags: [adf, scaffolding, init, project-setup, governance]
+status: active
+install_id: null
+install_level: null
+added: "2026-03-23"
+updated: "2026-03-23"
+clients:
+  claude-code:
+    enabled: true
+    scope: project
+    install_vector: plugin
+  claude-desktop:
+    enabled: false
+    reason: "No skill support"
+  codex:
+    enabled: false
+    reason: "No skill support"
+  gemini:
+    enabled: false
+    reason: "No skill support"

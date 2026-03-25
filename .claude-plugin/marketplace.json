@@ -1,0 +1,66 @@
+{
+  "name": "capabilities-registry",
+  "metadata": {
+    "description": "Canonical registry of ADF capabilities — skills, tools, agents, and plugins"
+  },
+  "owner": {
+    "name": "Jesse Pike"
+  },
+  "plugins": [
+    {
+      "name": "adf-skills",
+      "description": "ADF workflow skills — project scaffolding (adf-init), stage management (adf-stage), and structured reviews (adf-review) for the Agentic Development Framework",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./capabilities/skills/adf-init",
+        "./capabilities/skills/adf-stage",
+        "./capabilities/skills/adf-review",
+        "./capabilities/skills/discover-sprint",
+        "./capabilities/skills/design-sprint",
+        "./capabilities/skills/develop-sprint",
+        "./capabilities/skills/deliver-sprint",
+        "./capabilities/skills/operate-synthesis"
+      ]
+    },
+    {
+      "name": "project-health",
+      "description": "Code-level health auditing — tests, deps, hygiene, secrets, design drift, doc sync, and doc freshness. Complements ADF governance and review skills.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./capabilities/skills/project-health"
+      ]
+    },
+    {
+      "name": "multi-model",
+      "description": "Multi-model delegation and review — hand off implementation to Codex CLI, run external reviews across models (Codex, Claude -p, Gemini). Uses existing subscriptions at zero marginal cost.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./capabilities/skills/codex-delegate",
+        "./capabilities/skills/external-review",
+        "./capabilities/skills/review-loop"
+      ]
+    },
+    {
+      "name": "discovery-tools",
+      "description": "Research and product challenge skills — parallel research swarm for investigating topics from multiple angles, and office-hours for structured product challenge sessions that pressure-test concepts and find blind spots.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./capabilities/skills/research-swarm",
+        "./capabilities/skills/office-hours"
+      ]
+    },
+    {
+      "name": "diagrams",
+      "description": "Diagram routing skill — quick schematics via Excalidraw Architect (free, editable) or polished visuals via Diagram Forge (AI image generation). Routes to the right tool based on intent.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./capabilities/skills/diagrams"
+      ]
+    }
+  ]
+}
